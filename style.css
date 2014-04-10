@@ -1,0 +1,781 @@
+/*
+ Author: Mo McRoberts <mo.mcroberts@bbc.co.uk>
+
+ Copyright (c) 2014 BBC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+*/
+
+/* 5.1 Document header */
+
+body>header {
+	margin: -13pt -13pt 1em -13pt;
+	padding: 0;
+	position: relative;
+	border-bottom: solid #eee 1px;
+}
+section.legalnotice {
+	font-size: 0.85em;
+}
+
+body.home>header {
+	background: #000;
+	color: #e2e2e2;
+	border-bottom: none;
+}
+/* 5.1.1 Global navigation */
+
+nav.global a:link, nav.global a:visited {
+	color: inherit;
+	text-decoration: inherit;
+}
+nav.global abbr {
+	text-decoration: inherit !important;
+	cursor: inherit !important;
+	border: none !important;
+}
+nav.global {
+	background: #636363;
+	color: #ffffff;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	border-bottom: solid #636363 1px;
+}
+nav.global .inner {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 960px;
+	height: 39pt;
+	position: relative;
+}
+nav.global ul {
+	display: block;
+	float: right;
+	margin: 0;
+	padding: 0;
+	border-left: solid #636363 1px;
+}
+nav.global li {
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
+	font-style: normal;
+	display: block;
+	float: left;
+	height: 39pt;
+	border-right: solid #636363 1px;
+	margin: 0;
+	color: #636363;
+}
+nav.global li>a {
+	display: block;
+	height: 39pt;
+	line-height: 39pt;
+	color: #b2b2b2;
+	padding: 0 13pt;
+	font-size: 0.85em;
+	text-transform: lowercase;
+}
+nav.global li>a:hover {
+	background: #b2b2b2;
+	color: #404040;
+}
+nav.global li.logo {
+	position: absolute;
+	float: none;
+	top: 0;
+	left: 0;
+	border-left: solid #636363 1px;
+}
+nav.global li.logo>a {
+	background: #636363;
+	color: #ceca13 !important;	
+	font-size: 2.5em;
+	margin-left: -13pt;
+}
+nav.global li.logo>a:hover {
+	background: #636363;
+	color: inherit;
+}
+/* 5.1.2 Masthead image */
+
+body>header .masthead {
+	display: none;
+	margin: 0 0 0 0;
+	background: #b4b4b4;
+	min-height: 360px;
+	border-bottom: solid #636363 1px;
+}
+body.home>header .masthead {
+	border-bottom: none;
+}
+/* 5.1.3 Inside cover */
+
+body>header h1, body>header h2 {
+	margin: 13pt auto;
+	max-width: 960px;
+	padding: 0 13pt;
+}
+body>header p {
+	font-weight: normal;
+	font-style: normal;
+	margin: 1.5em auto;
+	max-width: 960px;
+	padding: 0 13pt;
+}
+body>header a:link, body>header a:visited {
+	text-decoration: inherit;
+	color: inherit;
+}
+body>header .author,body>header .editor {
+	font-size: 0.85em;
+	font-weight: 300;
+}
+body>header .editor {
+	color: #b2b2b2;
+}
+body>header .copyright {
+	font-size: 0.85em;
+	font-weight: 300;
+	color: #b2b2b2;	
+}
+/* 5.2 Document footer */
+
+body>footer {
+	margin: 1em -1em -1em -1em;
+	padding: 0.25em 1em 0.25em 1em;
+	border-top: solid #eee 1px;
+}
+body > footer p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;
+	font-size: 0.75em;
+}
+
+/* 5.3 Body text */
+
+html {
+	background-color: #d2d2d2;
+	color: black;
+}
+body {
+	background: #fff;
+	font-family: 'Roboto', 'Helvetica', 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	font-size: 13pt;
+	margin: 0;
+	padding: 13pt;
+	box-shadow: 0 0 1em rgba(0,0,0,0.5);
+}
+p {
+	margin: 1em 0;
+	line-height: 1.4;
+}
+section {
+	clear: left;
+}
+article>section {
+	margin: 1em 0;
+	border-top: solid #636363 0.1em;
+}
+body>section {
+	margin: 1em 0;
+	border-top: solid #636363 0.1em;
+}
+body>header+section {
+	border-top: none transparent 0;
+}
+body > section, body > article, body > nav {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;
+}
+
+
+/* 5.4 Headings */
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
+	font-style: normal;
+	padding: 0;
+	margin: 13pt 0;
+	line-height: 1.2;
+}
+h2, h3, h4, h5, h6 {
+	color: #636363;
+}
+h1 {
+	font-size: 3em;
+	font-weight: 300;
+}
+h2, section h1, body>nav h1 {
+	font-size: 1.875em;
+	font-weight: 400;
+}
+h3, section section h1, section h2 {
+	font-size: 1.125em;
+	font-weight: 500;
+}
+h4, section section section h1, section section h2, section h3 {
+	font-size: 0.875em;
+	font-weight: 700;
+}
+h5, h6, section section section section h1, section section section h2, section section h3, section h4 { 
+	font-size: 0.75em;
+	font-weight: 700;
+}
+h5, h6, section section section section section h1, section section section section section h2, section section section section section h3, section section section section section h4  {
+	text-transform: uppercase;
+}
+/* 5.5 Lists */
+
+ol, ul, dl {
+	margin: 1em 0;
+}
+ol ol, ul ul, ol ul, ul ol {
+	margin: 0;
+}
+ol, ul {
+	padding: 0 0 0 1.5em;
+}
+li {
+	margin: 0.25em 0;
+	position: relative;
+	line-height: 1.4;
+}
+li p {
+	margin: 0.25em 0;
+}
+li>*:first-child {
+	margin-top: 0;
+}
+li>*:last-child {
+	margin-bottom: 0;
+}
+
+/* 5.5.1 Ordered lists */
+
+ol {
+	counter-reset: listitem;
+	list-style-type: none;
+}
+ol>li:before {
+	position: absolute;
+	display: inline-block;
+	counter-increment: listitem;
+	content: counter(listitem, decimal) ". ";
+	font-style: italic;
+	width: 1.5em;
+	text-align: right;
+	margin-left: -2em;
+}
+ol>li>ol>li:before {
+	content: counter(listitem, lower-latin) ". ";	
+}
+ol>li>ol>li>ol>li:before {
+	content: counter(listitem, lower-roman) ". ";	
+}
+
+/* 5.5.2 Un-ordered lists */
+
+/* 5.5.3 Definition lists */
+
+dl {
+	margin: 1em 0;
+}
+dt {
+	margin: 1em 0 0.25em 0;
+	font-weight: normal;
+}
+dd {
+	margin: 0.25em 0 0.25em 1.5em;
+}
+
+/* 5.5.4 Tables of contents */
+
+.toc {
+	page-break-after: always;
+}
+.toc > ol li {
+	position: relative;
+}
+.toc > ol li:before {
+	position: absolute;
+	left: -2.5em;
+	min-width: 2em;
+	text-align: right;
+	content: counters(listitem, ".", decimal) " ";
+	font-style: normal;
+	display: inline;
+	margin: 0;
+}
+.toc > ol li.frontmatter:before, .toc > ol li.backmatter:before {
+	content: '';
+	counter-reset: listitem;
+}
+
+article {
+	counter-reset: section1;	
+}
+aside.sample {
+	counter-reset: section1 -1;
+}
+article > section > h1:before { counter-increment: section1; content: counter(section1) " "; }
+article > section { counter-reset: section2; }
+article > section > section > h1:before { counter-increment: section2; content: counter(section1) "." counter(section2) " "; }
+article > section > section { counter-reset: section3; }
+article > section > section > section > h1:before { counter-increment: section3; content: counter(section1) "." counter(section2) "." counter(section3) " "; }
+
+@media screen and (min-width: 1080px), print {
+	article > section h1 {
+		position: relative;
+	}
+	article > section h1:before {
+		position: absolute;
+		left: -3em;
+		min-width: 2.5em;
+		text-align: right;	
+	}
+}
+/* 5.6 Horizontal rules */
+
+hr {
+	border: none;
+	outline: none;
+	border-bottom: solid #666666 0.1em;
+	margin: 1em 0;
+}
+
+/* 5.7 Code samples */
+
+pre {
+	margin: 1em;
+	padding: 0.5em;
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+	border-left: 0.5em solid #444;
+	border-radius: 4px;
+	line-height: 1.0;
+	overflow: scroll;
+}
+pre.code {
+	background: #002b36;
+}
+pre.output {
+	background: #000;	
+}
+pre > code, pre > samp {
+	color: #93a1a1;
+}
+pre.output kbd {
+	background: #404040;
+	color: #fff;
+}
+pre.css.code { border-left-color: #2aa198; }
+pre.html.code { border-left-color: #268bd2; }
+pre.js.code { border-left-color: #2aa198; }
+pre.c.code { border-left-color: #dc322f; }
+
+pre.code .keyword { color: #268bd2; }
+pre.code .type { color: #b58900; }
+pre.code .ident { color: #2aa198; }
+pre.code .param { font-weight: bold; }
+pre.code .string, pre.code .number, pre.code .literal { color: #859900; }
+pre.code .builtin { color: #cb4b16; }
+pre.code .comment { color: #93a1a1; font-weight: italic; }
+pre.code .preproc { color: #dc322f; font-style: italic; }
+
+pre.code .css-el { color: #6c71c4; }
+
+/* 5.8 Tables */
+
+table, td, tr, th {
+	border-collapse: collapse;
+	border: solid #e6e6e6 1px;
+}
+div.table {
+	overflow: scroll;
+}
+table {
+	table-layout: fixed;
+	margin: 1em 0;
+	border-top: 0.5em solid #636363;
+	caption-side: bottom;
+}
+td {
+	vertical-align: middle;
+	padding: 0.5em;
+}
+thead, tfoot {
+	background: #e6e6e6;
+}
+th {
+	font-weight: normal;
+	vertical-align: middle;
+	padding: 0.5em;
+}
+tbody > tr > th {
+	text-align: left;
+}
+caption {
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
+	font-weight: normal;
+	font-size: 0.85em;
+	margin-bottom: 0.5em;
+}
+tfoot {
+	font-size: 0.85em;
+}
+tfoot th {
+	font-weight: 300;
+}
+table.numeric td, tbody.numeric td, tr.numeric td, td.numeric {
+	text-align: right;
+}
+/* 5.9 Figures */
+
+figure {
+	clear: right;
+	float: right;
+	display: inline-table;
+	margin: 1em;
+	padding: 0;
+	border: solid #e6e6e6 1px;
+	position: relative;
+	page-break-inside: avoid;
+	max-width: 30%;
+	text-align: center;
+	caption-side: bottom;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+figure>*, figure img {
+	display: block;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+figure>figcaption {
+	display: table-caption;
+	background: #e6e6e6;
+	color: #000;
+	margin: 0;
+	font-size: 9pt;
+	line-height: 1.5;
+	padding: 0.25em 0.5em;
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+figure.stacked {
+	float: left;
+	clear: none;
+	max-width: 100%;
+}
+figure.full {
+	float: none;
+	clear: none;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+figure.half {
+	float: none;
+	max-width: 48%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+figure.half:nth-child(even) {
+	clear: none;
+}
+
+figure.third {
+	float: none;
+	max-width: 30%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+figure.third:nth-child(3n+2), figure.third:nth-child(3n+3) {
+	clear: none;
+}
+
+/* 5.10 Call-outs */
+
+aside.info, aside.tip, aside.important, aside.warning, aside.caution {
+	margin: 1em;
+	padding: 0.75em 0.5em 0.75em 3em;
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+	border-left: 0.5em solid #444;
+	border-radius: 4px;
+	position: relative;
+	line-height: 1.4;
+}
+aside.tip { border-left-color: #859900; }
+aside.tip:before {
+	background: #859900;
+	content: 'i';
+	font: italic normal 1em serif;
+	position: absolute;
+	left: 0.75em;
+	top: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	margin-top: -0.75em;
+	line-height: 1.5em;
+	text-align: center;
+	border-radius: 0.75em;
+	color: #fff;
+}
+aside.info { border-left-color: #268bd2; }
+aside.info:before {
+	background: #268bd2;
+	content: 'i';
+	font: italic normal 1em serif;
+	position: absolute;
+	left: 0.75em;
+	top: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	margin-top: -0.75em;
+	line-height: 1.5em;
+	text-align: center;
+	border-radius: 0.75em;
+	color: #fff;
+}
+aside.warning { border-left-color: #b58900; }
+aside.warning:before {
+	background: #b58900;
+	content: '!';
+	font: normal bold 1em serif;
+	position: absolute;
+	left: 0.75em;
+	top: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	margin-top: -0.75em;
+	line-height: 1.5em;
+	text-align: center;
+	border-radius: 0.75em;
+	color: #fff;
+}
+aside.important { border-left-color: #dc322f; }
+aside.important:before {
+	content: '!';
+	font: normal normal 1em sans-serif;
+	position: absolute;
+	left: 0.75em;
+	top: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	margin-top: -0.75em;
+	line-height: 1.4em;
+	text-align: center;
+	background: #dc322f;
+	border-radius: 0.75em;
+	color: #fff;	
+}
+aside.caution { border-left-color: #dc322f; }
+aside.caution:before {
+	content: '—';
+	font: normal normal 1em sans-serif;
+	position: absolute;
+	left: 0.75em;
+	top: 50%;
+	width: 1.5em;
+	height: 1.5em;
+	margin-top: -0.75em;
+	line-height: 1.4em;
+	text-align: center;
+	background: #dc322f;
+	border-radius: 0.75em;
+	color: #fff;	
+}
+aside>p:first-child {
+	margin-top: 0;
+}
+aside>p:last-child {
+	margin-bottom: 0;
+}
+/* 5.11 Examples */
+
+aside.example {
+	margin: 1em auto;
+	padding: 1em;
+	border: solid #e6e6e6 1px;
+	position: relative;
+	page-break-inside: avoid;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	_height: 1%;
+	display: table;
+	caption-side: bottom;
+	width: 100%;
+	box-sizing: border-box;
+}
+aside.example>h1.example-title {
+	display: table-caption;
+	background: #e6e6e6;
+	color: #000;
+	margin: 0;
+	font-size: 9pt;
+	line-height: 1.5;
+	padding: 0.25em 0.5em;
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+aside.example:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+aside.example:before {
+	content: 'Example';
+	background: #e6e6e6;
+	color: white;
+	position: absolute;	
+	margin: -1px -1px 0 0;
+	top: 0;
+	right: 0;
+	font-size: 9pt;
+	line-height: 1.5;
+	padding: 0 0.5em;
+	border-top-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+aside.example:hover {
+	border: solid #848484 1px;
+}
+aside.example:hover:before {
+	background: #848484;
+}
+aside.example:hover>h1.example-title {
+	background: #848484;
+}
+
+/* 5.12 Quotations */
+
+blockquote {
+	margin: 1em 1em 1em 0em;
+	padding: 0 0 0 1em;
+	border-left: 0.5em solid #e6e6e6;
+	line-height: 1.4;
+	color: #404040;
+}
+/* 5.13 Footnotes */
+
+.footnote>a:link, .footnote>a:visited {
+	color: #268bd2;
+	text-decoration: none;
+}
+.footnote>a:hover, .footnote>a:active {
+	color: #000;
+}
+.footnotes ul {
+	list-style: none;
+}
+/* 5.14 Forms */
+
+/* 6.1 Links */
+
+a:link {
+	color: #a29f06;
+}
+a:visited {
+	color: #ec7139;
+}
+a:hover, a:active {
+	color: #e43744;
+}
+
+/* 6.2 Emphasis */
+
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: 500;
+}
+
+/* 6.3 Abbreviations and acronyms */
+
+abbr[title] {
+	border-bottom: dotted #000 1px;
+	cursor: help;
+}
+
+/* 6.4 Code literals */
+
+code, samp {
+	font-family: Inconsolata, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+	font-size: 0.75em;
+	font-weight: normal;
+}
+code samp, samp code, code code, samp samp {
+	font-size: inherit;
+}
+var {
+	font-family: Arapey, serif;
+	font-weight: normal;
+	font-size: 1em;
+	font-style: italic;
+	color: inherit;
+}
+kbd {
+	font-family: inherit;
+	font-weight: normal;
+	font-size: 1em;
+	font-style: italic;
+	color: inherit;
+}
+code {
+	color: #cb4b16;
+}
+samp {
+	color: #586e75;
+}
+code var, kbd samp {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+}
+code var {
+	font-weight: bold;
+}
+
+/* 6.5 Quotations */
+
+q {
+	color: #404040;
+}
+q:before {
+	content: '“';
+}
+q:after {
+	content: '”';
+}
+
+/* 6.7 Citations */
+
+/* 7.1 Bold and italics */
+
