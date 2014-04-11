@@ -50,7 +50,7 @@ nav.global {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	border-bottom: solid #636363 1px;
+	border-bottom: solid #404040 1px;
 }
 nav.global .inner {
 	margin: 0 auto;
@@ -64,7 +64,6 @@ nav.global ul {
 	float: right;
 	margin: 0;
 	padding: 0;
-	border-left: solid #636363 1px;
 }
 nav.global li {
 	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
@@ -72,9 +71,12 @@ nav.global li {
 	display: block;
 	float: left;
 	height: 39pt;
-	border-right: solid #636363 1px;
 	margin: 0;
-	color: #636363;
+	color: #e2e2e2;
+	border-right: solid #707070 1px;
+}
+nav.global li:last-child {
+	border-right: none;
 }
 nav.global li>a {
 	display: block;
@@ -94,7 +96,7 @@ nav.global li.logo {
 	float: none;
 	top: 0;
 	left: 0;
-	border-left: solid #636363 1px;
+	border: none;
 }
 nav.global li.logo>a {
 	background: #636363;
