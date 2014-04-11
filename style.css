@@ -22,7 +22,7 @@ body>header {
 	margin: -13pt -13pt 1em -13pt;
 	padding: 0;
 	position: relative;
-	border-bottom: solid #eee 1px;
+	border-bottom: solid #e2e2e2 1px;
 }
 section.legalnotice {
 	font-size: 0.85em;
@@ -202,7 +202,7 @@ body>header .copyright {
 body>footer {
 	margin: 1em -1em -1em -1em;
 	padding: 0.25em 1em 0.25em 1em;
-	border-top: solid #eee 1px;
+	border-top: solid #e2e2e2 1px;
 }
 body > footer p {
 	margin-left: auto;
@@ -236,13 +236,13 @@ section {
 }
 article>section {
 	margin: 1em 0;
-	border-top: solid #636363 0.1em;
+	border-top: solid #e2e2e2 0.1em;
 }
 body>section {
 	margin: 1em 0;
-	border-top: solid #636363 0.1em;
+	border-top: solid #e2e2e2 0.1em;
 }
-body>header+section {
+body>header+section, header+article > section:first-child {
 	border-top: none transparent 0;
 }
 body > section, body > article, body > nav {
