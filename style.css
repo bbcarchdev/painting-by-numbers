@@ -161,12 +161,17 @@ body>header .masthead {
 	display: none;
 	margin: 0 0 0 0;
 	background: #b4b4b4;
-	min-height: 360px;
+	height: 2px;
+}
+body.book>header .masthead, body.index>header .masthead {
+	height: 360px;
 	border-bottom: solid #636363 1px;
 }
 body.home>header .masthead {
+	height: 360px;
 	border-bottom: none;
 }
+
 /* 5.1.3 Inside cover */
 
 body>header h1, body>header h2 {
