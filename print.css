@@ -27,7 +27,9 @@ body>header {
 nav.global {
 	display: none;
 }
-
+nav.subnav {
+	display: none;
+}
 /* 5.1.2 Masthead image */
 
 .masthead {

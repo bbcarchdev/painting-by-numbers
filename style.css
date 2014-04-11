@@ -106,6 +106,55 @@ nav.global li.logo>a:hover {
 	background: #636363;
 	color: inherit;
 }
+nav.subnav {                                                                    
+    background: #848484;
+    color: #e6e6e6;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
+    font-style: normal;
+    border-bottom: solid #636363 1px;
+}
+nav.subnav .inner {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 960px;
+    height: 24pt;
+	position: relative;
+}
+nav.subnav a {
+	color: inherit;
+	text-decoration: inherit;
+}
+nav.subnav abbr {
+	text-decoration: inherit !important;
+	cursor: inherit !important;
+	border: none !important;
+}
+nav.subnav ul {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+nav.subnav li {
+	display: inline-block;
+	height: 24pt;
+	margin: 0;
+}
+nav.subnav li>a {
+	display: block;
+	height: 24pt;
+	line-height: 24pt;
+	padding: 0 13pt;
+	font-size: 0.85em;
+}
+nav.subnav li:first-child>a {
+	padding-left: 4px;
+}
+nav.subnav li>a:hover {
+	color: #fff;
+}
+
 /* 5.1.2 Masthead image */
 
 body>header .masthead {
