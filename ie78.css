@@ -7,3 +7,10 @@ nav.subnav li {
 	display: inline;
 	zoom: 1;
 }
+nav.global a:link, nav.global a:visited {
+	text-decoration: none;
+}
+nav.subnav a:link, nav.subnav a:visited {
+	text-decoration: none;
+	color: #e2e2e2;
+}
