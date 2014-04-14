@@ -14,3 +14,6 @@ nav.subnav a:link, nav.subnav a:visited {
 	text-decoration: none;
 	color: #e2e2e2;
 }
+img {
+	border: none;
+}
