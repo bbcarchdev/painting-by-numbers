@@ -31,7 +31,6 @@ section.legalnotice {
 body.home>header {
 	background: #000;
 	color: #e2e2e2;
-	margin: -1px 0 0 0;
 	border-bottom: none;
 }
 body.home>header h1 {
@@ -842,3 +841,12 @@ q:after {
 /* 6.7 Citations */
 
 /* 7.1 Bold and italics */
+
+/* Fixes for older IE */
+header, footer, nav, aside, article, section {                                  
+    display: block;                                                             
+}
+nav.subnav li {
+	*display: inline;
+	zoom: 1;
+}
