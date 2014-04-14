@@ -1,0 +1,9 @@
+/* Fixes for older IE */
+
+header, footer, nav, aside, article, section {
+    display: block;
+}
+nav.subnav li {
+	display: inline;
+	zoom: 1;
+}
