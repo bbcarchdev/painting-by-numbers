@@ -72,6 +72,9 @@ article>section:last-child {
 p, li, dt, dd, tr {
 	page-break-inside: avoid;
 }
+.refentry>header, .refentry>section, .refentry>article section {                
+    page-break-after: inherit !important;
+}
 
 /* 2.5 Code samples */
 

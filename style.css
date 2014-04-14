@@ -31,8 +31,13 @@ section.legalnotice {
 body.home>header {
 	background: #000;
 	color: #e2e2e2;
+	margin: -1px 0 0 0;
 	border-bottom: none;
 }
+body.home>header h1 {
+	display: none;
+}
+
 /* 5.1.1 Global navigation */
 
 nav.global a:link, nav.global a:visited {
@@ -111,10 +116,10 @@ nav.global li.logo>a:hover {
 nav.subnav {                                                                    
     background: #848484;
     color: #e6e6e6;
-    margin: 0;
+    margin: -1px 0 0 0;
     padding: 0;
     font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
-    font-style: normal;
+    font-style: normal;	
     border-bottom: solid #636363 1px;
 }
 nav.subnav .inner {
@@ -157,11 +162,12 @@ nav.subnav li>a:hover {
 	color: #fff;
 }
 
+
 /* 5.1.2 Masthead image */
 
 body>header .masthead {
 	display: none;
-	margin: 0 0 0 0;
+	margin: -1px 0 0 0;
 	background: #b4b4b4;
 	height: 2px;
 }
@@ -171,7 +177,6 @@ body.book>header .masthead, body.index>header .masthead {
 }
 body.home>header .masthead {
 	height: 360px;
-	border-bottom: none;
 }
 
 /* 5.1.3 Inside cover */
@@ -222,8 +227,8 @@ body > footer p {
 /* 5.3 Body text */
 
 html {
-	background-color: #d2d2d2;
-	color: black;
+	background-color: #fff;
+	color: #000;
 }
 body {
 	background: #fff;
@@ -232,7 +237,6 @@ body {
 	font-size: 13pt;
 	margin: 0;
 	padding: 13pt;
-	box-shadow: 0 0 1em rgba(0,0,0,0.5);
 }
 p {
 	margin: 1em 0;
@@ -393,6 +397,10 @@ article > section { counter-reset: section2; }
 article > section > section > h1:before { counter-increment: section2; content: counter(section1) "." counter(section2) " "; }
 article > section > section { counter-reset: section3; }
 article > section > section > section > h1:before { counter-increment: section3; content: counter(section1) "." counter(section2) "." counter(section3) " "; }
+
+.refentry>article section>h1::before {                                          
+    content: '';                                                                
+}
 
 @media screen and (min-width: 1080px), print {
 	article > section h1 {
@@ -835,3 +843,11 @@ q:after {
 
 /* 7.1 Bold and italics */
 
+/* Fixes for older IE */
+header, footer, nav, aside, article, section {                                  
+    display: block;                                                             
+}
+nav.subnav li {
+	*display: inline;
+	zoom: 1;
+}
