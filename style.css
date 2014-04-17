@@ -153,9 +153,6 @@ nav.subnav li>a {
 	padding: 0 13pt;
 	font-size: 0.85em;
 }
-nav.subnav li:first-child>a {
-	padding-left: 0;
-}
 nav.subnav li>a:hover {
 	color: #fff;
 }
@@ -865,6 +862,9 @@ q:after {
 	}
 	nav.subnav li>a {
 		padding: 0 6pt;
+	}
+	nav.subnav li:first-child>a {
+		padding-left: 4pt;
 	}
 }
 
