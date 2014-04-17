@@ -10,7 +10,7 @@ nav.subnav {
 nav.subnav .inner {
     margin: 0 auto;
     padding: 0;
-    max-width: 960px;
+    max-width: 986px;
     height: 24pt;
 	position: relative;
 }
@@ -41,7 +41,7 @@ nav.subnav li>a {
 	font-size: 0.85em;
 }
 nav.subnav li:first-child>a {
-	padding-left: 4px;
+	padding-left: 0;
 }
 nav.subnav li>a:hover {
 	color: #fff;

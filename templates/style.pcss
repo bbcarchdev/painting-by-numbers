@@ -122,6 +122,40 @@
 
 /* 7.1 Bold and italics */
 
+/* Small screens */
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 11pt;
+	}
+	body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
+		height: 120px;
+		background-size: auto 180px !important;
+	}
+	nav.global>.inner, nav.global li, nav.global li>a {
+		height: 24pt;
+	}
+	nav.global ul {
+		border-left: solid #707070 1px;
+	}
+	nav.global li>a {
+		padding: 0 5pt;
+		line-height: 24pt;
+	}
+	nav.global li.logo>a {
+		font-size: 1.5em;
+	}
+	nav.subnav li>a {
+		padding: 0 6pt;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	nav.global {
+		font-size: 0.875em;
+	}
+}
+
 /* Fixes for older IE */
 header, footer, nav, aside, article, section {                                  
     display: block;                                                             

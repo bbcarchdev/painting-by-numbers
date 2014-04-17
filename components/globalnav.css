@@ -18,7 +18,7 @@ nav.global {
 nav.global .inner {
 	margin: 0 auto;
 	padding: 0;
-	max-width: 960px;
+	max-width: 986px;
 	height: 39pt;
 	position: relative;
 }
@@ -65,7 +65,6 @@ nav.global li.logo>a {
 	background: #636363;
 	color: #ceca13 !important;	
 	font-size: 2.5em;
-	margin-left: -13pt;
 }
 nav.global li.logo>a:hover {
 	background: #636363;

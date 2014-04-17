@@ -59,7 +59,7 @@ nav.global {
 nav.global .inner {
 	margin: 0 auto;
 	padding: 0;
-	max-width: 960px;
+	max-width: 986px;
 	height: 39pt;
 	position: relative;
 }
@@ -106,7 +106,6 @@ nav.global li.logo>a {
 	background: #636363;
 	color: #ceca13 !important;	
 	font-size: 2.5em;
-	margin-left: -13pt;
 }
 nav.global li.logo>a:hover {
 	background: #636363;
@@ -124,7 +123,7 @@ nav.subnav {
 nav.subnav .inner {
     margin: 0 auto;
     padding: 0;
-    max-width: 960px;
+    max-width: 986px;
     height: 24pt;
 	position: relative;
 }
@@ -155,7 +154,7 @@ nav.subnav li>a {
 	font-size: 0.85em;
 }
 nav.subnav li:first-child>a {
-	padding-left: 4px;
+	padding-left: 0;
 }
 nav.subnav li>a:hover {
 	color: #fff;
@@ -261,7 +260,6 @@ body > section, body > article, body > nav {
 	width: 100%;
 	max-width: 960px;
 }
-
 
 /* 5.4 Headings */
 
@@ -841,6 +839,40 @@ q:after {
 /* 6.7 Citations */
 
 /* 7.1 Bold and italics */
+
+/* Small screens */
+
+@media screen and (max-width: 768px) {
+	body {
+		font-size: 11pt;
+	}
+	body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
+		height: 120px;
+		background-size: auto 180px !important;
+	}
+	nav.global>.inner, nav.global li, nav.global li>a {
+		height: 24pt;
+	}
+	nav.global ul {
+		border-left: solid #707070 1px;
+	}
+	nav.global li>a {
+		padding: 0 5pt;
+		line-height: 24pt;
+	}
+	nav.global li.logo>a {
+		font-size: 1.5em;
+	}
+	nav.subnav li>a {
+		padding: 0 6pt;
+	}
+}
+
+@media screen and (max-width: 640px) {
+	nav.global {
+		font-size: 0.875em;
+	}
+}
 
 /* Fixes for older IE */
 header, footer, nav, aside, article, section {                                  
