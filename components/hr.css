@@ -1,0 +1,6 @@
+hr {
+	border: none;
+	outline: none;
+	border-bottom: solid #666666 0.1em;
+	margin: 1em 0;
+}

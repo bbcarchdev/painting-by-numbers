@@ -1,0 +1,7 @@
+blockquote {
+	margin: 1em 1em 1em 0em;
+	padding: 0 0 0 1em;
+	border-left: 0.5em solid #e6e6e6;
+	line-height: 1.4;
+	color: #404040;
+}

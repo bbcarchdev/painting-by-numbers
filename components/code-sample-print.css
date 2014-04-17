@@ -1,0 +1,19 @@
+pre {
+	page-break-inside: avoid;
+}
+pre.code, pre.output {
+	box-shadow: none;
+	margin: 1em 0;
+	background: #fdf6e3;
+	white-space: pre-wrap;
+}
+code {
+	font-size: 8pt;
+}
+pre>code, pre>samp {
+	color: #657b83;
+}
+pre.output kbd {
+	background: #e6e6e6;
+	color: #000;
+}

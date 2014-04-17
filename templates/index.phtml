@@ -1,0 +1,1299 @@
+<?php /***** Process this file with tools/generate.php to produce HTML *****/ ?>
+<!DOCTYPE html>
+<!--
+
+ Author: Mo McRoberts <mo.mcroberts@bbc.co.uk>
+
+ Copyright (c) 2014 BBC
+
+ Licensed under the terms of the Open Government Licence v2.0
+
+-->
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta charset="utf-8" />
+		<!--[if lt IE 9]><script>document.createElement('header');document.createElement('nav');document.createElement('section');document.createElement('article');document.createElement('aside');document.createElement('footer');</script><![endif]-->
+		<title>Painting by Numbers</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="stylesheet" type="text/css" href="print.css" media="print">
+<?php if(!defined('NOFONTS')) {?>
+		<link rel="stylesheet" type="text/css" href="http://cloud.typography.com/6699852/732262/css/fonts.css">
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,500,300italic,500italic|Inconsolata|Arapey">
+<?php } ?>
+		<link rel="stylesheet" type="text/css" href="sample.css">
+		<!--[if lt IE 9]><link rel="stylesheet" type="text/css" href="ie78.css" /><![endif]-->
+	</head>
+	<body class="book">
+		<header>
+			<nav class="global"><div class="inner">
+				<ul>
+					<li class="logo"><a href="http://bbcarchdev.github.io/res/"><abbr title="Research &amp; Education Space">RES</abbr></a></li>
+					<li><a href="http://bbcarchdev.github.io/res/guides">Guides</a></li>
+					<li><a href="http://acropolis.org.uk/">Developer API</a></li>
+					<li><a href="http://bbcarchdev.github.io/res/tools">Tools</a></li>
+					<li><a href="http://bbcarchdev.github.io/res/code">Source code</a></li>
+				</ul>
+			</div></nav>
+			<div class="masthead"></div>
+			<h1>Painting by Numbers</h1>
+			<h2>The visual style &amp; mark-up guide for the Research and Education Space</h2>
+			<p class="edition">April 2014 Edition</p>
+			<p class="editor">Edited by Mo McRoberts, <a href="http://www.bbc.co.uk/archive/">BBC Archive Development</a></p>
+			<p class="copyright">Copyright © BBC 2014</p>
+		</header>
+		<section id="intro">
+			<h1>Introduction</h1>
+			<p>
+				This document is the visual style and mark-up guide for the Research and Education Space (RES), a project being jointly undertaken by <a href="http://www.jisc.ac.uk">Jisc</a>, the <a href="http://bufvc.ac.uk">BUFVC</a> and the <a href="http://www.bbc.co.uk">BBC</a> with the aim of bringing large volumes of archive material to students and teachers in the UK.
+			</p>
+			<aside class="info">
+				This style guide is <strong>not</strong> intended for developers of applications of RES to conform to. Instead, it is being released in the hope that it may be useful to others, for example as the basis of a style guide for your own project.
+			</aside>
+			<p>
+				Each section within this style guide includes a description of the visual style of the element, a sample of the element rendered in that style, the CSS styling rules for HTML documents required to render that style in a web browser, and, where appropriate, the HTML mark-up used for the sample and the DocBook equivalent. The styles themselves are intended to be generally portable to other environments.
+			</p>
+			<p>
+				You may re-use all or part of this document, including the accompanying <a href="style.css">CSS stylesheets</a>, under the terms of the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">Open Government Licence v2.0</a>. Note that the licence does <em>not</em> cover the use of the RES logo nor any web fonts or other images which have been licensed from third parties for use by the project itself.
+			</p>
+			<p>
+				The latest version of this document can always be found at <a href="http://bbcarchdev.github.io/painting-by-numbers/">http://bbcarchdev.github.io/painting-by-numbers/</a>.</p>
+		</section>
+		<section id="toc" class="toc">
+			<h1>Table of contents</h1>
+			<ol>
+				<li class="frontmatter"><a href="#intro">Introduction</a></li>
+				<li><a href="#doctypes">Types of document</a>
+					<ol>
+						<li><a href="#longform">Long-form works</a>
+							<ol>
+								<li><a href="#coverpages">Cover pages and spine</a></li>
+								<li><a href="#frontmatter">Front matter</a></li>
+								<li><a href="#bodymatter">Body matter</a></li>
+								<li><a href="#backmatter">Back matter</a></li>
+							</ol>
+						</li>
+						<li><a href="#multivolume">Multi-volume works</a></li>
+						<li><a href="#presentations">Presentations</a></li>
+						<li><a href="#manpages">Manual pages</a></li>
+						<li><a href="#webpages">Web pages</a></li>
+						<li><a href="#shortform">Other short-form works</a></li>
+					</ol>
+				</li>
+				<li><a href="#logo">Logo</a>
+					<ol>
+						<li><a href="#logo-variants">Logo variations</a></li>
+						<li><a href="#logo-use">Logo usage guidance</a></li>
+						<li><a href="#logo-paged">Use in paged media</a></li>
+					</ol>
+				</li>
+				<li><a href="#colours">Colour palette</a></li>				
+				<li><a href="#type">Type</a></li>
+				<li><a href="#block">Structural elements</a>
+					<ol>
+						<li><a href="#header">Document header &amp; front matter</a>
+							<ol>
+								<li><a href="#globalnav">Global navigation</a></li>
+								<li><a href="#masthead">Masthead image</a></li>
+								<li><a href="#innercover">Inside cover</a></li>
+								<li><a href="#legalnotices">Legal notices</a></li>
+								<li><a href="#frontmatter-example">Complete front matter example</a></li>
+							</ol>
+						</li>
+						<li><a href="#footer">Document footer &amp; back matter</a></li>
+						<li><a href="#sections">Sections, chapters and parts</a></li>
+						<li><a href="#body">Body text</a></li>
+						<li><a href="#headings">Headings</a></li>
+						<li><a href="#lists">Lists</a>
+							<ol>
+								<li><a href="#ol">Ordered lists</a></li>
+								<li><a href="#ul">Un-ordered lists</a></li>
+								<li><a href="#dl">Definition lists</a></li>
+								<li><a href="#simplelists">Simple lists</a></li>
+								<li><a href="#segmentedlists">Segmented lists</a></li>
+								<li><a href="#tocs">Tables of contents</a></li>
+							</ol>
+						</li>
+						<li><a href="#hr">Horizontal rules</a></li>
+						<li><a href="#code">Code samples</a></li>
+						<li><a href="#tables">Tables</a></li>
+						<li><a href="#figures">Figures</a></li>
+						<li><a href="#callouts">Call-outs</a></li>
+						<li><a href="#examples">Examples</a></li>
+						<li><a href="#blockquote">Quotations</a></li>
+						<li><a href="#footnotes">Footnotes</a></li>
+						<li><a href="#forms">Forms</a></li>
+					</ol>
+				</li>
+				<li><a href="#inline">In-line elements</a>
+					<ol>
+						<li><a href="#links">Hyperlinks</a></li>
+						<li><a href="#emphasis">Emphasis</a></li>
+						<li><a href="#abbr">Abbreviations and acronyms</a></li>
+						<li><a href="#tt">Code literals</a></li>
+						<li><a href="#inlinequote">Quotations</a></li>
+						<li><a href="#cite">Citations</a></li>
+						<li><a href="#foreignphrases">Foreign phrases</a></li>
+					</ol>
+				</li>
+				<li><a href="#utilities">Utilities</a>
+					<ol>
+						<li><a href="#bolditalic">Bold and italic</a></li>
+						<li><a href="#avoidbreaks">Avoiding page-breaks</a></li>
+					</ol>
+				</li>
+				<li class="backmatter"><a href="#html-index">Index of HTML elements</a></li>
+			</ol>
+		</section>
+		<article>
+			<section id="doctypes">
+				<h1>Types of document</h1>
+				<p>
+					This style guide is intended to be applicable to a range of document
+					types, produced in a variety of different environments. This section includes
+					general guidance for certain common types of document, but it is not intended
+					to be exhaustive.
+				</p>
+				<p>
+					Future editions of this visual style guide may expand upon the guidance given
+					here as practical use dictates.
+				</p>
+				
+				<section id="longform">
+					<h1>Long-form works</h1>
+					<p>
+						Long-form works, such as books, academic papers, and other substantial documents
+						consisting of multiple ordered sections and conveying one or more narratives,
+						are structured according to common conventions. They consist of various kinds of
+						“front matter” (including tables of contents, introductions, copyright information,
+						and so on), followed by the “body matter” (that is, the sections which constitute the
+						bulk of the work), and may close with “back matter” (also called “end matter”, and
+						which includes sections such as the glossary and the index).
+					</p>
+					
+					<section id="coverpages">
+						<h1>Cover pages and spine</h1>
+						<p>
+							Cover pages are made up of a block of solid colour taken from the
+							<cite>Solarized</cite> <a href="#colours">highlight palette</a> which is 50%
+							of the page height, laid on a white page background, running the full width
+							of the page. Covers must be printed full-bleed.
+						</p>
+						<p>
+							The front and back cover overlays the central solid block with an illustration
+							matching the style used for <a href="#masthead">masthead images</a> on web pages.
+						</p>
+						<p>
+							The upper quarter of the front cover consists of:
+						</p>
+						<ul>
+							<li>
+								The document title, set in the <a href="#headings">first-level heading</a>
+								style. The title is horizontally and vertically centered within the
+								quarter.
+							</li>
+							<li>
+								The <a href="#logo">complete full-colour logo</a> placed in the top left
+								corner of the page, with equal top and left-side margins. The size of the
+								logo is such that a margin equal to that used for the top and left-side
+								margins is present between the bottom of the logo and the top of the
+								document title.
+							</li>
+							<li>
+								The document sub-title, if present, is set in the
+								<a href="#headings">second-level subhead</a> style, centered horizontally
+								on the page, and centered vertically within the available space between
+								the bottom of the document title and top of the solid colour area.
+							</li>
+						</ul>
+						<aside class="caution TODO">TODO: Lower quarter, sample, back cover, spine</aside>
+						<div class="keep-together">
+							<h2>DocBook mark-up</h2>
+							<p>
+								Cover pages are constructed from the document <code>&lt;title&gt;</code>,
+								<code>&lt;subtitle&gt;</code> (if present) and the contents of
+								the top-level <code>&lt;info&gt;</code> element. See the
+								<a href="#frontmatter-example">front matter example</a> for details.
+							</p>
+						</div>
+						
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<p>
+								Cover pages are not marked up in HTML documents: the document begins with the
+								<a href="#innercover">inner cover page</a> instead.
+							</p>
+						</div>
+					</section>
+					
+					<section id="frontmatter">
+						<h1>Front matter</h1>
+						<p>
+							<a href="#header">Front matter sections</a>, if present, are generally included in the following order:
+						</p>
+						<ol>
+							<li><a href="#globalnav">Global navigation</a> (web pages only)</li>
+							<li><a href="#masthead">Masthead image</a> (web pages only)</li>
+							<li><a href="#innercover">Inside cover</a> (including title, subtitle, edition, authors)</li>
+							<li><a href="#legalnotices">Legal notices</a></li>
+							<li><a href="#tocs">Table of contents</a> (see note below)</li>
+							<li>Foreword</li>
+							<li>Preface</li>
+							<li>Acknowledgements</li>
+							<li>Introduction</li>
+							<li>Prologue</li>
+						</ol>
+						<aside class="info">
+							For documents primarily intended for on-screen use, the table of contents should
+							be placed after the introduction.
+						</aside>
+						<p>
+							Front matter sections should be included depending upon the requirements of
+							the document. It is entirely reasonable for front matter to consist solely
+							of a title page if no other sections are required.
+						</p>					
+					</section>
+					
+					<section id="bodymatter">
+						<h1>Body matter</h1>
+						<p>
+							“Body matter” refers to the one or more ordered
+							<a href="#sections">sections</a> which constitute the core content
+							of the work.
+						</p>
+						<h2>HTML mark-up</h2>
+						<p>
+							In HTML documents, all body matter is contained within an
+							<code>&lt;article&gt;</code> element which is a direct child of the
+							<code>&lt;body&gt;</code> element.
+						</p>
+					</section>
+					
+					<section id="backmatter">
+						<h1>Back matter</h1>
+						<aside class="caution TODO">TODO</aside>
+					</section>
+					
+					
+				</section>
+				
+				<section id="multivolume">
+					<h1>Multi-volume works</h1>
+					<aside class="caution TODO">TODO</aside>					
+				</section>
+
+				<section id="presentations">
+					<h1>Presentations</h1>
+					<aside class="caution TODO">TODO</aside>
+				</section>
+				
+				<section id="manpages">					
+					<h1>Manual pages and other reference entries</h1>
+					<aside class="caution TODO">TODO</aside>
+				</section>
+				
+				<section id="shortform">
+					<h1>Other short-form works</h1>
+					<aside class="caution TODO">TODO</aside>
+				</section>
+				
+				
+			</section>
+			
+			<section id="logo">
+				<h1>Logo</h1>
+				
+				<section id="logo-variants">
+					<h1>Logo variations</h1>
+					<?php require(dirname(__FILE__) . '/../components/logo-variants.php'); ?>
+					<aside class="caution TODO">TODO: Half-height minimal colour logo</aside>
+				</section>
+				
+				<section id="logo-use">
+					<h1>Logo usage guidance</h1>
+					<p>
+						In order to ensure consistent presentation throughout all materials,
+						both on-screen and print, the following guidelines have been developed. There
+						are always exceptions, but you must always get a second opinion before you
+						decide to deviate from them.
+					</p>
+					<ul>
+						<li>Only the variants of the logo shown in the above section should be used;</li>
+						<li>the aspect ratio and shape should be maintained: do not stretch or distort the logo;</li>
+						<li>you should not try to re-create the logo using different typefaces or styles;</li>
+						<li>the logo should not be cropped;</li>
+						<li>the logo colours and opacity should not be modified;</li>
+						<li>the logo should not sit flush with a page or containing element border;</li>
+						<li>the logo should not have additional text or graphic elements overlaid upon it;</li>
+						<li>the abbreviated version of the logo should not be combined with additional text (for example, in order to look similar to the full version);</li>
+						<li>the white-on-black, white-on-grey, and black-on-white variants of the logo are intended for print media, and should not be employed in documents primarily for on-screen use;</li>
+						<li>however, in page footers (for both display and print), it is reasonable to make use of the black-on-white logo with reduced opacity;</li>
+						<li>the half-height minimal logo is <strong>only</strong> for use as part of a <a href="#globalnav">global navigation</a> menu on a web page.</li>
+					</ul>
+				</section>
+				
+				<section id="logo-paged">
+					<h1>Use in paged media</h1>
+					<p>
+						Appropriate use of the logo in paged media (such as slide decks and word processed
+						documents) differs from continuous media such as web pages. While on a web page the logo
+						is typically presented only in the header and footer of the page, repeated use of variants
+						of the logo is normal for paged media.
+					</p>
+					<p>
+						For presentations and documents with a cover slide or page, the full version of the logo
+						should be used on that cover. If the deck or document concerns the project as a whole
+						(for example, a slide deck containing an overview of the project), it is appropriate
+						for the logo to be displayed prominently as the primary graphic element of the cover. In
+						this case, the logo should be horizontally and vertically centered on the page with appropriate
+						spacing between it and other elements.
+					</p>
+					<p>
+						Where the above does not apply, the logo should be placed in a corner of the page,
+						with even spacing between it and the nearest two page borders. For landscape media,
+						the logo should be placed in the bottom left corner of the page; for portrait media,
+						the logo should be placed in the top right.
+					</p>
+					<p>
+						On subsequent pages, the logo should only be used in the footer of the page. The logo should
+						<strong>not</strong> be combined with the page (section) title.
+					</p>
+				</section>
+			</section>
+
+			<section id="colours">
+				<h1>Colour palette</h1>
+				<aside class="caution TODO">TODO: Explanation</aside>
+				<?php require(dirname(__FILE__) . '/../components/colours.php'); ?>					
+			</section>
+				
+			<section id="type">
+				<h1>Type</h1>
+				<p>
+					Type is split into three broad groupings, each with differing characteristics, described below:
+				</p>
+				<dl>
+					<dt><a href="#body">Body text</a></dt>
+					<dd>
+						Body text is set in a plain sans-serif face, at a size and with line spacing such that it can be read comfortably at a light weight. All font sizes, vertical margins, and most horizontal margins are specified as multipliers of the body text size. To avoid “wall of text” effects, body text is set with a ragged right edge (that is, left-justification).
+					</dd>
+					<dt><a href="#headings">Headings and titles</a></dt>
+					<dd>
+						Headings and titles are set in a rounded sans-serif face. At smaller sizes, all-caps may be employed to ensure a clear visual distinction from body text.
+					</dd>
+					<dt><a href="#code">Computer code, input and output</a></dt>
+					<dd>
+						Code, input and output are set in a monospace typewriter-style face. Because monospace type generally appears taller than the same text in a proportional sans-serif face, it should be set at a smaller size to equivalent body text.
+					</dd>
+					<dt>Serif text</dt>
+					<dd>
+						<a href="#tt">Variable names</a> are set in an italicised serif face.
+					</dd>
+				</dl>
+			</section>
+				
+			<section id="block">
+				<h1>Structural elements</h1>
+				
+				<section id="header">
+					<h1>Document header &amp; front matter</h1>
+					
+					<aside class="info">
+						See <a href="#frontmatter-example"><i>Complete front matter example</i></a> for a detailed representative
+						sample of how to mark up front matter.
+					</aside>
+					<h2>Common CSS styling rules for HTML documents</h2>
+					<?php code('css', 'header.css'); ?>
+
+					<section id="globalnav">
+						<h1>Global navigation</h1>
+						<p>
+							Global navigation is used exclusively in web pages, and allows ready navigation between
+							documents comprising a website, or set of websites.	It always appears at the very top of
+							a page.
+						</p>
+						
+						<div class="keep-together">
+							<h2>DocBook mark-up</h2>
+							<p>
+								Global navigation is not marked up in DocBook documents; it is added during
+								conversion to HTML.
+							</p>
+						</div>
+											
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<p>
+								Global navigation is marked up as an un-ordered list within a <code>&lt;nav&gt;</code> element
+								contained within the top-level <code>&lt;header&gt;</code>.
+							</p>
+							<?php code('html', 'globalnav.html'); ?>
+						</div>
+												
+						<div class="keep-together">
+							<h2>CSS styling rules for HTML documents</h2>
+							<?php code('css', 'globalnav.css'); ?>
+						</div>
+						
+					</section>
+				
+					<section id="masthead">
+						<h1>Masthead image</h1>
+						<aside class="caution TODO">TODO</aside>
+						
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<p>
+								The masthead placeholder <code>&lt;div&gt;</code> element appears immediately following any
+								<a href="#globalnav">global navigation</a> within the top-level <code>&lt;header&gt;</code> element.
+							</p>
+							<?php code('html', 'masthead.html'); ?>
+						</div>
+						
+						<div class="keep-together">
+							<h2>CSS styling rules for HTML documents</h2>
+							<?php code('css', 'masthead.css'); ?>
+							<p>
+								Note that the common styling rules for the masthead image specify <code>display: none;</code> and
+								a default (grey) background. A document-specific stylesheet or in-line styling rules are
+								expected to override this. A typical override might consist of:
+							</p>
+							<?php code('css', 'masthead-override.css'); ?>
+						</div>
+							
+					</section>							
+				
+					<section id="innercover">
+						<h1>Inside cover</h1>
+						<aside class="caution TODO">TODO</aside>
+						
+						<div class="keep-together">
+							<h2>DocBook mark-up</h2>
+							<p>
+								With the exception of the document title, inside cover information forms part of the top-level
+								<code>&lt;info&gt;</code> element. The subtitle (or tagline) is a <code>&lt;para&gt;</code> within
+								a <code>&lt;cover&gt;</code> element which is part of <code>&lt;info&gt;</code>.
+							</p>
+							<?php code('docbook', 'innercover.xml'); ?>
+						</div>
+						
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<p>
+								Inside cover information occurs within the top-level <code>&lt;header&gt;</code> element, and follows
+								the <a href="#globalnav">global navigation</a> and <a href="#masthead">masthead image</a> if either is
+								present.
+							</p>
+							<?php code('html', 'innercover.html'); ?>
+						</div>
+					</section>
+				
+					<section id="legalnotices">
+						<h1>Legal notices</h1>
+						<p>
+							Legal notices appear immediately following the <a href="#header">inside cover</a>,
+							and are set in a smaller font than ordinary body text (<code>0.85em</code>). They include
+							information about copyright, trademarks, warranties, the publisher, and formal cataloguing
+							data.
+						</p>
+						<div class="keep-together">
+							<h2>DocBook mark-up</h2>
+							<p>
+								In DocBook, legal notices are contained within a <code>&lt;legalnotice&gt;</code> element
+								which is part of the top-level <code>&lt;info&gt;</code> element.
+							</p>
+							<?php code('docbook', 'legalnotice.xml'); ?>
+						</div>
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<p>
+								In HTML documents, legal notices are contained within a top-level <code>&lt;section&gt;</code> with
+								a class of <code>legalnotice</code>.
+							</p>
+							<?php code('html', 'legalnotice.html'); ?>
+						</div>
+					</section>
+				
+					<section id="frontmatter-example">
+						<h1>Complete front matter example</h1>
+						
+						<div class="keep-together">
+							<h2>DocBook mark-up</h2>
+							<?php code('docbook', 'frontmatter.xml'); ?>
+						</div>
+
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<?php code('html', 'frontmatter.html'); ?>
+						</div>
+					</section>
+					
+				</section>
+								
+				<section id="footer">
+					<h1>Document footer &amp; back matter</h1>
+					<aside class="caution TODO">TODO</aside>
+				</section>
+								
+				<section id="body">
+					<h1>Body text</h1>					
+					<p>
+						Body text is set in one of (in order of preference):
+					</p>
+					<ol>
+						<li><a href="http://www.google.com/fonts/specimen/Roboto">Roboto</a></li>
+						<li><a href="http://www.linotype.com/526/helvetica-family.html">Helvetica</a></li>
+						<li><a href="http://www.linotype.com/1266/neuehelvetica-family.html">Helvetica Neue</a></li>
+						<li>The browser-specified <i>sans-serif</i> face</li>
+					</ol>
+					<p>It is set at the light weight (<code>300</code>) of the face at <code>13pt</code> for screen and <code>11pt</code> fpr print. The page background is white, while the text is by default black. On-screen, the page body is padded by <code>13pt</code> on all sides, with a gutter of <code>5%</code> of the viewport width. Paragraphs have top and bottom margins of <code>1em</code> and a line height of <code>1.4</code> times the base size. All body text has a ragged right edge (left-justification).
+					</p>
+
+					<div class="keep-together">
+						<h2>DocBook mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('docbook', 'body-text.xml'); ?>
+					</div>
+
+					<div class="keep-togegther">
+						<h2>HTML mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('html', 'body-text.html'); ?>
+					</div>
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('body-text.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'body-text.css'); ?>
+					</div>
+					
+					<div class="keep-together">					
+						<h2>CSS styling rules for HTML documents (for print)</h2>
+						<?php code('css', 'body-text-print.css'); ?>
+					</div>
+				</section>
+				
+				<section id="headings">
+					<h1>Headings</h1>
+					<aside class="caution TODO">TODO: Move mark-up detail to HTML-specific subsection</aside>
+					<p>Headings follow a scale of multipliers of the base body text size, with <code>3em</code> at the largest size (used for the page title), and <code>0.75em</code> used for fifth— and sixth-level headings.</p>
+					<p>Section headings are always marked up using the <code>&lt;h1&gt;</code> element, with sub-headings using <code>&lt;h2&gt;</code> where needed. Sub-headings use the
+						next size down in the scale, and are coloured in dark grey (<code>#636363</code>). Additional sub-heading levels (<code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, …) may be used where needed, and follow the same pattern. Sub-heading text transformation always matches that of the corresponding <code>&lt;h1&gt;</code>: that is, sub-headings of a fifth-level heading (or less significant) are set in all-caps, while others are capitalised normally.
+					</p>
+					<p>Section headings within an <code>&lt;article&gt;</code> are automatically numbered. </p>
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('headings.html'); ?>
+					</div>
+					<div class="keep-together">
+						<h2>DocBook mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('docbook', 'headings-example.xml'); ?>
+					</div>
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('html', 'headings-example.html'); ?>
+					</div>
+					<div class="keep-together">						
+						<h2>CSS styling rules for HTML documents</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('css', 'headings.css.html', true); ?>
+					</div>
+				</section>
+
+				<section id="lists">
+					<h1>Lists</h1>
+					<p>Lists are set with a <code>1em</code> top and bottom margin, except where an ordered or un-ordered list is contained within another ordered or un-ordered list. <code>1.5em</code> of padding is applied to the left-hand side. List items have a <code>0.25em</code> top and bottom margin.</p>					
+					<h2>Common CSS styling rules for HTML documents</h2>
+					<div class="keep-together">
+						<p>
+							A common set of rules used for both ordered and un-ordered lists is shown below:
+						</p>
+						<?php code('css', 'lists.css'); ?>
+					</div>
+					
+					<section id="ol">
+						<h1>Ordered lists</h1>
+						<p>Ordered lists are numbered, with the <code>1.5em</code> of left-hand padding applied to the parent used for the item number (i.e., the number has a negative <code>1.5em</code> left-hand margin). The item number is set in italics and followed by a full stop; the top-level list uses decimal numbering (<i>1., 2., 3., …</i>), the second-level uses lowercase latin (<i>a., b., c., …</i>), and third-level uses lowercase roman (<i>i., ii., iii., …</i>).</p>
+						<div class="keep-together">							
+							<h2>Sample</h2>
+							<?php sample('ol.html'); ?>
+						</div>
+						<div class="keep-together">
+							<h2>DocBook mark-up</h2>
+							<aside class="caution TODO">TODO</aside>
+							<?php code('docbook', 'ol.xml'); ?>
+						</div>
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<aside class="caution TODO">TODO</aside>
+							<p>The sample above was produced with the following mark-up:</p>
+							<?php code('html', 'ol.html'); ?>
+						</div>
+						<div class="keep-together">
+							<h2>CSS styling rules for HTML documents</h2>
+							<?php code('css', 'ol.css'); ?>
+						</div>
+					</section>
+
+					<section id="ul">
+						<h1>Un-ordered lists</h1>
+						<div class="keep-together">
+							<h2>Sample</h2>
+							<?php sample('ul.html'); ?>
+						</div>
+						<div class="keep-together">
+							<h2>DocBook mark-up</h2>
+							<aside class="caution TODO">TODO</aside>
+							<?php code('docbook', 'ul.xml'); ?>
+						</div>
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<p>The sample above was produced with the following mark-up:</p>
+							<aside class="caution TODO">TODO</aside>
+							<?php code('html', 'ul.html'); ?>
+						</div>
+					</section>
+
+					<section id="dl">
+						<h1>Definition lists</h1>
+						<h2>Sample</h2>
+						<?php sample('dl.html'); ?>
+						<div class="keep-together">
+							<h2>DocBook mark-up</h2>
+							<aside class="caution TODO">TODO</aside>
+							<?php code('docbook', 'dl.xml'); ?>
+						</div>
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<aside class="caution TODO">TODO</aside>
+							<?php code('html', 'dl.html'); ?>
+						</div>
+						<div class="keep-together">
+							<h2>CSS styling rules for HTML documents</h2>
+							<?php code('css', 'dl.css'); ?>
+						</div>
+					</section>
+					
+					<aside class="caution TODO">TODO: Simple lists</aside>
+					<aside class="caution TODO">TODO: Segmented lists</aside>
+					
+					<section id="tocs">
+						<h1>Tables of contents</h1>
+						<aside class="caution TODO">TODO</aside>
+						
+						<div class="keep-together">
+							<h2>Sample</h2>
+							<?php sample('toc.html'); ?>
+						</div>
+
+						<aside class="caution TODO">TODO: DocBook</aside>
+						
+						<div class="keep-together">
+							<h2>HTML mark-up</h2>
+							<p>The sample above was produced with the following mark-up:</p>
+							<?php code('html', 'toc.html'); ?>
+						</div>
+						
+						<div class="keep-together">
+							<h2>CSS styling rules for HTML documents</h2>
+							<?php code('css', 'toc.css'); ?>
+						</div>						
+					</section>
+					
+				</section>
+				
+				<section id="hr">
+					<h1>Horizontal rules</h1>
+					<p>
+						A horizontal rule consists of a single, medium grey (<code>#666666</code>), 0.1em horizontal line with 1em top and bottom margins running full width.
+					</p>
+					<aside class="info">
+						Rules and separators are automatically inserted between chapters. Explicit insertion of horizontal rules should generally be avoided.
+					</aside>
+					<p>
+						Explicit horizontal rules are not supported in DocBook documents.
+					</p>
+					
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('hr.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<p>
+							Horizontal rules are marked up using the <code>&lt;hr&gt;</code> element.
+						</p>
+						<?php code('html', 'hr.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'hr.css'); ?>
+					</div>
+				</section>
+				
+				<section id="code">
+					<h1>Code samples</h1>
+					<aside class="tip">See also: <a href="#tt">In-line code literals</a></aside>
+					<p>
+						Code sample blocks are set in monospace type at single-spaced 0.75em, with a preference for <i>Inconsolata</i>, <i>DejaVu Sans Mono</i>, <i>Menlo</i> or <i>Consolas</i> ahead of the browser default typeface. Code is presented using the <a href="http://ethanschoonover.com/solarized">Solarized</a> palette, using <code>base02</code> as the background colour and <code>base1</code> as the default foreground colour. When printed, the font size is reduced to 8pt, <code>base3</code> is used for the background, and <code>base00</code> for the default foreground.
+					</p>					
+					<p>
+						The block has 1em margins on all sides, is padded by 0.5em, has a 6px 50% opacity shadow, and a 4px border on the left-hand side indicating the language or syntax used, which by default is dark grey (<code>#444444</code>). Scrolling is enabled for content which overflows the horizontal margins of the container. When printed, the shadow is removed and text is wrapped within the container in place of scrolling.
+					</p>
+					<p>
+						Computer output blocks are presented in a matching style, except with a <code>black</code> background instead of <code>base3</code>.
+					</p>
+					
+					<div class="keep-together">
+						<h2>Code block sample</h2>
+						<?php sample('code-sample.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>Computer output sample</h2>
+						<?php sample('samp-sample.html'); ?>
+					</div>
+					
+					<div class="keep-together">									
+						<h2>DocBook mark-up</h2>
+						<p>Code blocks are marked up as a <code>&lt;programlisting&gt;</code> element. The <code>language</code> attribute is used to indicate the language or syntax in use.</p>
+						<?php code('docbook', 'code-sample.xml'); ?>
+					</div>
+					<div class="keep-together">
+						<p>Output blocks are marked up as a <code>&lt;screen&gt;</code> element.</p>
+						<?php code('docbook', 'samp-sample.xml'); ?>
+					</div>				
+					
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<p>
+							Code blocks are marked up as a <code>&lt;pre&gt;</code> element with a <code>code</code> class applied, containing a <code>&lt;code&gt;</code> element. A class should also be applied to the <code>&lt;pre&gt;</code> element indicating the language or syntax in use; classes applied to individual <code>&lt;span&gt;</code> elements within the block may be used for syntax highlighting.
+						</p>
+						<p>
+							The code sample above was produced with the following HTML:
+						</p>
+						<?php code('html', 'code-sample.html'); ?>
+					</div>
+
+					<div class="keep-together">
+						<p>
+							Output blocks are marked up as a <code>&lt;pre&gt;</code> element with an <code>output</code> class applied, containing a <code>&lt;samp&gt;</code> element. Within the body of the output, the <code>&lt;kbd&gt;</code> element is used to indicate portions of user input.
+						</p>
+						<p>
+							The output sample above was produced with the following HTML:
+						</p>
+						<?php code('html', 'samp-sample.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'code-sample.css'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents (for print)</h2>
+						<?php code('css', 'code-sample-print.css'); ?>
+					</div>					
+				</section>
+				
+				<section id="tables">
+					<h1>Tables</h1>
+					<aside class="caution TODO">TODO</aside>
+					
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('table.html'); ?>
+					</div>
+										
+					<aside class="caution TODO">TODO: DocBook</aside>
+					
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('html', 'table.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'table.css'); ?>
+					</div>					
+				</section>
+				
+				<section id="figures">
+					<h1>Figures</h1>
+					<aside class="caution TODO">TODO</aside>
+					
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('figure.html'); ?>
+					</div>
+					
+					<aside class="caution TODO">TODO: DocBook mark-up</aside>
+
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<?php code('html', 'figure.html'); ?>
+					</div>
+
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'figure.css'); ?>
+					</div>					
+				</section>
+				
+				<section id="callouts">
+					<h1>Call-outs</h1>
+					<aside class="caution TODO">TODO</aside>
+					
+					<h2>Sample</h2>
+					<?php sample('callout.html'); ?>
+										
+					<div class="keep-together">
+						<h2>DocBook mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('docbook', 'callout.xml'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('html', 'callout.html'); ?>
+					</div>
+
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'callout.css'); ?>
+					</div>
+				</section>
+				
+				<section id="examples">
+					<h1>Examples</h1>
+					<aside class="caution TODO">TODO</aside>
+					
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('example.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>DocBook mark-up</h2>
+						<p>
+							In DocBook documents, examples are marked up using the <code>&lt;example&gt;</code> element, optionally including
+							a <code>&lt;title&gt;</code>.
+						</p>					
+						<?php code('docbook', 'example.xml'); ?>
+					</div>
+										
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<p>
+							In HTML documents, examples consist of an <code>&lt;aside&gt;</code>
+							with a <code>class</code> of <code>example</code>. If the example has
+							a title, then it is marked up as an <code>&lt;h1&gt;</code> with a
+							<code>class</code> of <code>example-title</code>.
+						</p>
+						<?php code('html', 'example.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'example.css'); ?>
+					</div>
+				</section>
+				
+				<section id="blockquote">
+					<h1>Quotations</h1>
+					<aside class="caution TODO">TODO</aside>
+
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('blockquote.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>DocBook mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('docbook', 'blockquote.xml'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('html', 'blockquote.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'blockquote.css'); ?>
+					</div>
+				</section>
+				
+				<section id="footnotes">
+					<h1>Footnotes</h1>
+					<aside class="caution TODO">TODO</aside>
+					
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('footnote.html'); ?>
+					</div>
+					
+					<aside class="caution TODO">TODO: DocBook mark-up</aside>
+					
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('html', 'footnote.html'); ?>
+					</div>
+
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'footnote.css'); ?>
+					</div>
+				</section>
+				
+				<section id="forms">
+					<h1>Forms</h1>
+					<aside class="caution TODO">TODO</aside>
+				</section>
+				
+			</section>
+		
+			<section id="inline">
+				<h1>In-line elements</h1>
+				<p>
+					This section describes the styling of elements which appear <i>in-line</i>: that is, within body text. Typical in-line
+					elements include those for creating <a href="#links">hyperlinks</a>, <a href="#emphasis">emphasis</a>, and <a href="#tt">code literals</a>.
+				</p>
+				
+				<section id="links">
+					<h1>Hyperlinks</h1>
+					<p>
+						Links may be in their default state, being hovered-over, or active (that is, in the process of being navigated). At the same time, they may be visited or as-yet unvisited.
+					</p>
+					<p>
+						Text links are always displayed with an underline text decoration, unless context means that it is obvious to all users that the link is navigable. Underlining links ensures they are visibly distinguished as such, even in cases where colour alone is not sufficient to make the distinction between links and non-link text (either due to the colouring of the non-link text, or the capabilities of the device or user).
+					</p>
+					<p>
+						Image links are displayed with a surrounding border, unless context means that it is obvious to all users that the link is navigable.
+					</p>
+					<p>
+						In all cases, the mouse cursor, if applicable, must be set to the system– or browser-default for links (typically a “pointing finger” cursor).
+					</p>
+					<h2>Sample</h2>
+					<?php sample('link-simulated.html'); ?>
+					
+					<h2>CSS styling rules for HTML documents</h2>
+					<?php code('css', 'link.css'); ?>
+					
+					<h2>CSS styling rules for HTML documents (for print)</h2>
+					<?php code('css', 'link-print.css'); ?>
+				</section>
+
+				<section id="emphasis">
+					<h1>Emphasis</h1>
+					
+					<p>Emphasis is marked up using the <code>&lt;em&gt;</code> element, with <em>strong</em> emphasis using the <code>&lt;strong&gt;</code> element. Emphasised text is presented in italics, with strongly-emphasised text presented at medium-weight (<code>500</code>). <em>Very strong emphasis</em> is marked up using the <code>&lt;em&gt;</code> and <code>&lt;strong&gt;</code> elements together and is presented in medium-weight italics.
+					</p>
+					<aside class="caution">
+						Emphasis does <strong>not</strong> have the same effect as applying <a href="#bolditalic">boldface and
+						italics</a> directly. Non-visual media, such as screen-readers, will interpret emphasis
+						appropriately to the medium (for example, by altering the pitch and tone of the
+						synthesised voice), whereas styling changes do not have the same effect.
+					</aside>
+					
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('em.html'); ?>
+					</div>
+
+					<div class="keep-together">
+						<h2>DocBook mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('docbook', 'em.xml'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<p>
+							The sample above was produced with the following HTML:
+						</p>
+						<?php code('html', 'em.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'em.css'); ?>
+					</div>
+				</section>
+								
+				<section id="abbr">
+					<h1>Abbreviations and acronyms</h1>
+					
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('abbr.html'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>DocBook mark-up</h2>
+						<p>
+							DocBook documents use separate elements for (pronounceable)
+							acronymns—<code>&lt;acronymn&gt;</code>—and other abbreviations—<code>&lt;abbrev&gt;</code>.
+							There is no defined attribute or child element for conveying the expansion of the abbreviation.
+						</p>
+						<?php code('docbook', 'abbr.xml'); ?>
+					</div>
+					
+					<div class="keep-together">
+						<h2>HTML mark-up</h2>
+						<p>Abbreviations and acronyms are both marked up using the <code>&lt;abbr&gt;</code> in-line element;
+							the <code>title</code> attribute is used to convey the expansion of the abbreviation.</p>
+						<p>
+							The sample above was produced with the following HTML:
+						</p>
+						<?php code('html', 'abbr.html'); ?>
+					</div>					
+					
+					<div class="keep-together">
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'abbr.css'); ?>
+					</div>
+				</section>
+				
+				<section id="tt">
+					<h1>Code literals</h1>
+					<p>
+						There are various kinds of “code literal” which may be used in-line:
+					</p>
+					<ul>
+						<li>generic code fragments, such as the names of HTML or XML elements, CSS classes, and similar;</li>
+						<li>variables, either in a mathematical or computing context;</li>
+						<li>sample computer output;</li>
+						<li>sample computer input</li>
+					</ul>
+					<p>
+						Code fragments, computer variables, and sample computer output are set in a monospace typeface, using (by preference) one of the following:
+					</p>
+					<ul>
+						<li><a href="http://levien.com/type/myfonts/inconsolata.html">Inconsolata</a></li>
+						<li><a href="http://dejavu-fonts.org">DejaVu Sans Mono</a></li>
+						<li><a href="https://en.wikipedia.org/wiki/Menlo_(typeface)">Menlo</a> (installed by default on Mac OS X, based upon Bitstream Vera Sans Mono)</li>
+						<li><a href="https://en.wikipedia.org/wiki/Consolas">Consolas</a> (installed on Windows Vista or newer, or where Office has been installed)</li>
+						<li>The browser-specified <i>monospace</i> face</li>
+					</ul>
+					<p>
+						In-line variables names are set in italic sans-serif in one of the following:
+					</p>
+					<ul>
+						<li><a href="https://www.google.com/fonts/specimen/Arapey">Arapey</a></li>
+						<li>The browser-specified <i>sans-serif</i> face</li>
+					</ul>
+					<p>
+						Computer input is set in italics at medium weight in the face of the surrounding text.
+					</p>
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('code-literals.html'); ?>
+					</div>
+										
+					<div class="keep-together">
+						<h2>DocBook Mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('docbook', 'code-literals.xml'); ?>
+					</div>
+
+					<div class="keep-together">
+						<h2>HTML Mark-up</h2>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('html', 'code-literals.html'); ?>
+					</div>
+					
+					<div class="keep-together">					
+						<h2>CSS styling rules for HTML documents</h2>
+						<?php code('css', 'code-literals.css'); ?>
+					</div>
+				</section>
+				
+				<section id="inlinequote">
+					<h1>Quotations</h1>
+					
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('q.html'); ?>
+					</div>
+				</section>
+				
+				<section id="cite">
+					<h1>Citations</h1>
+					<aside class="caution TODO">TODO</aside>
+				</section>
+				
+				<section id="foreignphrases">
+					<h1>Foreign Phrases</h1>
+					<aside class="caution TODO">TODO</aside>
+				</section>
+
+			</section>
+			
+			<section id="utilities">
+				<h1>Utilities</h1>
+				
+				<section id="bolditalic">
+					<h1>Bold and italic</h1>
+					<aside class="caution">
+						Bold and italic text is <strong>not</strong> the same as applying <a href="#emphasis">emphasis</a>. Bold and italic are purely a stylistic intervention for use where generic styling is not applicable; emphasis, on the other hand, affects how the document is interpreted in non-visual media (such as screen-readers).
+					</aside>
+					<p>
+						HTML documents support applying boldface and italics to text for stylistic purposes, conveying no particular
+						semantic intent.
+					</p>
+					<aside class="caution TODO">TODO</aside>
+				</section>
+				
+			</section>
+			
+		</article>
+
+		<section id="docbook-index">
+			<aside class="caution TODO">TODO: Index of DocBook elements</aside>
+		</section>
+		
+		<section id="html-index">
+			<h1>Index of HTML elements</h1>
+			<dl>				
+				<!-- 
+					
+					<dt><code>&lt;xxx&gt;</code></dt>
+					<dd><a href="#">xxx</a></dd>
+				-->
+					
+				<!-- <dt><code>&lt;html&gt;</code></dt> -->
+				<!-- <dt><code>&lt;address&gt;</code></dt> -->
+				<!-- <dt><code>&lt;main&gt;</code></dt> -->
+				<!-- <dt><code>&lt;div&gt;</code></dt> -->
+				<!-- <dt><code>&lt;small&gt;</code></dt> -->
+				<!-- <dt><code>&lt;s&gt;</code></dt> -->												
+				<!-- <dt><code>&lt;dfn&gt;</code></dt> -->				
+				<!-- <dt><code>&lt;data&gt;</code></dt> -->
+				<!-- <dt><code>&lt;time&gt;</code></dt> -->
+				<!-- <dt><code>&lt;sup&gt;</code></dt> -->
+				<!-- <dt><code>&lt;sub&gt;</code></dt> -->
+				<!-- <dt><code>&lt;mark&gt;</code></dt> -->
+				<!-- <dt><code>&lt;ruby&gt;</code></dt> -->
+				<!-- <dt><code>&lt;rt&gt;</code></dt> -->
+				<!-- <dt><code>&lt;rp&gt;</code></dt> -->
+				<!-- <dt><code>&lt;bdi&gt;</code></dt> -->
+				<!-- <dt><code>&lt;bdo&gt;</code></dt> -->
+				<!-- <dt><code>&lt;span&gt;</code></dt> -->
+				<!-- <dt><code>&lt;br&gt;</code></dt> -->
+				<!-- <dt><code>&lt;wbr&gt;</code></dt> -->
+				<!--			<dt><code>&lt;i&gt;</code></dt>
+								<dt><code>&lt;b&gt;</code></dt>
+								<dt><code>&lt;u&gt;</code></dt> -->
+				<!-- <dt><code>&lt;ins&gt;</code></dt> -->
+				<!-- <dt><code>&lt;del&gt;</code></dt> -->
+				<!-- <dt><code>&lt;del&gt;</code></dt> -->
+
+				<dt><code>&lt;a&gt;</code></dt>
+				<dd><a href="#links">Hyperlinks</a></dd>				
+				
+				<dt><code>&lt;abbr&gt;</code></dt>
+				<dd><a href="#abbr">Abbreviations and acronyms</a></dd>
+
+				<dt><code>&lt;acronym&gt;</code></dt>
+				<dd><a href="#abbr">Abbreviations and acronyms</a></dd>
+
+				<dt><code>&lt;article&gt;</code></dt>
+				<dd><a href="#bodymatter">Body matter</a></dd>
+				
+				<dt><code>&lt;blockquote&gt;</code></dt>
+				<dd><a href="#blockquote">Quotations</a></dd>
+				
+				<dt><code>&lt;cite&gt;</code></dt>
+				<dd><a href="#cite">Citations</a></dd>
+				
+				<dt><code>&lt;code&gt;</code></dt>
+				<dd><a href="#code">Code samples</a></dd>
+				<dd><a href="#tt">Code literals</a></dd>
+				
+				<dt><code>&lt;dl&gt;</code>, <code>&lt;dt&gt;</code>, <code>&lt;dd&gt;</code></dt>
+				<dd><a href="#dl">Definition lists</a></dd>
+							
+				<dt><code>&lt;em&gt;</code></dt>
+				<dd><a href="#emphasis">Emphasis</a></dd>
+
+				<dt><code>&lt;figure&gt;</code>, <code>&lt;figcaption&gt;</code></dt>
+				<dd><a href="#figures">Figures</a></dd>
+				
+				<dt><code>&lt;footer&gt;</code></dt>
+				<dd><a href="#footer">Document footer &amp; back matter</a></dd>				
+				
+				<dt><code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, <code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, <code>&lt;h5&gt;</code>, <code>&lt;h6&gt;</code></dt>
+				<dd><a href="#headings">Headings</a></dd>
+
+				<dt><code>&lt;header&gt;</code></dt>
+				<dd><a href="#header">Document header &amp; front matter</a></dd>				
+
+				<dt><code>&lt;hr&gt;</code></dt>
+
+				<dt><code>&lt;kbd&gt;</code></dt>
+				<dd><a href="#tt">Code literals</a></dd>
+				
+				<dt><code>&lt;img&gt;</code></dt>
+				<dd><a href="#figures">Figures</a></dd>
+				
+				<dt><code>&lt;li&gt;</code></dt>
+				<dd><a href="#ol">Ordered lists</a></dd>
+				<dd><a href="#ul">Un-ordered lists</a></dd>
+											
+				<dt><code>&lt;nav&gt;</code></dt>
+				<dd><a href="#globalnav">Global navigation</a></dd>
+
+				<dt><code>&lt;ol&gt;</code></dt>
+				<dd><a href="#ol">Ordered lists</a></dd>
+
+				<dt><code>&lt;p&gt;</code></dt>
+				<dd><a href="#body">Body text</a></dd>
+					
+				<dt><code>&lt;pre&gt;</code></dt>				
+				<dd><a href="#code">Code samples</a></dd>
+
+				<dt><code>&lt;q&gt;</code></dt>
+				<dd><a href="#inlinequote">Quotations</a></dd>
+				
+				<dt><code>&lt;samp&gt;</code></dt>
+				<dd><a href="#code">Code samples</a></dd>
+				<dd><a href="#tt">Code literals</a></dd>
+				
+				<dt><code>&lt;section&gt;</code></dt>
+				<dd><a href="#header">Document header &amp; front matter</a></dd>				
+				<dd><a href="#bodymatter">Body matter</a></dd>		
+				<dd><a href="#footer">Document footer &amp; back matter</a></dd>				
+				
+				<dt><code>&lt;table&gt;</code></dt>
+				<dd><a href="#tables">Tables</a></dd>
+				
+				<dt><code>&lt;ul&gt;</code></dt>
+				<dd><a href="#ul">Un-ordered lists</a></dd>
+								
+				<dt><code>&lt;strong&gt;</code></dt>
+				<dd><a href="#emphasis">Emphasis</a></dd>
+				
+				<dt><code>&lt;var&gt;</code></dt>
+				<dd><a href="#tt">Code literals</a></dd>				
+			</dl>
+		</section>
+		
+		<footer>
+			<p>Copyright © BBC 2014. Licensed under the terms of the <a href="http://www.nationalarchives.gov.uk/doc/open-government-licence/version/2/">Open Government Licence v2.0</a>.</p>
+		</footer>
+	</body>
+</html>

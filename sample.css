@@ -1,0 +1,100 @@
+/*
+ Author: Mo McRoberts <mo.mcroberts@bbc.co.uk>
+
+ Copyright (c) 2014 BBC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+*/
+
+body>header .masthead {
+	display: block;
+	background: #268bd2 url('images/masthead.png') 50% 50% no-repeat;
+}
+
+a.sample-active {
+	color: #e43744;
+}
+
+div.palette, div.palette-group {
+	clear: left;
+}
+
+div.palette .colour {
+	float: left;
+	margin: 1em;
+	page-break-inside: avoid;
+}
+
+.swatch {
+	color: transparent !important;
+	width: 5em;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	border-right: solid #e6e6e6 1px;
+}
+table.palette td.col {
+	padding-left: 6em;
+	min-height: 4em;
+	position: relative;
+}
+.swatch.black { background: #000000; }
+.swatch.white { background: #ffffff; }
+
+.swatch.green1 { background: #ceca13; }
+.swatch.grey1 { background: #636363; }
+.swatch.green2 { background: #a29f06; }
+.swatch.grey2 { background: #b4b4b4; }
+.swatch.grey3 { background: #d2d2d2; }
+.swatch.grey4 { background: #e6e6e6; }
+.swatch.grey5 { background: #848484; }
+.swatch.grey6 { background: #636363; }
+.swatch.grey7 { background: #404040; }
+.swatch.orange2 { background: #ec7139; }
+.swatch.red2 { background: #e43744; }
+.swatch.cyan2 { background: #30c8c2; }
+
+.swatch.base03 { background: #002b36; }
+.swatch.base02 { background: #073642; }
+.swatch.base01 { background: #586e75; }
+.swatch.base00 { background: #657b83; }
+.swatch.base0 { background: #839496; }
+.swatch.base1 { background: #93a1a1; }
+.swatch.base2 { background: #eee8d5; }
+.swatch.base3 { background: #fdf6e3; }
+.swatch.yellow { background: #b58900; }
+.swatch.orange { background: #cb4b16; }
+.swatch.red { background: #dc322f; }
+.swatch.magenta { background: #d33682; }
+.swatch.violet { background: #6c71c4; }
+.swatch.blue { background: #268bd2; }
+.swatch.cyan { background: #2aa198; }
+.swatch.green { background: #859900; }
+
+h1.sample { font-size: 3em; font-weight: 300; }
+h2.sample { font-size: 1.875em; font-weight: 400; }
+h3.sample { font-size: 1.125em; font-weight: 500; }
+h4.sample { font-size: 0.875em; font-weight: 700; }
+h5.sample, h6.sample { font-size: 0.75em; font-weight: 700; text-transform: uppercase; }
+h2.sample, h3.sample, h4.sample, h5.sample, h6.sample { color: black; }
+h2.sample, h3.sample, h4.sample, h5.sample2 { text-transform: inherit; }
+h2.sample2, h3.sample2, h4.sample2, h5.sample2, h6.sample2 { color: #636363; }
+
+aside.sample .toc {
+	page-break-before: inherit;
+	page-break-after: inherit;
+}

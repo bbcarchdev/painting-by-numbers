@@ -1,0 +1,10 @@
+dl {
+	margin: 1em 0;
+}
+dt {
+	margin: 1em 0 0.25em 0;
+	font-weight: normal;
+}
+dd {
+	margin: 0.25em 0 0.25em 1.5em;
+}

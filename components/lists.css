@@ -1,0 +1,23 @@
+ol, ul, dl {
+	margin: 1em 0;
+}
+ol ol, ul ul, ol ul, ul ol {
+	margin: 0;
+}
+ol, ul {
+	padding: 0 0 0 1.5em;
+}
+li {
+	margin: 0.25em 0;
+	position: relative;
+	line-height: 1.4;
+}
+li p {
+	margin: 0.25em 0;
+}
+li>*:first-child {
+	margin-top: 0;
+}
+li>*:last-child {
+	margin-bottom: 0;
+}

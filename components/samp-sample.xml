@@ -1,0 +1,17 @@
+<screen><prompt>sysop@host-10-47-63-1:~ $</prompt> <userinput>sudo apt-get install emacs23-nox</userinput>
+<prompt>[sudo] password for sysop:</prompt> <userinput>[your password]</userinput>
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following extra packages will be installed:
+  dbus emacs23-bin-common emacs23-common emacsen-common libasound2 libdbus-1-3
+  libgpm2 liblockfile-bin liblockfile1 libsystemd-login0
+Suggested packages:
+  dbus-x11 emacs23-el emacs23-common-non-dfsg libasound2-plugins gpm
+The following NEW packages will be installed:
+  dbus emacs23-bin-common emacs23-common emacs23-nox emacsen-common libasound2
+  libdbus-1-3 libgpm2 liblockfile-bin liblockfile1 libsystemd-login0
+0 upgraded, 11 newly installed, 0 to remove and 4 not upgraded.
+Need to get 23.2 MB of archives.
+After this operation, 75.9 MB of additional disk space will be used.
+<prompt>Do you want to continue [Y/n]?</prompt> <userinput>y</userinput></screen>

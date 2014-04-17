@@ -1,0 +1,43 @@
+table, td, tr, th {
+	border-collapse: collapse;
+	border: solid #e6e6e6 1px;
+}
+div.table {
+	overflow: scroll;
+}
+table {
+	table-layout: fixed;
+	margin: 1em 0;
+	border-top: 0.5em solid #636363;
+	caption-side: bottom;
+}
+td {
+	vertical-align: middle;
+	padding: 0.5em;
+}
+thead, tfoot {
+	background: #e6e6e6;
+}
+th {
+	font-weight: normal;
+	vertical-align: middle;
+	padding: 0.5em;
+}
+tbody > tr > th {
+	text-align: left;
+}
+caption {
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
+	font-weight: normal;
+	font-size: 0.85em;
+	margin-bottom: 0.5em;
+}
+tfoot {
+	font-size: 0.85em;
+}
+tfoot th {
+	font-weight: 300;
+}
+table.numeric td, tbody.numeric td, tr.numeric td, td.numeric {
+	text-align: right;
+}

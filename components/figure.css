@@ -1,0 +1,66 @@
+figure {
+	clear: right;
+	float: right;
+	display: inline-table;
+	margin: 1em;
+	padding: 0;
+	border: solid #e6e6e6 1px;
+	position: relative;
+	page-break-inside: avoid;
+	max-width: 30%;
+	text-align: center;
+	caption-side: bottom;
+	box-sizing: border-box;
+	vertical-align: top;
+}
+figure>*, figure img {
+	display: block;
+	max-width: 100%;
+	box-sizing: border-box;
+}
+figure>figcaption {
+	display: table-caption;
+	background: #e6e6e6;
+	color: #000;
+	margin: 0;
+	font-size: 9pt;
+	line-height: 1.5;
+	padding: 0.25em 0.5em;
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+figure.stacked {
+	float: left;
+	clear: none;
+	max-width: 100%;
+}
+figure.full {
+	float: none;
+	clear: none;
+	max-width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+figure.half {
+	float: none;
+	max-width: 48%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+figure.half:nth-child(even) {
+	clear: none;
+}
+
+figure.third {
+	float: none;
+	max-width: 30%;
+	margin-left: 1%;
+	margin-right: 1%;
+}
+figure.third:nth-child(3n+2), figure.third:nth-child(3n+3) {
+	clear: none;
+}

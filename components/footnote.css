@@ -1,0 +1,10 @@
+.footnote>a:link, .footnote>a:visited {
+	color: #268bd2;
+	text-decoration: none;
+}
+.footnote>a:hover, .footnote>a:active {
+	color: #000;
+}
+.footnotes ul {
+	list-style: none;
+}

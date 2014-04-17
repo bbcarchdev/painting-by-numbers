@@ -1,0 +1,61 @@
+aside.example {
+	margin: 1em auto;
+	padding: 1em;
+	border: solid #e6e6e6 1px;
+	position: relative;
+	page-break-inside: avoid;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+	_height: 1%;
+	display: table;
+	caption-side: bottom;
+	width: 100%;
+	box-sizing: border-box;
+}
+aside.example>h1.example-title {
+	display: table-caption;
+	background: #e6e6e6;
+	color: #000;
+	margin: 0;
+	font-size: 9pt;
+	line-height: 1.5;
+	padding: 0.25em 0.5em;
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
+	font-weight: 300;
+	text-align: center;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+aside.example:after {
+	content:".";
+	display:block;
+	height:0;
+	clear:both;
+	visibility:hidden;
+}
+aside.example:before {
+	content: 'Example';
+	background: #e6e6e6;
+	color: white;
+	position: absolute;	
+	margin: -1px -1px 0 0;
+	top: 0;
+	right: 0;
+	font-size: 9pt;
+	line-height: 1.5;
+	padding: 0 0.5em;
+	border-top-right-radius: 4px;
+	border-bottom-left-radius: 4px;
+	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', sans-serif;
+	font-weight: 300;
+	text-transform: lowercase;
+}
+aside.example:hover {
+	border: solid #848484 1px;
+}
+aside.example:hover:before {
+	background: #848484;
+}
+aside.example:hover>h1.example-title {
+	background: #848484;
+}

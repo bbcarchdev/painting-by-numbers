@@ -1,0 +1,9 @@
+aside.example {
+	border: solid #848484 1px;
+}
+aside.example:before {
+	background: #848484;
+}
+aside.example>h1.example-title {
+	background: #848484;
+}

@@ -1,0 +1,15 @@
+<programlisting language="c">/* The canonical sample program */
+
+#include &lt;<filename class="headerfile">stdio.h</filename>&gt;
+
+<type>int</type>
+<function>main</function>(<type>int</type> <parameter>argc</parameter>, <type>char **</type><parameter>argv</parameter>)
+{
+    (<type>void</type>) <parameter>argc</parameter>;
+    (<type>void</type>) <parameter>argv</parameter>;
+
+    <function>puts</function>(<literal>"hello, world."</literal>);
+
+    return <literal>0</literal>;
+}
+</programlisting>

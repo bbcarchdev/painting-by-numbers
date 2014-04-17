@@ -1,0 +1,48 @@
+.toc {
+	page-break-after: always;
+}
+.toc > ol li {
+	position: relative;
+}
+.toc > ol li:before {
+	position: absolute;
+	left: -2.5em;
+	min-width: 2em;
+	text-align: right;
+	content: counters(listitem, ".", decimal) " ";
+	font-style: normal;
+	display: inline;
+	margin: 0;
+}
+.toc > ol li.frontmatter:before, .toc > ol li.backmatter:before {
+	content: '';
+	counter-reset: listitem;
+}
+
+article {
+	counter-reset: section1;	
+}
+aside.sample {
+	counter-reset: section1 -1;
+}
+article > section > h1:before { counter-increment: section1; content: counter(section1) " "; }
+article > section { counter-reset: section2; }
+article > section > section > h1:before { counter-increment: section2; content: counter(section1) "." counter(section2) " "; }
+article > section > section { counter-reset: section3; }
+article > section > section > section > h1:before { counter-increment: section3; content: counter(section1) "." counter(section2) "." counter(section3) " "; }
+
+.refentry>article section>h1::before {                                          
+    content: '';                                                                
+}
+
+@media screen and (min-width: 1080px), print {
+	article > section h1 {
+		position: relative;
+	}
+	article > section h1:before {
+		position: absolute;
+		left: -3em;
+		min-width: 2.5em;
+		text-align: right;	
+	}
+}

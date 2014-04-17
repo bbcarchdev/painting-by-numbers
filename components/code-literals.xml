@@ -1,0 +1,9 @@
+<para>
+	The variable <varname>x</varname> denotes the horizontal coordinate in the plot. The formula in <code>calcplot()</code> is used to calculate the value based upon the supplied value of <varname>y</varname>: <code>return cos(2 * <varname>y</varname>);</code>
+</para>
+<para>
+	To establish a <application>Secure Shell</application> (SSH) connection to a remote host, one types the <command>ssh</command> command at the shell prompt (typically ending with <prompt>$</prompt>). Alternatively, select the <menuchoice><shortcut><keycombo>Cmd+Shift+K</keycombo></shortcut><guimenu>Terminal</guimenu><guimenuitem>New Remote Connection…</guimenuitem></menuchoice> menu option.
+</para>
+<para>
+	Once connected, the <phrase>Message of the Day</phrase> (stored in <filename>/etc/motd</filename>) is printed, and will typically indicate the version of the operating system running on the host you’ve connected to, such as <computeroutput>3.2.46-1 x86_64</computeroutput>.
+</para>

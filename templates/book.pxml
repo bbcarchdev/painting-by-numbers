@@ -1,0 +1,102 @@
+<?php echo '<?xml version="1.0" encoding="UTF-8"?>'; ?>
+<book version="5.0" xml:lang="en-gb" xmlns="http://docbook.org/ns" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<!--
+
+	 Author: Mo McRoberts <mo.mcroberts@bbc.co.uk>
+
+	 Copyright (c) 2014 BBC
+
+	 Licensed under the terms of the Open Government Licence v2.0
+
+	-->
+	<title>Sample Book</title>
+	<subtitle>The unabridged guide</subtitle>
+	<info>
+		<editor>
+			<personname>
+				<firstname>John</firstname>
+				<surname>Smith</surname>
+				<affiliation>
+					<org>
+						<orgname>Fictitious Entity, Inc.</orgname>
+						<uri type="website">http://www.example.com/</uri>
+					</org>
+				</affiliation>
+			</personname>
+		</editor>
+		<date>February 2014</date>
+		<?php literal('legalnotice.xml'); ?>
+	</info>
+	<toc>
+		<title>Table of contents</title>
+		<tocentry>Foreword</tocentry>
+		<tocentry>Preface</tocentry>
+		<tocentry>Acknowledgements</tocentry>
+		<tocdiv>
+			<title>History of the FrozWidget™</title>
+			<tocentry>The early years</tocentry>
+		</tocdiv>
+	</toc>		
+	<chapter xml:id="sample-chapter">
+	  <title>Sample chapter</title>
+	  <para>
+		  <link role="blah" xlink:href="http://www.bbc.co.uk/">This is a link to the BBC website</link>
+	  </para>
+	  <section>
+		  <title>Body text</title>
+		  <?php literal('body-text.xml'); ?>
+	  </section>
+	  <section>
+		  <title>Inline elements</title>
+		  <section>
+			  <title>Emphasis</title>
+			  <?php literal('em.xml'); ?>
+		  </section>
+		  
+		  <section>
+			  <title>Abbreviations and acronyms</title>
+			  <?php literal('abbr.xml'); ?>
+		  </section>
+		  
+		  <section>
+			  <title>Code literals</title>
+			  <?php literal('code-literals.xml'); ?>
+		  </section>
+		  
+	  </section>
+	  <section>
+		  <title>Lists</title>
+		  <section>
+			  <title>Ordered lists</title>
+			  <?php literal('ol.xml'); ?>
+		  </section>
+		  <section>
+			  <title>Un-ordered lists</title>
+			  <?php literal('ul.xml'); ?>
+		  </section>
+		  <section>
+			  <title>Definition lists</title>
+			  <?php literal('dl.xml'); ?>
+		  </section>
+	  </section>
+	  <section>
+		  <title>Code samples</title>
+		  <section>
+			  <title>Program listing</title>
+			  <?php literal('code-sample.xml'); ?>
+		  </section>
+		  <section>
+			  <title>Computer output</title>
+			  <?php literal('samp-sample.xml'); ?>
+		  </section>
+	  </section>
+	  <section>
+		  <title>Call-outs</title>
+		  <?php literal('callout.xml'); ?>
+	  </section>
+	  <section>
+		<title>Examples</title>
+		<?php literal('example.xml'); ?>
+	  </section>
+	</chapter>
+</book>

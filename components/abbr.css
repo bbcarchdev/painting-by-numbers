@@ -1,0 +1,4 @@
+abbr[title] {
+	border-bottom: dotted #000 1px;
+	cursor: help;
+}

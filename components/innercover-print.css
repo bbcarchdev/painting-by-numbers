@@ -1,0 +1,6 @@
+body>header {
+	background: inherit;
+	color: #000;
+	margin-bottom: 1em;
+	page-break-after: always;
+}

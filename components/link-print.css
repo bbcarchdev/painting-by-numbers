@@ -1,0 +1,7 @@
+a:link, a:visited {
+	color: #00f;
+}
+a[href^="#"] {
+	color: inherit !important;
+	text-decoration: inherit !important;
+}

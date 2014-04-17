@@ -1,0 +1,12 @@
+body>footer {
+	margin: 1em -1em -1em -1em;
+	padding: 0.25em 1em 0.25em 1em;
+	border-top: solid #e2e2e2 1px;
+}
+body > footer p {
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 960px;
+	font-size: 0.75em;
+}

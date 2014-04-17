@@ -1,0 +1,19 @@
+<title>Sample Book</title>
+<info>
+	<editor>
+		<personname>
+			<firstname>Mo</firstname>
+			<surname>McRoberts</surname>
+			<affiliation>
+				<org>
+					<orgname>BBC</orgname>
+					<uri type="website">http://www.bbc.co.uk/</uri>
+				</org>
+			</affiliation>
+		</personname>
+	</editor>
+	<date>February 2014</date>
+	<cover>
+		<para role="tagline">The complete guide</para>
+	</cover>
+</info>

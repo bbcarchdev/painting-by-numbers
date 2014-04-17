@@ -1,0 +1,9 @@
+q {
+	color: #404040;
+}
+q:before {
+	content: '“';
+}
+q:after {
+	content: '”';
+}

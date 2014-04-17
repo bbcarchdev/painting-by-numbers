@@ -1,0 +1,37 @@
+pre {
+	margin: 1em;
+	padding: 0.5em;
+	box-shadow: 0 0 6px rgba(0,0,0,0.5);
+	border-left: 0.5em solid #444;
+	border-radius: 4px;
+	line-height: 1.0;
+	overflow: scroll;
+}
+pre.code {
+	background: #002b36;
+}
+pre.output {
+	background: #000;	
+}
+pre > code, pre > samp {
+	color: #93a1a1;
+}
+pre.output kbd {
+	background: #404040;
+	color: #fff;
+}
+pre.css.code { border-left-color: #2aa198; }
+pre.html.code { border-left-color: #268bd2; }
+pre.js.code { border-left-color: #2aa198; }
+pre.c.code { border-left-color: #dc322f; }
+
+pre.code .keyword { color: #268bd2; }
+pre.code .type { color: #b58900; }
+pre.code .ident { color: #2aa198; }
+pre.code .param { font-weight: bold; }
+pre.code .string, pre.code .number, pre.code .literal { color: #859900; }
+pre.code .builtin { color: #cb4b16; }
+pre.code .comment { color: #93a1a1; font-weight: italic; }
+pre.code .preproc { color: #dc322f; font-style: italic; }
+
+pre.code .css-el { color: #6c71c4; }

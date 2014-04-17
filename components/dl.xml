@@ -1,0 +1,23 @@
+<variablelist>
+	<varlistentry>
+		<term>first</term>
+		<listitem>
+			<para>the initial item in a list; ahead of all others temporally or sequentially.</para>
+		</listitem>
+	</varlistentry>
+	<varlistentry>
+		<term>second</term>
+		<listitem>
+			<para>the item which immediately follows the first.</para>
+		</listitem>
+		<listitem>			
+			<para>a unit of measurement of time; one second is one sixtieth of a minute.</para>
+		</listitem>
+	</varlistentry>
+	<varlistentry>
+		<term>last</term>
+		<listitem>
+			<para>the final or terminating item in a list; occurs after all others.</para>
+		</listitem>
+	</varlistentry>
+</variablelist>

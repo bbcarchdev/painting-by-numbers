@@ -1,0 +1,19 @@
+<note>
+	<para>This is a <tag class="element">note</tag> call-out.</para>
+</note>
+
+<tip>
+	<para>This is a <tag class="element">tip</tag> call-out.</para>
+</tip>
+
+<warning>
+	<para>This is a <tag class="element">warning</tag> call-out.</para>
+</warning>
+
+<important>
+	<para>This is an <tag class="element">important</tag> call-out.</para>
+</important>
+
+<caution>
+	<para>This is a <tag class="element">caution</tag> call-out.</para>
+</caution>

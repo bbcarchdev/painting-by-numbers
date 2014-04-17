@@ -1,0 +1,8 @@
+<para>
+	<abbrev>SSH<alt>Secure Shell</alt></abbrev> is a protocol for establishing encrypted
+	connections between Internet or local network hosts. Connections may be
+	established using <abbrev>IPv4<alt>Internet Protocol, version 4</alt></abbrev> or <abbrev>IPv6<alt>Internet Protocol, version 6</alt></abbrev>, and
+	<abbrev>SSH</abbrev> clients and servers are available for many platforms,
+	ranging from aged <abbrev>PCs</abbrev> running <acronym>DOS<alt>Microsoft's MS-DOS, and compatible equivalents, was the operating system shipped with most PCs prior to Windows 95’s release</alt></acronym>,
+	through mobile phones, to supercomputers.
+</para>

@@ -1,0 +1,28 @@
+html {
+	background: inherit;
+}
+body {
+	font-size: 11pt;
+	margin: 1em 1cm;
+	box-shadow: none;
+}
+.keep-together {
+	page-break-inside: avoid;
+}
+article>section, body>section {
+	page-break-after: always;
+	border-top: none;
+	border-bottom: none;
+}
+article>section:last-child {
+	page-break-after: avoid;
+}
+.screen-only {
+	display: none;
+}
+p, li, dt, dd, tr {
+	page-break-inside: avoid;
+}
+.refentry>header, .refentry>section, .refentry>article section {                
+    page-break-after: inherit !important;
+}

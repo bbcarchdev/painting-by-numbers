@@ -1,0 +1,5 @@
+<para>Un-emphasised text</para>
+
+<para><emphasis>Emphasised text</emphasis></para>
+
+<para><emphasis role="strong">Strongly-emphasised text</emphasis></para>
