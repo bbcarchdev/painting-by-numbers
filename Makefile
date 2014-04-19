@@ -98,13 +98,15 @@ $(BOOKHTML): $(BOOK) $(BOOKSTYLES) $(XSLT)
 	$(XSLTPROC) -nonet --xinclude \
 		--param "html.linksfile" "'`pwd`/templates/docbook-styles.xml'" \
 		--param "html.ie78css" "'ie78.css'" \
-		docbook-html5/docbook-html5.xsl $(BOOK) > $(BOOKHTML)
+		-o $(BOOKHTML) \
+		docbook-html5/docbook-html5.xsl $(BOOK)
 
 $(MANPAGEHTML): $(MANPAGE) $(BOOKSTYLES) $(XSLT)
 	$(XSLTPROC) -nonet --xinclude \
 		--param "html.linksfile" "'`pwd`/templates/docbook-styles.xml'" \
 		--param "html.ie78css" "'ie78.css'" \
-		docbook-html5/docbook-html5.xsl $(MANPAGE) > $(MANPAGEHTML)	
+		-o $(MANPAGEHTML) \
+		docbook-html5/docbook-html5.xsl $(MANPAGE)	
 
 $(PDF): $(DOC) $(STYLE) $(PSTYLE)
 	wkpdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
