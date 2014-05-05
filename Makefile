@@ -94,16 +94,18 @@ $(PSTYLE): tools/generate.php $(PSTYLETEMPLATE) $(SAMPLES)
 $(BOOK): tools/generate.php $(BOOKTEMPLATE) $(SAMPLES)
 	php -f tools/generate.php $(BOOKTEMPLATE) > $(BOOK)
 
-$(BOOKHTML): $(BOOK) $(BOOKSTYLES) $(XSLT)
+$(BOOKHTML): $(BOOK) $(BOOKSTYLES) $(XSLT) $(SAMPLES)
 	$(XSLTPROC) -nonet --xinclude \
-		--param "html.linksfile" "'`pwd`/templates/docbook-styles.xml'" \
+		--param "html.linksfile" "'`pwd`/templates/docbook-links.xml'" \
+		--param "html.navfile" "'`pwd`/docbook-html5/res-nav.xml'" \
 		--param "html.ie78css" "'ie78.css'" \
 		-o $(BOOKHTML) \
 		docbook-html5/docbook-html5.xsl $(BOOK)
 
 $(MANPAGEHTML): $(MANPAGE) $(BOOKSTYLES) $(XSLT)
 	$(XSLTPROC) -nonet --xinclude \
-		--param "html.linksfile" "'`pwd`/templates/docbook-styles.xml'" \
+		--param "html.linksfile" "'`pwd`/templates/docbook-links.xml'" \
+		--param "html.navfile" "'`pwd`/docbook-html5/res-nav.xml'" \
 		--param "html.ie78css" "'ie78.css'" \
 		-o $(MANPAGEHTML) \
 		docbook-html5/docbook-html5.xsl $(MANPAGE)	

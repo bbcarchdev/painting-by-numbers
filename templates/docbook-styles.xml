@@ -1,7 +1,0 @@
-<include>
-  <link rel="stylesheet" type="text/css" href="style.css" />
-  <link rel="stylesheet" type="text/css" href="print.css" media="print" />
-  <link rel="stylesheet" type="text/css" href="http://cloud.typography.com/6699852/732262/css/fonts.css" />
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,500,300italic,500italic|Inconsolata|Arapey" />
-</include>
-
