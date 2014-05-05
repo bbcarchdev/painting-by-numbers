@@ -35,7 +35,7 @@
 			<div class="masthead"></div>
 			<h1>Painting by Numbers</h1>
 			<h2>The visual style &amp; mark-up guide for the Research and Education Space</h2>
-			<p class="edition">April 2014 Edition</p>
+			<p class="edition">May 2014 Edition</p>
 			<p class="editor">Edited by Mo McRoberts, <a href="http://www.bbc.co.uk/archive/">BBC Archive Development</a></p>
 			<p class="copyright">Copyright © BBC 2014</p>
 		</header>
@@ -561,7 +561,7 @@ nav.global li.logo&gt;a:hover {
 	display: none;
 	margin: -1px 0 0 0;
 	background: #b4b4b4;
-	height: 2px;
+	height: 0.5em;
 }
 body.book&gt;header .masthead, body.index&gt;header .masthead {
 	height: 360px;
@@ -1295,21 +1295,18 @@ dd {
 	counter-reset: listitem;
 }
 
-article {
-	counter-reset: section1;	
-}
 aside.sample {
 	counter-reset: section1 -1;
 }
-article &gt; section &gt; h1:before { counter-increment: section1; content: counter(section1) " "; }
-article &gt; section { counter-reset: section2; }
-article &gt; section &gt; section &gt; h1:before { counter-increment: section2; content: counter(section1) "." counter(section2) " "; }
-article &gt; section &gt; section { counter-reset: section3; }
-article &gt; section &gt; section &gt; section &gt; h1:before { counter-increment: section3; content: counter(section1) "." counter(section2) "." counter(section3) " "; }
 
-.refentry&gt;article section&gt;h1::before {                                          
-    content: '';                                                                
-}
+/* Long-form works have numbered sections */
+
+.book&gt;article { counter-reset: section1; }
+.book&gt;article&gt;section&gt;h1:before { counter-increment: section1; content: counter(section1) " "; }
+.book&gt;article&gt;section { counter-reset: section2; }
+.book&gt;article&gt;section&gt;section&gt;h1:before { counter-increment: section2; content: counter(section1) "." counter(section2) " "; }
+.book&gt;article&gt;section&gt;section { counter-reset: section3; }
+.book&gt;article&gt;section&gt;section&gt;section&gt;h1:before { counter-increment: section3; content: counter(section1) "." counter(section2) "." counter(section3) " "; }
 
 @media screen and (min-width: 1080px), print {
 	article &gt; section h1 {

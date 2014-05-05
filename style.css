@@ -164,7 +164,7 @@ body>header .masthead {
 	display: none;
 	margin: -1px 0 0 0;
 	background: #b4b4b4;
-	height: 2px;
+	height: 0.5em;
 }
 body.book>header .masthead, body.index>header .masthead {
 	height: 360px;
@@ -380,21 +380,18 @@ dd {
 	counter-reset: listitem;
 }
 
-article {
-	counter-reset: section1;	
-}
 aside.sample {
 	counter-reset: section1 -1;
 }
-article > section > h1:before { counter-increment: section1; content: counter(section1) " "; }
-article > section { counter-reset: section2; }
-article > section > section > h1:before { counter-increment: section2; content: counter(section1) "." counter(section2) " "; }
-article > section > section { counter-reset: section3; }
-article > section > section > section > h1:before { counter-increment: section3; content: counter(section1) "." counter(section2) "." counter(section3) " "; }
 
-.refentry>article section>h1::before {                                          
-    content: '';                                                                
-}
+/* Long-form works have numbered sections */
+
+.book>article { counter-reset: section1; }
+.book>article>section>h1:before { counter-increment: section1; content: counter(section1) " "; }
+.book>article>section { counter-reset: section2; }
+.book>article>section>section>h1:before { counter-increment: section2; content: counter(section1) "." counter(section2) " "; }
+.book>article>section>section { counter-reset: section3; }
+.book>article>section>section>section>h1:before { counter-increment: section3; content: counter(section1) "." counter(section2) "." counter(section3) " "; }
 
 @media screen and (min-width: 1080px), print {
 	article > section h1 {

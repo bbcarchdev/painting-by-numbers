@@ -23,7 +23,7 @@
 				</affiliation>
 			</personname>
 		</editor>
-		<date>February 2014</date>
+		<date>May 2014</date>
 		<legalnotice>
 	<para>Copyright © 2014 Fictitious Entity, Inc. All rights reserved.</para>
 	<para>FrozWidget™ is a trademark of Fictitious Entity, Inc.</para>
@@ -32,69 +32,19 @@
 	<para>ISBN 0-123-12345-X</para>
 </legalnotice>
 	</info>
-	<toc>
-		<title>Table of contents</title>
-		<tocentry>Foreword</tocentry>
-		<tocentry>Preface</tocentry>
-		<tocentry>Acknowledgements</tocentry>
-		<tocdiv>
-			<title>History of the FrozWidget™</title>
-			<tocentry>The early years</tocentry>
-		</tocdiv>
-	</toc>		
-	<chapter xml:id="sample-chapter">
-	  <title>Sample chapter</title>
-	  <para>
-		  <link role="blah" xlink:href="http://www.bbc.co.uk/">This is a link to the BBC website</link>
-	  </para>
-	  <section>
-		  <title>Body text</title>
-		  <para>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</para>
+	<chapter xml:id="block">
+		<title>Structural elements</title>
+		<section xml:id="body-text">
+			<title>Body text</title>
+			<para>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</para>
 
 <para>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</para>
-	  </section>
-	  <section>
-		  <title>Inline elements</title>
-		  <section>
-			  <title>Emphasis</title>
-			  <para>Un-emphasised text</para>
-
-<para><emphasis>Emphasised text</emphasis></para>
-
-<para><emphasis role="strong">Strongly-emphasised text</emphasis></para>
-		  </section>
-		  
-		  <section>
-			  <title>Abbreviations and acronyms</title>
-			  <para>
-	<abbrev>SSH<alt>Secure Shell</alt></abbrev> is a protocol for establishing encrypted
-	connections between Internet or local network hosts. Connections may be
-	established using <abbrev>IPv4<alt>Internet Protocol, version 4</alt></abbrev> or <abbrev>IPv6<alt>Internet Protocol, version 6</alt></abbrev>, and
-	<abbrev>SSH</abbrev> clients and servers are available for many platforms,
-	ranging from aged <abbrev>PCs</abbrev> running <acronym>DOS<alt>Microsoft's MS-DOS, and compatible equivalents, was the operating system shipped with most PCs prior to Windows 95’s release</alt></acronym>,
-	through mobile phones, to supercomputers.
-</para>
-		  </section>
-		  
-		  <section>
-			  <title>Code literals</title>
-			  <para>
-	The variable <varname>x</varname> denotes the horizontal coordinate in the plot. The formula in <code>calcplot()</code> is used to calculate the value based upon the supplied value of <varname>y</varname>: <code>return cos(2 * <varname>y</varname>);</code>
-</para>
-<para>
-	To establish a <application>Secure Shell</application> (SSH) connection to a remote host, one types the <command>ssh</command> command at the shell prompt (typically ending with <prompt>$</prompt>). Alternatively, select the <menuchoice><shortcut><keycombo>Cmd+Shift+K</keycombo></shortcut><guimenu>Terminal</guimenu><guimenuitem>New Remote Connection…</guimenuitem></menuchoice> menu option.
-</para>
-<para>
-	Once connected, the <phrase>Message of the Day</phrase> (stored in <filename>/etc/motd</filename>) is printed, and will typically indicate the version of the operating system running on the host you’ve connected to, such as <computeroutput>3.2.46-1 x86_64</computeroutput>.
-</para>
-		  </section>
-		  
-	  </section>
-	  <section>
-		  <title>Lists</title>
-		  <section>
-			  <title>Ordered lists</title>
-			  <orderedlist>
+		</section>
+		<section xml:id="lists">
+			<title>Lists</title>
+			<section xml:id="ol">
+				<title>Ordered lists</title>
+				<orderedlist>
 	<listitem>
 		<para>She packed her seven versalia, put her initial into the belt and made herself on the way.</para>
 	</listitem>
@@ -118,10 +68,10 @@
 	<listitem>
 		<para>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</para>
 	</listitem>
-</orderedlist>		  </section>
-		  <section>
-			  <title>Un-ordered lists</title>
-			  <itemizedlist>
+</orderedlist>			</section>
+			<section xml:id="ul">
+				<title>Un-ordered lists</title>
+				<itemizedlist>
 	<listitem>
 		<para>She packed her seven versalia, put her initial into the belt and made herself on the way.</para>
 	</listitem>
@@ -146,10 +96,10 @@
 		<para>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</para>
 	</listitem>
 </itemizedlist>
-		  </section>
-		  <section>
-			  <title>Definition lists</title>
-			  <variablelist>
+			</section>
+			<section xml:id="dl">
+				<title>Definition lists</title>
+				<variablelist>
 	<varlistentry>
 		<term>first</term>
 		<listitem>
@@ -172,13 +122,13 @@
 		</listitem>
 	</varlistentry>
 </variablelist>
-		  </section>
-	  </section>
-	  <section>
-		  <title>Code samples</title>
-		  <section>
-			  <title>Program listing</title>
-			  <programlisting language="c">/* The canonical sample program */
+			</section>
+		</section>
+		<section xml:id="code">
+			<title>Code samples and computer output</title>
+			<section xml:id="code-sample">
+				<title>Code samples</title>
+				<programlisting language="c">/* The canonical sample program */
 
 #include &lt;<filename class="headerfile">stdio.h</filename>&gt;
 
@@ -192,10 +142,10 @@
 
     return <literal>0</literal>;
 }
-</programlisting>		  </section>
-		  <section>
-			  <title>Computer output</title>
-			  <screen><prompt>sysop@host-10-47-63-1:~ $</prompt> <userinput>sudo apt-get install emacs23-nox</userinput>
+</programlisting>			</section>
+			<section xml:id="samp-sample">
+				<title>Computer output</title>
+				<screen><prompt>sysop@host-10-47-63-1:~ $</prompt> <userinput>sudo apt-get install emacs23-nox</userinput>
 <prompt>[sudo] password for sysop:</prompt> <userinput>[your password]</userinput>
 Reading package lists... Done
 Building dependency tree       
@@ -212,11 +162,12 @@ The following NEW packages will be installed:
 Need to get 23.2 MB of archives.
 After this operation, 75.9 MB of additional disk space will be used.
 <prompt>Do you want to continue [Y/n]?</prompt> <userinput>y</userinput></screen>
-		  </section>
-	  </section>
-	  <section>
-		  <title>Call-outs</title>
-		  <note>
+			</section>
+		</section>
+
+		<section xml:id="callout">
+			<title>Call-outs</title>
+			<note>
 	<para>This is a <tag class="element">note</tag> call-out.</para>
 </note>
 
@@ -235,13 +186,66 @@ After this operation, 75.9 MB of additional disk space will be used.
 <caution>
 	<para>This is a <tag class="element">caution</tag> call-out.</para>
 </caution>
-	  </section>
-	  <section>
-		<title>Examples</title>
-		<example>
+		</section>
+		
+		<section xml:id="examples">
+			<title>Examples</title>
+			<example>
   <title>Sample paragraph</title>
   <para>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</para>
 </example>
-	  </section>
+		</section>
+		
+		<section xml:id="blockquote">
+			<title>Quotations</title>
+			<para>
+	Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
+</para>
+<blockquote>
+	<para>
+		The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.
+	</para>
+	<attribution><link xlink:href="http://www.blindtextgenerator.com/lorem-ipsum">Blind text generator</link>, 3rd January 2014</attribution>
+</blockquote>
+		</section>
+		
+	</chapter>
+	
+	<chapter xml:id="inline">
+		<title>In-line elements</title>
+
+		<section xml:id="em">
+			<title>Emphasis</title>
+			<para>Un-emphasised text</para>
+
+<para><emphasis>Emphasised text</emphasis></para>
+
+<para><emphasis role="strong">Strongly-emphasised text</emphasis></para>
+		</section>
+
+		<section xml:id="abbr">
+			<title>Abbreviations and acronyms</title>
+			<para>
+	<abbrev>SSH<alt>Secure Shell</alt></abbrev> is a protocol for establishing encrypted
+	connections between Internet or local network hosts. Connections may be
+	established using <abbrev>IPv4<alt>Internet Protocol, version 4</alt></abbrev> or <abbrev>IPv6<alt>Internet Protocol, version 6</alt></abbrev>, and
+	<abbrev>SSH</abbrev> clients and servers are available for many platforms,
+	ranging from aged <abbrev>PCs</abbrev> running <acronym>DOS<alt>Microsoft's MS-DOS, and compatible equivalents, was the operating system shipped with most PCs prior to Windows 95’s release</alt></acronym>,
+	through mobile phones, to supercomputers.
+</para>
+		</section>
+
+		<section  xml:id="tt">
+			<title>Code literals</title>
+			<para>
+	The variable <varname>x</varname> denotes the horizontal coordinate in the plot. The formula in <code>calcplot()</code> is used to calculate the value based upon the supplied value of <varname>y</varname>: <code>return cos(2 * <varname>y</varname>);</code>
+</para>
+<para>
+	To establish a <application>Secure Shell</application> (SSH) connection to a remote host, one types the <command>ssh</command> command at the shell prompt (typically ending with <prompt>$</prompt>). Alternatively, select the <menuchoice><shortcut><keycombo>Cmd+Shift+K</keycombo></shortcut><guimenu>Terminal</guimenu><guimenuitem>New Remote Connection…</guimenuitem></menuchoice> menu option.
+</para>
+<para>
+	Once connected, the <phrase>Message of the Day</phrase> (stored in <filename>/etc/motd</filename>) is printed, and will typically indicate the version of the operating system running on the host you’ve connected to, such as <computeroutput>3.2.46-1 x86_64</computeroutput>.
+</para>
+		</section>
 	</chapter>
 </book>
