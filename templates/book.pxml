@@ -24,79 +24,75 @@
 				</affiliation>
 			</personname>
 		</editor>
-		<date>February 2014</date>
+		<date>May 2014</date>
 		<?php literal('legalnotice.xml'); ?>
 	</info>
-	<toc>
-		<title>Table of contents</title>
-		<tocentry>Foreword</tocentry>
-		<tocentry>Preface</tocentry>
-		<tocentry>Acknowledgements</tocentry>
-		<tocdiv>
-			<title>History of the FrozWidget™</title>
-			<tocentry>The early years</tocentry>
-		</tocdiv>
-	</toc>		
-	<chapter xml:id="sample-chapter">
-	  <title>Sample chapter</title>
-	  <para>
-		  <link role="blah" xlink:href="http://www.bbc.co.uk/">This is a link to the BBC website</link>
-	  </para>
-	  <section>
-		  <title>Body text</title>
-		  <?php literal('body-text.xml'); ?>
-	  </section>
-	  <section>
-		  <title>Inline elements</title>
-		  <section>
-			  <title>Emphasis</title>
-			  <?php literal('em.xml'); ?>
-		  </section>
-		  
-		  <section>
-			  <title>Abbreviations and acronyms</title>
-			  <?php literal('abbr.xml'); ?>
-		  </section>
-		  
-		  <section>
-			  <title>Code literals</title>
-			  <?php literal('code-literals.xml'); ?>
-		  </section>
-		  
-	  </section>
-	  <section>
-		  <title>Lists</title>
-		  <section>
-			  <title>Ordered lists</title>
-			  <?php literal('ol.xml'); ?>
-		  </section>
-		  <section>
-			  <title>Un-ordered lists</title>
-			  <?php literal('ul.xml'); ?>
-		  </section>
-		  <section>
-			  <title>Definition lists</title>
-			  <?php literal('dl.xml'); ?>
-		  </section>
-	  </section>
-	  <section>
-		  <title>Code samples</title>
-		  <section>
-			  <title>Program listing</title>
-			  <?php literal('code-sample.xml'); ?>
-		  </section>
-		  <section>
-			  <title>Computer output</title>
-			  <?php literal('samp-sample.xml'); ?>
-		  </section>
-	  </section>
-	  <section>
-		  <title>Call-outs</title>
-		  <?php literal('callout.xml'); ?>
-	  </section>
-	  <section>
-		<title>Examples</title>
-		<?php literal('example.xml'); ?>
-	  </section>
+	<chapter xml:id="block">
+		<title>Structural elements</title>
+		<section xml:id="body-text">
+			<title>Body text</title>
+			<?php literal('body-text.xml'); ?>
+		</section>
+		<section xml:id="lists">
+			<title>Lists</title>
+			<section xml:id="ol">
+				<title>Ordered lists</title>
+				<?php literal('ol.xml'); ?>
+			</section>
+			<section xml:id="ul">
+				<title>Un-ordered lists</title>
+				<?php literal('ul.xml'); ?>
+			</section>
+			<section xml:id="dl">
+				<title>Definition lists</title>
+				<?php literal('dl.xml'); ?>
+			</section>
+		</section>
+		<section xml:id="code">
+			<title>Code samples and computer output</title>
+			<section xml:id="code-sample">
+				<title>Code samples</title>
+				<?php literal('code-sample.xml'); ?>
+			</section>
+			<section xml:id="samp-sample">
+				<title>Computer output</title>
+				<?php literal('samp-sample.xml'); ?>
+			</section>
+		</section>
+
+		<section xml:id="callout">
+			<title>Call-outs</title>
+			<?php literal('callout.xml'); ?>
+		</section>
+		
+		<section xml:id="examples">
+			<title>Examples</title>
+			<?php literal('example.xml'); ?>
+		</section>
+		
+		<section xml:id="blockquote">
+			<title>Quotations</title>
+			<?php literal('blockquote.xml'); ?>
+		</section>
+		
+	</chapter>
+	
+	<chapter xml:id="inline">
+		<title>In-line elements</title>
+
+		<section xml:id="em">
+			<title>Emphasis</title>
+			<?php literal('em.xml'); ?>
+		</section>
+
+		<section xml:id="abbr">
+			<title>Abbreviations and acronyms</title>
+			<?php literal('abbr.xml'); ?>
+		</section>
+
+		<section  xml:id="tt">
+			<title>Code literals</title>
+			<?php literal('code-literals.xml'); ?>
+		</section>
 	</chapter>
 </book>
