@@ -1,77 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<refentry xml:id="true-1" xmlns="http://docbook.org/ns" version="5.0" xml:lang="en">
-  <info>
-	<title>User Commands</title>
-	<productname>System Manager's Manual</productname>
-	<authorgroup>
-	  <author>
-		<personname>
-		  <firstname>Mo</firstname>
-		  <surname>McRoberts</surname>
-		</personname>
-	  </author>
-	</authorgroup>
-	<copyright>
-	  <year>2012</year>
-	  <holder>Mo McRoberts</holder>
-	</copyright>
-  </info>
+<refentry version="5.0" xml:id="sample-1" xml:lang="en" xmlns="http://docbook.org/ns" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<info>
+		<authorgroup>
+			<author>
+				<personname>
+					<firstname>Mo</firstname>
+					<surname>McRoberts</surname>
+				</personname>
+				<affiliation>
+					<org>
+						<orgname>BBC</orgname>
+						<orgdiv>Archive Development</orgdiv>
+						<uri>http://www.bbc.co.uk/archive/</uri>
+					</org>
+				</affiliation>
+			</author>
+		</authorgroup>
+		<copyright>
+			<year>2014</year>
+			<holder>BBC</holder>
+		</copyright>
+	</info>
   
-  <refmeta>
-	<refentrytitle>true</refentrytitle>
-	<manvolnum>1</manvolnum>
-  </refmeta>
-  
-  <refnamediv>
-	<refname>true</refname>
-	<refpurpose>return true value</refpurpose>
-  </refnamediv>
-  
-  <refsynopsisdiv>
-	<cmdsynopsis>
-	  <command>true</command>
-	</cmdsynopsis>
-  </refsynopsisdiv>
-  
-  <refsect1>
-	<title>Description</title>
-	<para>
-	  The <command>true</command> utility exits with a successful exit status.
-	</para>
-  </refsect1>
-  
-  <refsect1>
-	<title>Options</title>
-	<para>
-	  The <command>true</command> utility does not perform any option
-	  processing.	  
-	</para>
-  </refsect1>
-
-  <refsect1>
-	<title>Diagnostics</title>
-	<para>
-	  The <command>true</command> utility always exits with a status of
-	  <errorcode>0</errorcode>.
-	</para>
-  </refsect1>
-
-  <refsect1>
-	<title>Standards</title>
-	<para>
-	  The <command>true</command> utility conforms to the
-	  <citetitle>Single UNIX Specification, Version 3 (SUSv3)</citetitle>.
-	</para>
-  </refsect1>
-
-  <refsect1>
-	<title>See also</title>
-	<para>
-	  <citerefentry>
-		<refentrytitle>false</refentrytitle>
+	<refmeta>
+		<refentrytitle>sample</refentrytitle>
 		<manvolnum>1</manvolnum>
-	  </citerefentry>.
-	</para>
-  </refsect1>
+		<refmiscinfo class="source">Painting by Numbers</refmiscinfo>
+		<refmiscinfo class="manual">System Manager’s Manual</refmiscinfo>	
+	</refmeta>
+  
+	<refnamediv>
+		<refname>sample</refname>
+		<refpurpose>perform some action</refpurpose>
+	</refnamediv>
+  
+	<refsynopsisdiv>
+		<cmdsynopsis>
+		<command>sample</command>
+		</cmdsynopsis>
+	</refsynopsisdiv>
+  
+	<refsect1>
+		<title>Description</title>
+		<para>
+			The <command>sample</command> utility exits with a successful exit status.
+		</para>
+	</refsect1>
+  
+	<refsect1>
+		<title>Options</title>
+		<para>
+			The <command>sample</command> utility does not perform any option
+			processing.	  
+		</para>
+	</refsect1>
+
+	<refsect1>
+		<title>Diagnostics</title>
+		<para>
+			The <command>sample</command> utility always exits with a status of
+			<errorcode>0</errorcode>.
+		</para>
+	</refsect1>
+
+	<refsect1>
+		<title>Standards</title>
+		<para>
+			The <command>sample</command> utility is not known to conform to any
+			particular standard.
+		</para>
+	</refsect1>
+
+	<refsect1>
+		<title>See also</title>
+		<para>
+			<link xlink:href="http://pubs.opengroup.org/onlinepubs/009695399/utilities/true.html"><citerefentry><refentrytitle>true</refentrytitle><manvolnum>1</manvolnum></citerefentry></link>.
+		</para>
+	</refsect1>
 
 </refentry>
