@@ -14,6 +14,13 @@
 ##  See the License for the specific language governing permissions and
 ##  limitations under the License.
 
+PACKAGE = res-website/painting-by-numbers
+
+sysconfdir ?= /etc
+webdir ?= /var/www
+
+INSTALL ?= install
+
 ## Tunables
 
 XSLTPROC ?= xsltproc
@@ -34,16 +41,31 @@ PSTYLETEMPLATE = templates/print.pcss
 BOOK = book.xml
 BOOKPDF = book.pdf
 BOOKHTML = book.html
-BOOKTEMPLATE = templates/book.pxml								
+BOOKTEMPLATE = templates/book.pxml
 
 ## A sample manual page
 MANPAGE = manpage.xml
 MANPAGEPDF = manpage.pdf
 MANPAGEHTML = manpage.html
 
+# Files to install
+FILES = $(DOC) $(STYLE) $(PSTYLE) $(BOOK) $(BOOKHTML) $(MANPAGE) $(MANPAGEHTML) sample.css local.css ie78.css
+# Files to install which aren't automatically re-generated
+XFILES = $(PDF) $(BOOKPDF) $(MANPAGEPDF)
+# Images
+IMGFILES = 1560939316_4f9063d4c9_m.jpg 1571469638_f1f15e3480_m.jpg 1571454020_49ccbe3a59_m.jpg masthead.png
+# Logo
+LOGOFILES = res-logo-full-mono.pdf res-logo-min-black.png res-logo-min-olive.svg \
+	res-logo-full-mono.png res-logo-min-black.svg res-logo-min-white-black.pdf \
+	res-logo-full-mono.svg res-logo-min-olive-grey.pdf res-logo-min-white-black.png \
+	res-logo-full.pdf res-logo-min-olive-grey.png res-logo-min-white-black.svg \
+	res-logo-full.png res-logo-min-olive-grey.svg res-logo-min-white-grey.pdf \
+	res-logo-full.svg res-logo-min-olive.pdf res-logo-min-white-grey.png \
+	res-logo-min-black.pdf res-logo-min-olive.png res-logo-min-white-grey.svg
+
 all: $(DOC) $(STYLE) $(PSTYLE) $(BOOKHTML) $(MANPAGEHTML)
 
-pdf: $(PDF) $(BOOKPDF)
+pdf: $(PDF) $(BOOKPDF) $(MANPAGEPDF)
 
 ## All of the source samples
 SAMPLES = \
@@ -111,7 +133,19 @@ $(MANPAGEHTML): $(MANPAGE) $(BOOKSTYLES) $(XSLT)
 		docbook-html5/docbook-html5.xsl $(MANPAGE)	
 
 $(PDF): $(DOC) $(STYLE) $(PSTYLE)
-	wkpdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
+	wkhtmltopdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
 
 $(BOOKPDF): $(BOOKHTML) $(STYLE) $(PSTYLE)
-	wkpdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
+	wkhtmltopdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
+
+$(MANPAGEPDF): $(MANPAGEHTML) $(STYLE) $(PSTYLE)
+	wkhtmltopdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
+
+install: $(FILES)
+	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)
+	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)/images
+	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)/logo
+	for i in $(FILES) ; do $(INSTALL) -m 644 $$i $(DESTDIR)$(webdir)/$(PACKAGE) ; done
+	for i in $(XFILES) ; do $(INSTALL) -m 644 $$i $(DESTDIR)$(webdir)/$(PACKAGE) ; done
+	for i in $(IMGFILES) ; do $(INSTALL) -m 644 images/$$i $(DESTDIR)$(webdir)/$(PACKAGE)/images ; done
+	for i in $(LOGOFILES) ; do $(INSTALL) -m 644 logo/$$i $(DESTDIR)$(webdir)/$(PACKAGE)/logo ; done
