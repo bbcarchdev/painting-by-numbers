@@ -67,6 +67,13 @@ all: $(DOC) $(STYLE) $(PSTYLE) $(BOOKHTML) $(MANPAGEHTML)
 
 pdf: $(PDF) $(BOOKPDF) $(MANPAGEPDF)
 
+clean:
+	rm -f $(DOC) $(STYLE) $(PSTYLE)
+	rm -f $(BOOKHTML) $(MANPAGEHTML)
+
+pdfclean: clean
+	rm -f $(PDF) $(BOOKPDF) $(MANPAGEPDF)
+
 ## All of the source samples
 SAMPLES = \
 	components/logo-variants.php \
@@ -102,7 +109,12 @@ SAMPLES = \
 	components/colours.php
 
 ## All of the XSLT
-XSLT = docbook-html5/docbook-html5.xsl docbook-html5/doc.xsl docbook-html5/block.xsl docbook-html5/inline.xsl docbook-html5/toc.xsl
+XSLT = \
+	../docbook-html5/docbook-html5.xsl \
+	../docbook-html5/doc.xsl \
+	../docbook-html5/block.xsl \
+	../docbook-html5/inline.xsl \
+	../docbook-html5/toc.xsl
 	
 $(DOC): tools/generate.php $(TEMPLATE) $(SAMPLES)
 	php -f tools/generate.php $(TEMPLATE) > $(DOC)
@@ -119,18 +131,18 @@ $(BOOK): tools/generate.php $(BOOKTEMPLATE) $(SAMPLES)
 $(BOOKHTML): $(BOOK) $(BOOKSTYLES) $(XSLT) $(SAMPLES)
 	$(XSLTPROC) -nonet --xinclude \
 		--param "html.linksfile" "'`pwd`/templates/docbook-links.xml'" \
-		--param "html.navfile" "'`pwd`/docbook-html5/res-nav.xml'" \
+		--param "html.navfile" "'`pwd`/../docbook-html5/res-nav.xml'" \
 		--param "html.ie78css" "'ie78.css'" \
 		-o $(BOOKHTML) \
-		docbook-html5/docbook-html5.xsl $(BOOK)
+		../docbook-html5/docbook-html5.xsl $(BOOK)
 
 $(MANPAGEHTML): $(MANPAGE) $(BOOKSTYLES) $(XSLT)
 	$(XSLTPROC) -nonet --xinclude \
 		--param "html.linksfile" "'`pwd`/templates/docbook-links.xml'" \
-		--param "html.navfile" "'`pwd`/docbook-html5/res-nav.xml'" \
+		--param "html.navfile" "'`pwd`/../docbook-html5/res-nav.xml'" \
 		--param "html.ie78css" "'ie78.css'" \
 		-o $(MANPAGEHTML) \
-		docbook-html5/docbook-html5.xsl $(MANPAGE)	
+		../docbook-html5/docbook-html5.xsl $(MANPAGE)	
 
 $(PDF): $(DOC) $(STYLE) $(PSTYLE)
 	wkhtmltopdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
