@@ -17,16 +17,13 @@
 ## These are the make rules for building this tree as part of the RES
 ## website - https://bbcarchdev.github.io/res/
 
-PACKAGE = res-website/painting-by-numbers
+top = ..
+subdir = painting-by-numbers
 
-sysconfdir ?= /etc
-webdir ?= /var/www
+LINKS = templates/docbook-links.xml
+IE78CSS = ie78.css
 
-INSTALL ?= install
-
-## Tunables
-
-XSLTPROC ?= xsltproc
+include $(top)/config.mk
 
 ## The main document
 
@@ -66,17 +63,6 @@ LOGOFILES = res-logo-full-mono.pdf res-logo-min-black.png res-logo-min-olive.svg
 	res-logo-full.svg res-logo-min-olive.pdf res-logo-min-white-grey.png \
 	res-logo-min-black.pdf res-logo-min-olive.png res-logo-min-white-grey.svg
 
-all: $(DOC) $(STYLE) $(PSTYLE) $(BOOKHTML) $(MANPAGEHTML)
-
-pdf: $(PDF) $(BOOKPDF) $(MANPAGEPDF)
-
-clean:
-	rm -f $(DOC) $(STYLE) $(PSTYLE)
-	rm -f $(BOOKHTML) $(MANPAGEHTML)
-
-pdfclean: clean
-	rm -f $(PDF) $(BOOKPDF) $(MANPAGEPDF)
-
 ## All of the source samples
 SAMPLES = \
 	components/logo-variants.php \
@@ -111,14 +97,26 @@ SAMPLES = \
 	components/q.html components/q.css \
 	components/colours.php
 
-## All of the XSLT
-XSLT = \
-	../docbook-html5/docbook-html5.xsl \
-	../docbook-html5/doc.xsl \
-	../docbook-html5/block.xsl \
-	../docbook-html5/inline.xsl \
-	../docbook-html5/toc.xsl
-	
+all: $(DOC) $(STYLE) $(PSTYLE) $(BOOKHTML) $(MANPAGEHTML)
+
+pdf: $(PDF) $(BOOKPDF) $(MANPAGEPDF)
+
+clean:
+	rm -f $(DOC) $(STYLE) $(PSTYLE)
+	rm -f $(BOOKHTML) $(MANPAGEHTML)
+
+pdfclean: clean
+	rm -f $(PDF) $(BOOKPDF) $(MANPAGEPDF)
+
+install: $(FILES)
+	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)/$(subdir)
+	for i in $(FILES) ; do $(INSTALL) -m 644 $$i $(DESTDIR)$(webdir)/$(PACKAGE)/$(subdir) ; done
+	for i in $(XFILES) ; do $(INSTALL) -m 644 $$i $(DESTDIR)$(webdir)/$(PACKAGE)/$(subdir) ; done
+	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)/$(subdir)/images
+	for i in $(IMGFILES) ; do $(INSTALL) -m 644 images/$$i $(DESTDIR)$(webdir)/$(PACKAGE)/$(subdir)/images ; done
+	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)/$(subdir)/logo
+	for i in $(LOGOFILES) ; do $(INSTALL) -m 644 logo/$$i $(DESTDIR)$(webdir)/$(PACKAGE)/$(subdir)/logo ; done
+
 $(DOC): tools/generate.php $(TEMPLATE) $(SAMPLES)
 	php -f tools/generate.php $(TEMPLATE) > $(DOC)
 
@@ -132,35 +130,16 @@ $(BOOK): tools/generate.php $(BOOKTEMPLATE) $(SAMPLES)
 	php -f tools/generate.php $(BOOKTEMPLATE) > $(BOOK)
 
 $(BOOKHTML): $(BOOK) $(BOOKSTYLES) $(XSLT) $(SAMPLES)
-	$(XSLTPROC) -nonet --xinclude \
-		--param "html.linksfile" "'`pwd`/templates/docbook-links.xml'" \
-		--param "html.navfile" "'`pwd`/../docbook-html5/res-nav.xml'" \
-		--param "html.ie78css" "'ie78.css'" \
-		-o $(BOOKHTML) \
-		../docbook-html5/docbook-html5.xsl $(BOOK)
+	$(XML2HTML) $(BOOK)
 
 $(MANPAGEHTML): $(MANPAGE) $(BOOKSTYLES) $(XSLT)
-	$(XSLTPROC) -nonet --xinclude \
-		--param "html.linksfile" "'`pwd`/templates/docbook-links.xml'" \
-		--param "html.navfile" "'`pwd`/../docbook-html5/res-nav.xml'" \
-		--param "html.ie78css" "'ie78.css'" \
-		-o $(MANPAGEHTML) \
-		../docbook-html5/docbook-html5.xsl $(MANPAGE)	
+	$(XML2HTML) $(MANPAGE)
 
 $(PDF): $(DOC) $(STYLE) $(PSTYLE)
-	wkhtmltopdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
+	wkpdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
 
 $(BOOKPDF): $(BOOKHTML) $(STYLE) $(PSTYLE)
-	wkhtmltopdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
+	wkpdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
 
 $(MANPAGEPDF): $(MANPAGEHTML) $(STYLE) $(PSTYLE)
-	wkhtmltopdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
-
-install: $(FILES)
-	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)
-	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)/images
-	$(INSTALL) -m 755 -d $(DESTDIR)$(webdir)/$(PACKAGE)/logo
-	for i in $(FILES) ; do $(INSTALL) -m 644 $$i $(DESTDIR)$(webdir)/$(PACKAGE) ; done
-	for i in $(XFILES) ; do $(INSTALL) -m 644 $$i $(DESTDIR)$(webdir)/$(PACKAGE) ; done
-	for i in $(IMGFILES) ; do $(INSTALL) -m 644 images/$$i $(DESTDIR)$(webdir)/$(PACKAGE)/images ; done
-	for i in $(LOGOFILES) ; do $(INSTALL) -m 644 logo/$$i $(DESTDIR)$(webdir)/$(PACKAGE)/logo ; done
+	wkpdf --print-background --stylesheet-media print --paper a4 --orientation portrait --ignore-http-errors --source $< --output $@
