@@ -10,6 +10,8 @@
 SUBDIRS = components images logo templates tools
 
 pbnhtdoc_DATA = index.html book.html manpage.html \
+	book.xml manpage.xml \
+	book.pdf manpage.pdf \
 	style.css print.css
 
 dist_pbnhtdoc_DATA = ie78.css sample.css local.css
