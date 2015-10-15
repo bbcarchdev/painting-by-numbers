@@ -1903,8 +1903,9 @@ figure.third:nth-child(3n+2), figure.third:nth-child(3n+3) {
 					<h1>Call-outs</h1>
 					<aside class="caution TODO">TODO</aside>
 					
-					<h2>Sample</h2>
-					<aside class="example"><aside class="info">
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<aside class="example"><aside class="info">
 	This is an information call-out.
 </aside>
 
@@ -1923,9 +1924,10 @@ figure.third:nth-child(3n+2), figure.third:nth-child(3n+3) {
 <aside class="caution">
 	This is a caution call-out.
 </aside>
-</aside>										
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+</aside>					</div>
+					
+					<details>
+						<summary>DocBook mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code docbook"><code>&lt;<span class="keyword">note</span>&gt;
 	&lt;<span class="keyword">para</span>&gt;This is a &lt;<span class="keyword">tag</span> <span class="keyword">class</span>="<span class="string">element</span>"&gt;note&lt;/<span class="keyword">tag</span>&gt; call-out.&lt;/<span class="keyword">para</span>&gt;
@@ -1946,10 +1948,10 @@ figure.third:nth-child(3n+2), figure.third:nth-child(3n+3) {
 &lt;<span class="keyword">caution</span>&gt;
 	&lt;<span class="keyword">para</span>&gt;This is a &lt;<span class="keyword">tag</span> <span class="keyword">class</span>="<span class="string">element</span>"&gt;caution&lt;/<span class="keyword">tag</span>&gt; call-out.&lt;/<span class="keyword">para</span>&gt;
 &lt;/<span class="keyword">caution</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code html"><code>&lt;<span class="keyword">aside</span> <span class="keyword">class</span>="<span class="string">info</span>"&gt;
 	This is an information call-out.
@@ -1970,10 +1972,10 @@ figure.third:nth-child(3n+2), figure.third:nth-child(3n+3) {
 &lt;<span class="keyword">aside</span> <span class="keyword">class</span>="<span class="string">caution</span>"&gt;
 	This is a caution call-out.
 &lt;/<span class="keyword">aside</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>aside.info, aside.tip, aside.important, aside.warning, aside.caution {
 	margin: 1em;
 	padding: 0.75em 0.5em 0.75em 3em;
@@ -2068,7 +2070,7 @@ aside&gt;p:first-child {
 }
 aside&gt;p:last-child {
 	margin-bottom: 0;
-}</code></pre>					</div>
+}</code></pre>					</details>
 				</section>
 				
 				<section id="examples">
