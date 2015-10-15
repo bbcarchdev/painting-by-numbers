@@ -772,18 +772,16 @@
 						<?php sample('samp-sample.html'); ?>
 					</div>
 					
-					<div class="keep-together">									
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<p>Code blocks are marked up as a <code>&lt;programlisting&gt;</code> element. The <code>language</code> attribute is used to indicate the language or syntax in use.</p>
 						<?php code('docbook', 'code-sample.xml'); ?>
-					</div>
-					<div class="keep-together">
 						<p>Output blocks are marked up as a <code>&lt;screen&gt;</code> element.</p>
 						<?php code('docbook', 'samp-sample.xml'); ?>
-					</div>				
+					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<p>
 							Code blocks are marked up as a <code>&lt;pre&gt;</code> element with a <code>code</code> class applied, containing a <code>&lt;code&gt;</code> element. A class should also be applied to the <code>&lt;pre&gt;</code> element indicating the language or syntax in use; classes applied to individual <code>&lt;span&gt;</code> elements within the block may be used for syntax highlighting.
 						</p>
@@ -791,9 +789,7 @@
 							The code sample above was produced with the following HTML:
 						</p>
 						<?php code('html', 'code-sample.html'); ?>
-					</div>
 
-					<div class="keep-together">
 						<p>
 							Output blocks are marked up as a <code>&lt;pre&gt;</code> element with an <code>output</code> class applied, containing a <code>&lt;samp&gt;</code> element. Within the body of the output, the <code>&lt;kbd&gt;</code> element is used to indicate portions of user input.
 						</p>
@@ -801,17 +797,17 @@
 							The output sample above was produced with the following HTML:
 						</p>
 						<?php code('html', 'samp-sample.html'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'code-sample.css'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents (for print)</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents (for print)</summary>
 						<?php code('css', 'code-sample-print.css'); ?>
-					</div>					
+					</details>
 				</section>
 				
 				<section id="tables">

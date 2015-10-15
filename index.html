@@ -1420,8 +1420,8 @@ After this operation, 75.9 MB of additional disk space will be used.
 Do you want to continue [Y/n]? <kbd>y</kbd>
 </samp></pre></aside>					</div>
 					
-					<div class="keep-together">									
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<p>Code blocks are marked up as a <code>&lt;programlisting&gt;</code> element. The <code>language</code> attribute is used to indicate the language or syntax in use.</p>
 						<pre class="code docbook"><code>&lt;<span class="keyword">programlisting</span> <span class="keyword">language</span>="<span class="string">c</span>"&gt;/* The canonical sample program */
 
@@ -1437,9 +1437,7 @@ Do you want to continue [Y/n]? <kbd>y</kbd>
 
     return &lt;<span class="keyword">literal</span>&gt;0&lt;/<span class="keyword">literal</span>&gt;;
 }
-&lt;/<span class="keyword">programlisting</span>&gt;</code></pre>					</div>
-					<div class="keep-together">
-						<p>Output blocks are marked up as a <code>&lt;screen&gt;</code> element.</p>
+&lt;/<span class="keyword">programlisting</span>&gt;</code></pre>						<p>Output blocks are marked up as a <code>&lt;screen&gt;</code> element.</p>
 						<pre class="code docbook"><code>&lt;<span class="keyword">screen</span>&gt;&lt;<span class="keyword">prompt</span>&gt;sysop@host-10-47-63-1:~ $&lt;/<span class="keyword">prompt</span>&gt; &lt;<span class="keyword">userinput</span>&gt;sudo apt-get install emacs23-nox&lt;/<span class="keyword">userinput</span>&gt;
 &lt;<span class="keyword">prompt</span>&gt;[sudo] password for sysop:&lt;/<span class="keyword">prompt</span>&gt; &lt;<span class="keyword">userinput</span>&gt;[your password]&lt;/<span class="keyword">userinput</span>&gt;
 Reading package lists... Done
@@ -1457,10 +1455,10 @@ The following NEW packages will be installed:
 Need to get 23.2 MB of archives.
 After this operation, 75.9 MB of additional disk space will be used.
 &lt;<span class="keyword">prompt</span>&gt;Do you want to continue [Y/n]?&lt;/<span class="keyword">prompt</span>&gt; &lt;<span class="keyword">userinput</span>&gt;y&lt;/<span class="keyword">userinput</span>&gt;&lt;/<span class="keyword">screen</span>&gt;
-</code></pre>					</div>				
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<p>
 							Code blocks are marked up as a <code>&lt;pre&gt;</code> element with a <code>code</code> class applied, containing a <code>&lt;code&gt;</code> element. A class should also be applied to the <code>&lt;pre&gt;</code> element indicating the language or syntax in use; classes applied to individual <code>&lt;span&gt;</code> elements within the block may be used for syntax highlighting.
 						</p>
@@ -1481,9 +1479,7 @@ After this operation, 75.9 MB of additional disk space will be used.
 
 	&lt;<span class="keyword">span</span> <span class="keyword">class</span>="<span class="string">keyword</span>"&gt;return&lt;/<span class="keyword">span</span>&gt; 0;
 }
-&lt;/<span class="keyword">code</span>&gt;&lt;/<span class="keyword">pre</span>&gt;</code></pre>					</div>
-
-					<div class="keep-together">
+&lt;/<span class="keyword">code</span>&gt;&lt;/<span class="keyword">pre</span>&gt;</code></pre>
 						<p>
 							Output blocks are marked up as a <code>&lt;pre&gt;</code> element with an <code>output</code> class applied, containing a <code>&lt;samp&gt;</code> element. Within the body of the output, the <code>&lt;kbd&gt;</code> element is used to indicate portions of user input.
 						</p>
@@ -1507,10 +1503,10 @@ The following NEW packages will be installed:
 Need to get 23.2 MB of archives.
 After this operation, 75.9 MB of additional disk space will be used.
 Do you want to continue [Y/n]? &lt;<span class="keyword">kbd</span>&gt;y&lt;/<span class="keyword">kbd</span>&gt;
-&lt;/<span class="keyword">samp</span>&gt;&lt;/<span class="keyword">pre</span>&gt;</code></pre>					</div>
+&lt;/<span class="keyword">samp</span>&gt;&lt;/<span class="keyword">pre</span>&gt;</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>pre {
 	margin: 1em;
 	padding: 0.5em;
@@ -1548,10 +1544,10 @@ pre.code .comment { color: #93a1a1; font-weight: italic; }
 pre.code .preproc { color: #dc322f; font-style: italic; }
 
 pre.code .css-el { color: #6c71c4; }
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents (for print)</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents (for print)</summary>
 						<pre class="code css"><code>pre {
 	page-break-inside: avoid;
 }
@@ -1571,7 +1567,7 @@ pre.output kbd {
 	background: #e6e6e6;
 	color: #000;
 }
-</code></pre>					</div>					
+</code></pre>					</details>
 				</section>
 				
 				<section id="tables">
