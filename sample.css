@@ -98,3 +98,7 @@ aside.sample .toc {
 	page-break-before: inherit;
 	page-break-after: inherit;
 }
+
+.TODO {
+	display: none;
+}
