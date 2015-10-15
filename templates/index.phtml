@@ -818,19 +818,22 @@
 						<h2>Sample</h2>
 						<?php sample('table.html'); ?>
 					</div>
-										
-					<aside class="caution TODO">TODO: DocBook</aside>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
+						<aside class="caution TODO">TODO: DocBook</aside>
+					</details>
+					
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('html', 'table.html'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'table.css'); ?>
-					</div>					
+					</details>
 				</section>
 				
 				<section id="figures">
