@@ -1009,7 +1009,7 @@ li&gt;*:last-child {
 					<section id="ol">
 						<h1>Ordered lists</h1>
 						<p>Ordered lists are numbered, with the <code>1.5em</code> of left-hand padding applied to the parent used for the item number (i.e., the number has a negative <code>1.5em</code> left-hand margin). The item number is set in italics and followed by a full stop; the top-level list uses decimal numbering (<i>1., 2., 3., …</i>), the second-level uses lowercase latin (<i>a., b., c., …</i>), and third-level uses lowercase roman (<i>i., ii., iii., …</i>).</p>
-						<div class="keep-together">							
+						<div class="keep-together">
 							<h2>Sample</h2>
 							<aside class="example"><ol>
 	<li>She packed her seven versalia, put her initial into the belt and made herself on the way.</li>
@@ -1024,8 +1024,8 @@ li&gt;*:last-child {
 	<li>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</li>
 </ol>
 </aside>						</div>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<pre class="code docbook"><code>&lt;<span class="keyword">orderedlist</span>&gt;
 	&lt;<span class="keyword">listitem</span>&gt;
@@ -1051,9 +1051,9 @@ li&gt;*:last-child {
 	&lt;<span class="keyword">listitem</span>&gt;
 		&lt;<span class="keyword">para</span>&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&lt;/<span class="keyword">para</span>&gt;
 	&lt;/<span class="keyword">listitem</span>&gt;
-&lt;/<span class="keyword">orderedlist</span>&gt;</code></pre>						</div>
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+&lt;/<span class="keyword">orderedlist</span>&gt;</code></pre>						</details>
+						<details>
+							<summary>HTML mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<p>The sample above was produced with the following mark-up:</p>
 							<pre class="code html"><code>&lt;<span class="keyword">ol</span>&gt;
@@ -1068,9 +1068,9 @@ li&gt;*:last-child {
 	&lt;/<span class="keyword">li</span>&gt;
 	&lt;<span class="keyword">li</span>&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&lt;/<span class="keyword">li</span>&gt;
 &lt;/<span class="keyword">ol</span>&gt;
-</code></pre>						</div>
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+</code></pre>						</details>
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<pre class="code css"><code>ol {
 	counter-reset: listitem;
 	list-style-type: none;
@@ -1091,7 +1091,7 @@ ol&gt;li&gt;ol&gt;li:before {
 ol&gt;li&gt;ol&gt;li&gt;ol&gt;li:before {
 	content: counter(listitem, lower-roman) ". ";	
 }
-</code></pre>						</div>
+</code></pre>						</details>
 					</section>
 
 					<section id="ul">
@@ -1111,8 +1111,8 @@ ol&gt;li&gt;ol&gt;li&gt;ol&gt;li:before {
 	<li>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</li>
 </ul>
 </aside>						</div>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<pre class="code docbook"><code>&lt;<span class="keyword">itemizedlist</span>&gt;
 	&lt;<span class="keyword">listitem</span>&gt;
@@ -1139,9 +1139,9 @@ ol&gt;li&gt;ol&gt;li&gt;ol&gt;li:before {
 		&lt;<span class="keyword">para</span>&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&lt;/<span class="keyword">para</span>&gt;
 	&lt;/<span class="keyword">listitem</span>&gt;
 &lt;/<span class="keyword">itemizedlist</span>&gt;
-</code></pre>						</div>
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+</code></pre>						</details>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>The sample above was produced with the following mark-up:</p>
 							<aside class="caution TODO">TODO</aside>
 							<pre class="code html"><code>&lt;<span class="keyword">ul</span>&gt;
@@ -1156,7 +1156,7 @@ ol&gt;li&gt;ol&gt;li&gt;ol&gt;li:before {
 	&lt;/<span class="keyword">li</span>&gt;
 	&lt;<span class="keyword">li</span>&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.&lt;/<span class="keyword">li</span>&gt;
 &lt;/<span class="keyword">ul</span>&gt;
-</code></pre>						</div>
+</code></pre>						</details>
 					</section>
 
 					<section id="dl">
@@ -1171,8 +1171,8 @@ ol&gt;li&gt;ol&gt;li&gt;ol&gt;li:before {
 	<dt>last</dt>
 	<dd>the final or terminating item in a list; occurs after all others.</dd>
 </dl>
-</aside>						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+</aside>						<details>
+							<summary>DocBook mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<pre class="code docbook"><code>&lt;<span class="keyword">variablelist</span>&gt;
 	&lt;<span class="keyword">varlistentry</span>&gt;
@@ -1197,9 +1197,9 @@ ol&gt;li&gt;ol&gt;li&gt;ol&gt;li:before {
 		&lt;/<span class="keyword">listitem</span>&gt;
 	&lt;/<span class="keyword">varlistentry</span>&gt;
 &lt;/<span class="keyword">variablelist</span>&gt;
-</code></pre>						</div>
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+</code></pre>						</details>
+						<details>
+							<summary>HTML mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<pre class="code html"><code>&lt;<span class="keyword">dl</span>&gt;
 	&lt;<span class="keyword">dt</span>&gt;first&lt;/<span class="keyword">dt</span>&gt;
@@ -1210,9 +1210,9 @@ ol&gt;li&gt;ol&gt;li&gt;ol&gt;li:before {
 	&lt;<span class="keyword">dt</span>&gt;last&lt;/<span class="keyword">dt</span>&gt;
 	&lt;<span class="keyword">dd</span>&gt;the final or terminating item in a list; occurs after all others.&lt;/<span class="keyword">dd</span>&gt;
 &lt;/<span class="keyword">dl</span>&gt;
-</code></pre>						</div>
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+</code></pre>						</details>
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<pre class="code css"><code>dl {
 	margin: 1em 0;
 }
@@ -1223,7 +1223,7 @@ dt {
 dd {
 	margin: 0.25em 0 0.25em 1.5em;
 }
-</code></pre>						</div>
+</code></pre>						</details>
 					</section>
 					
 					<aside class="caution TODO">TODO: Simple lists</aside>
@@ -1252,11 +1252,14 @@ dd {
 	</ol>
 </section>
 </aside>						</div>
-
-						<aside class="caution TODO">TODO: DocBook</aside>
 						
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
+							<aside class="caution TODO">TODO: DocBook</aside>
+						</details>
+						
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>The sample above was produced with the following mark-up:</p>
 							<pre class="code html"><code>&lt;<span class="keyword">section</span> <span class="keyword">class</span>="<span class="string">toc</span>"&gt;
 	&lt;<span class="keyword">h1</span>&gt;Table of contents&lt;/<span class="keyword">h1</span>&gt;
@@ -1274,10 +1277,10 @@ dd {
 		&lt;<span class="keyword">li</span>&gt;&lt;<span class="keyword">a</span> <span class="keyword">href</span>="<span class="string">#inline</span>"&gt;In-line elements&lt;/<span class="keyword">a</span>&gt;&lt;/<span class="keyword">li</span>&gt;
 	&lt;/<span class="keyword">ol</span>&gt;
 &lt;/<span class="keyword">section</span>&gt;
-</code></pre>						</div>
+</code></pre>						</details>
 						
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<pre class="code css"><code>.toc {
 	page-break-after: always;
 }
@@ -1322,7 +1325,7 @@ aside.sample {
 		min-width: 2.5em;
 		text-align: right;	
 	}
-}</code></pre>						</div>						
+}</code></pre>						</details>
 					</section>
 					
 				</section>

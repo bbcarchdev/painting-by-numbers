@@ -623,25 +623,25 @@
 					<section id="ol">
 						<h1>Ordered lists</h1>
 						<p>Ordered lists are numbered, with the <code>1.5em</code> of left-hand padding applied to the parent used for the item number (i.e., the number has a negative <code>1.5em</code> left-hand margin). The item number is set in italics and followed by a full stop; the top-level list uses decimal numbering (<i>1., 2., 3., …</i>), the second-level uses lowercase latin (<i>a., b., c., …</i>), and third-level uses lowercase roman (<i>i., ii., iii., …</i>).</p>
-						<div class="keep-together">							
+						<div class="keep-together">
 							<h2>Sample</h2>
 							<?php sample('ol.html'); ?>
 						</div>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<?php code('docbook', 'ol.xml'); ?>
-						</div>
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						</details>
+						<details>
+							<summary>HTML mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<p>The sample above was produced with the following mark-up:</p>
 							<?php code('html', 'ol.html'); ?>
-						</div>
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+						</details>
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<?php code('css', 'ol.css'); ?>
-						</div>
+						</details>
 					</section>
 
 					<section id="ul">
@@ -650,37 +650,37 @@
 							<h2>Sample</h2>
 							<?php sample('ul.html'); ?>
 						</div>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<?php code('docbook', 'ul.xml'); ?>
-						</div>
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						</details>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>The sample above was produced with the following mark-up:</p>
 							<aside class="caution TODO">TODO</aside>
 							<?php code('html', 'ul.html'); ?>
-						</div>
+						</details>
 					</section>
 
 					<section id="dl">
 						<h1>Definition lists</h1>
 						<h2>Sample</h2>
 						<?php sample('dl.html'); ?>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<?php code('docbook', 'dl.xml'); ?>
-						</div>
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						</details>
+						<details>
+							<summary>HTML mark-up</summary>
 							<aside class="caution TODO">TODO</aside>
 							<?php code('html', 'dl.html'); ?>
-						</div>
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+						</details>
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<?php code('css', 'dl.css'); ?>
-						</div>
+						</details>
 					</section>
 					
 					<aside class="caution TODO">TODO: Simple lists</aside>
@@ -694,19 +694,22 @@
 							<h2>Sample</h2>
 							<?php sample('toc.html'); ?>
 						</div>
-
-						<aside class="caution TODO">TODO: DocBook</aside>
 						
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
+							<aside class="caution TODO">TODO: DocBook</aside>
+						</details>
+						
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>The sample above was produced with the following mark-up:</p>
 							<?php code('html', 'toc.html'); ?>
-						</div>
+						</details>
 						
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<?php code('css', 'toc.css'); ?>
-						</div>						
+						</details>
 					</section>
 					
 				</section>
