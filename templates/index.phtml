@@ -207,23 +207,23 @@
 							</li>
 						</ul>
 						<aside class="caution TODO">TODO: Lower quarter, sample, back cover, spine</aside>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<p>
 								Cover pages are constructed from the document <code>&lt;title&gt;</code>,
 								<code>&lt;subtitle&gt;</code> (if present) and the contents of
 								the top-level <code>&lt;info&gt;</code> element. See the
 								<a href="#frontmatter-example">front matter example</a> for details.
 							</p>
-						</div>
+						</details>
 						
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								Cover pages are not marked up in HTML documents: the document begins with the
 								<a href="#innercover">inner cover page</a> instead.
 							</p>
-						</div>
+						</details>
 					</section>
 					
 					<section id="frontmatter">
@@ -261,12 +261,14 @@
 							<a href="#sections">sections</a> which constitute the core content
 							of the work.
 						</p>
-						<h2>HTML mark-up</h2>
-						<p>
-							In HTML documents, all body matter is contained within an
-							<code>&lt;article&gt;</code> element which is a direct child of the
-							<code>&lt;body&gt;</code> element.
-						</p>
+						<details>
+							<summary>HTML mark-up</summary>
+							<p>
+								In HTML documents, all body matter is contained within an
+								<code>&lt;article&gt;</code> element which is a direct child of the
+								<code>&lt;body&gt;</code> element.
+							</p>
+						</details>
 					</section>
 					
 					<section id="backmatter">
@@ -402,9 +404,10 @@
 						See <a href="#frontmatter-example"><i>Complete front matter example</i></a> for a detailed representative
 						sample of how to mark up front matter.
 					</aside>
-					<h2>Common CSS styling rules for HTML documents</h2>
+					<details>
+					<summary>Common CSS styling rules for HTML documents</summary>
 					<?php code('css', 'header.css'); ?>
-
+					</details>
 					<section id="globalnav">
 						<h1>Global navigation</h1>
 						<p>
@@ -413,27 +416,27 @@
 							a page.
 						</p>
 						
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<p>
 								Global navigation is not marked up in DocBook documents; it is added during
 								conversion to HTML.
 							</p>
-						</div>
-											
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						</details>
+						
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								Global navigation is marked up as an un-ordered list within a <code>&lt;nav&gt;</code> element
 								contained within the top-level <code>&lt;header&gt;</code>.
 							</p>
 							<?php code('html', 'globalnav.html'); ?>
-						</div>
-												
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+						</details>
+						
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<?php code('css', 'globalnav.css'); ?>
-						</div>
+						</details>
 						
 					</section>
 				
@@ -441,17 +444,17 @@
 						<h1>Masthead image</h1>
 						<aside class="caution TODO">TODO</aside>
 						
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								The masthead placeholder <code>&lt;div&gt;</code> element appears immediately following any
 								<a href="#globalnav">global navigation</a> within the top-level <code>&lt;header&gt;</code> element.
 							</p>
 							<?php code('html', 'masthead.html'); ?>
-						</div>
+						</details>
 						
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<?php code('css', 'masthead.css'); ?>
 							<p>
 								Note that the common styling rules for the masthead image specify <code>display: none;</code> and
@@ -459,33 +462,33 @@
 								expected to override this. A typical override might consist of:
 							</p>
 							<?php code('css', 'masthead-override.css'); ?>
-						</div>
+						</details>
 							
-					</section>							
+					</section>
 				
 					<section id="innercover">
 						<h1>Inside cover</h1>
 						<aside class="caution TODO">TODO</aside>
 						
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<p>
 								With the exception of the document title, inside cover information forms part of the top-level
 								<code>&lt;info&gt;</code> element. The subtitle (or tagline) is a <code>&lt;para&gt;</code> within
 								a <code>&lt;cover&gt;</code> element which is part of <code>&lt;info&gt;</code>.
 							</p>
 							<?php code('docbook', 'innercover.xml'); ?>
-						</div>
+						</details>
 						
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								Inside cover information occurs within the top-level <code>&lt;header&gt;</code> element, and follows
 								the <a href="#globalnav">global navigation</a> and <a href="#masthead">masthead image</a> if either is
 								present.
 							</p>
 							<?php code('html', 'innercover.html'); ?>
-						</div>
+						</details>
 					</section>
 				
 					<section id="legalnotices">
@@ -496,47 +499,47 @@
 							information about copyright, trademarks, warranties, the publisher, and formal cataloguing
 							data.
 						</p>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<p>
 								In DocBook, legal notices are contained within a <code>&lt;legalnotice&gt;</code> element
 								which is part of the top-level <code>&lt;info&gt;</code> element.
 							</p>
 							<?php code('docbook', 'legalnotice.xml'); ?>
-						</div>
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						</details>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								In HTML documents, legal notices are contained within a top-level <code>&lt;section&gt;</code> with
 								a class of <code>legalnotice</code>.
 							</p>
 							<?php code('html', 'legalnotice.html'); ?>
-						</div>
+						</details>
 					</section>
 				
 					<section id="frontmatter-example">
 						<h1>Complete front matter example</h1>
 						
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<?php code('docbook', 'frontmatter.xml'); ?>
-						</div>
+						</details>
 
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>HTML mark-up</summary>
 							<?php code('html', 'frontmatter.html'); ?>
-						</div>
+						</details>
 					</section>
 					
 				</section>
-								
+					
 				<section id="footer">
 					<h1>Document footer &amp; back matter</h1>
 					<aside class="caution TODO">TODO</aside>
 				</section>
-								
+					
 				<section id="body">
-					<h1>Body text</h1>					
+					<h1>Body text</h1>
 					<p>
 						Body text is set in one of (in order of preference):
 					</p>
@@ -550,30 +553,31 @@
 					</p>
 
 					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
-						<aside class="caution TODO">TODO</aside>
-						<?php code('docbook', 'body-text.xml'); ?>
-					</div>
-
-					<div class="keep-togegther">
-						<h2>HTML mark-up</h2>
-						<aside class="caution TODO">TODO</aside>
-						<?php code('html', 'body-text.html'); ?>
-					</div>
-					<div class="keep-together">
 						<h2>Sample</h2>
 						<?php sample('body-text.html'); ?>
 					</div>
+
+					<details>
+						<summary>DocBook mark-up</summary>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('docbook', 'body-text.xml'); ?>
+					</details>
+
+					<details>
+						<summary>HTML mark-up</summary>
+						<aside class="caution TODO">TODO</aside>
+						<?php code('html', 'body-text.html'); ?>
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'body-text.css'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">					
-						<h2>CSS styling rules for HTML documents (for print)</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents (for print)</summary>
 						<?php code('css', 'body-text-print.css'); ?>
-					</div>
+					</details>
 				</section>
 				
 				<section id="headings">
@@ -588,33 +592,33 @@
 						<h2>Sample</h2>
 						<?php sample('headings.html'); ?>
 					</div>
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('docbook', 'headings-example.xml'); ?>
-					</div>
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					</details>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('html', 'headings-example.html'); ?>
-					</div>
-					<div class="keep-together">						
-						<h2>CSS styling rules for HTML documents</h2>
+					</details>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('css', 'headings.css.html', true); ?>
-					</div>
+					</details>
 				</section>
 
 				<section id="lists">
 					<h1>Lists</h1>
-					<p>Lists are set with a <code>1em</code> top and bottom margin, except where an ordered or un-ordered list is contained within another ordered or un-ordered list. <code>1.5em</code> of padding is applied to the left-hand side. List items have a <code>0.25em</code> top and bottom margin.</p>					
-					<h2>Common CSS styling rules for HTML documents</h2>
-					<div class="keep-together">
+					<p>Lists are set with a <code>1em</code> top and bottom margin, except where an ordered or un-ordered list is contained within another ordered or un-ordered list. <code>1.5em</code> of padding is applied to the left-hand side. List items have a <code>0.25em</code> top and bottom margin.</p>			
+					<details>
+						<summary>Common CSS styling rules for HTML documents</summary>
 						<p>
 							A common set of rules used for both ordered and un-ordered lists is shown below:
 						</p>
 						<?php code('css', 'lists.css'); ?>
-					</div>
+					</details>
 					
 					<section id="ol">
 						<h1>Ordered lists</h1>

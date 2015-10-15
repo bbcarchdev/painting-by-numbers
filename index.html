@@ -204,23 +204,23 @@
 							</li>
 						</ul>
 						<aside class="caution TODO">TODO: Lower quarter, sample, back cover, spine</aside>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<p>
 								Cover pages are constructed from the document <code>&lt;title&gt;</code>,
 								<code>&lt;subtitle&gt;</code> (if present) and the contents of
 								the top-level <code>&lt;info&gt;</code> element. See the
 								<a href="#frontmatter-example">front matter example</a> for details.
 							</p>
-						</div>
+						</details>
 						
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								Cover pages are not marked up in HTML documents: the document begins with the
 								<a href="#innercover">inner cover page</a> instead.
 							</p>
-						</div>
+						</details>
 					</section>
 					
 					<section id="frontmatter">
@@ -258,12 +258,14 @@
 							<a href="#sections">sections</a> which constitute the core content
 							of the work.
 						</p>
-						<h2>HTML mark-up</h2>
-						<p>
-							In HTML documents, all body matter is contained within an
-							<code>&lt;article&gt;</code> element which is a direct child of the
-							<code>&lt;body&gt;</code> element.
-						</p>
+						<details>
+							<summary>HTML mark-up</summary>
+							<p>
+								In HTML documents, all body matter is contained within an
+								<code>&lt;article&gt;</code> element which is a direct child of the
+								<code>&lt;body&gt;</code> element.
+							</p>
+						</details>
 					</section>
 					
 					<section id="backmatter">
@@ -409,7 +411,8 @@
 						See <a href="#frontmatter-example"><i>Complete front matter example</i></a> for a detailed representative
 						sample of how to mark up front matter.
 					</aside>
-					<h2>Common CSS styling rules for HTML documents</h2>
+					<details>
+					<summary>Common CSS styling rules for HTML documents</summary>
 					<pre class="code css"><code>body&gt;header {
 	margin: -13pt -13pt 1em -13pt;
 	padding: 0;
@@ -428,7 +431,7 @@ body.home&gt;header {
 body.home&gt;header h1 {
 	display: none;
 }
-</code></pre>
+</code></pre>					</details>
 					<section id="globalnav">
 						<h1>Global navigation</h1>
 						<p>
@@ -437,16 +440,16 @@ body.home&gt;header h1 {
 							a page.
 						</p>
 						
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<p>
 								Global navigation is not marked up in DocBook documents; it is added during
 								conversion to HTML.
 							</p>
-						</div>
-											
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						</details>
+						
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								Global navigation is marked up as an un-ordered list within a <code>&lt;nav&gt;</code> element
 								contained within the top-level <code>&lt;header&gt;</code>.
@@ -460,10 +463,10 @@ body.home&gt;header h1 {
 		&lt;/<span class="keyword">ul</span>&gt;
 	&lt;/<span class="keyword">div</span>&gt;&lt;/<span class="keyword">nav</span>&gt;
 &lt;/<span class="keyword">header</span>&gt;
-</code></pre>						</div>
-												
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+</code></pre>						</details>
+						
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<pre class="code css"><code>nav.global a:link, nav.global a:visited {
 	color: inherit;
 	text-decoration: inherit;
@@ -535,7 +538,7 @@ nav.global li.logo&gt;a {
 nav.global li.logo&gt;a:hover {
 	background: #636363;
 	color: inherit;
-}</code></pre>						</div>
+}</code></pre>						</details>
 						
 					</section>
 				
@@ -543,8 +546,8 @@ nav.global li.logo&gt;a:hover {
 						<h1>Masthead image</h1>
 						<aside class="caution TODO">TODO</aside>
 						
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								The masthead placeholder <code>&lt;div&gt;</code> element appears immediately following any
 								<a href="#globalnav">global navigation</a> within the top-level <code>&lt;header&gt;</code> element.
@@ -553,10 +556,10 @@ nav.global li.logo&gt;a:hover {
 	&lt;<span class="keyword">nav</span> <span class="keyword">class</span>="<span class="string">global</span>"&gt;…&lt;/<span class="keyword">nav</span>&gt;
 	&lt;<span class="keyword">div</span> <span class="keyword">class</span>="<span class="string">masthead</span>"&gt;&lt;/<span class="keyword">div</span>&gt;
 &lt;/<span class="keyword">header</span>&gt;
-</code></pre>						</div>
+</code></pre>						</details>
 						
-						<div class="keep-together">
-							<h2>CSS styling rules for HTML documents</h2>
+						<details>
+							<summary>CSS styling rules for HTML documents</summary>
 							<pre class="code css"><code>body&gt;header .masthead {
 	display: none;
 	margin: -1px 0 0 0;
@@ -579,16 +582,16 @@ body.home&gt;header .masthead {
 	display: block;
 	background: #268bd2 url('images/masthead.png') 50% 50% no-repeat;
 }
-</code></pre>						</div>
+</code></pre>						</details>
 							
-					</section>							
+					</section>
 				
 					<section id="innercover">
 						<h1>Inside cover</h1>
 						<aside class="caution TODO">TODO</aside>
 						
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<p>
 								With the exception of the document title, inside cover information forms part of the top-level
 								<code>&lt;info&gt;</code> element. The subtitle (or tagline) is a <code>&lt;para&gt;</code> within
@@ -613,10 +616,10 @@ body.home&gt;header .masthead {
 		&lt;<span class="keyword">para</span> <span class="keyword">role</span>="<span class="string">tagline</span>"&gt;The complete guide&lt;/<span class="keyword">para</span>&gt;
 	&lt;/<span class="keyword">cover</span>&gt;
 &lt;/<span class="keyword">info</span>&gt;
-</code></pre>						</div>
+</code></pre>						</details>
 						
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								Inside cover information occurs within the top-level <code>&lt;header&gt;</code> element, and follows
 								the <a href="#globalnav">global navigation</a> and <a href="#masthead">masthead image</a> if either is
@@ -626,7 +629,7 @@ body.home&gt;header .masthead {
 	&lt;<span class="keyword">h1</span>&gt;Examples, Samples and Demonstrators&lt;/<span class="keyword">h1</span>&gt;
 	&lt;<span class="keyword">h2</span>&gt;A front matter example&lt;/<span class="keyword">h2</span>&gt;
 &lt;/<span class="keyword">header</span>&gt;
-	</code></pre>						</div>
+	</code></pre>						</details>
 					</section>
 				
 					<section id="legalnotices">
@@ -637,8 +640,8 @@ body.home&gt;header .masthead {
 							information about copyright, trademarks, warranties, the publisher, and formal cataloguing
 							data.
 						</p>
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<p>
 								In DocBook, legal notices are contained within a <code>&lt;legalnotice&gt;</code> element
 								which is part of the top-level <code>&lt;info&gt;</code> element.
@@ -650,9 +653,9 @@ body.home&gt;header .masthead {
 	&lt;<span class="keyword">para</span>&gt;The authors and publishers have taken care in preparation of this book, but make no expressed or implied warranty of any kind and assume no responsibility for errors or omissions. No liability is assumed for incidental or consequential damages in connection with or arising out of the use of the information contained herein.&lt;/<span class="keyword">para</span>&gt;
 	&lt;<span class="keyword">para</span>&gt;ISBN 0-123-12345-X&lt;/<span class="keyword">para</span>&gt;
 &lt;/<span class="keyword">legalnotice</span>&gt;
-</code></pre>						</div>
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+</code></pre>						</details>
+						<details>
+							<summary>HTML mark-up</summary>
 							<p>
 								In HTML documents, legal notices are contained within a top-level <code>&lt;section&gt;</code> with
 								a class of <code>legalnotice</code>.
@@ -664,14 +667,14 @@ body.home&gt;header .masthead {
 	&lt;<span class="keyword">p</span>&gt;The authors and publishers have taken care in preparation of this book, but make no expressed or implied warranty of any kind and assume no responsibility for errors or omissions. No liability is assumed for incidental or consequential damages in connection with or arising out of the use of the information contained herein.&lt;/<span class="keyword">p</span>&gt;
 	&lt;<span class="keyword">p</span>&gt;ISBN 0-123-12345-X&lt;/<span class="keyword">p</span>&gt;
 &lt;/<span class="keyword">section</span>&gt;
-</code></pre>						</div>
+</code></pre>						</details>
 					</section>
 				
 					<section id="frontmatter-example">
 						<h1>Complete front matter example</h1>
 						
-						<div class="keep-together">
-							<h2>DocBook mark-up</h2>
+						<details>
+							<summary>DocBook mark-up</summary>
 							<pre class="code docbook"><code>&lt;<span class="keyword">book</span> <span class="keyword">version</span>="<span class="string">5.0</span>"&gt;
 	&lt;<span class="keyword">title</span>&gt;Examples, Samples and Demonstrators&lt;/<span class="keyword">title</span>&gt;
 	&lt;<span class="keyword">info</span>&gt;
@@ -712,10 +715,10 @@ body.home&gt;header .masthead {
 		&lt;/<span class="keyword">para</span>&gt;
 	&lt;/<span class="keyword">acknowledgements</span>&gt;
 &lt;/<span class="keyword">book</span>&gt;
-</code></pre>						</div>
+</code></pre>						</details>
 
-						<div class="keep-together">
-							<h2>HTML mark-up</h2>
+						<details>
+							<summary>HTML mark-up</summary>
 							<pre class="code html"><code>&lt;<span class="keyword">html</span>&gt;
 	&lt;<span class="keyword">head</span>&gt;
 		&lt;<span class="keyword">title</span>&gt;Examples, Samples and Demonstrators&lt;/<span class="keyword">title</span>&gt;
@@ -765,18 +768,18 @@ body.home&gt;header .masthead {
 		&lt;/<span class="keyword">section</span>&gt;
 	&lt;/<span class="keyword">body</span>&gt;
 &lt;/<span class="keyword">html</span>&gt;
-</code></pre>						</div>
+</code></pre>						</details>
 					</section>
 					
 				</section>
-								
+					
 				<section id="footer">
 					<h1>Document footer &amp; back matter</h1>
 					<aside class="caution TODO">TODO</aside>
 				</section>
-								
+					
 				<section id="body">
-					<h1>Body text</h1>					
+					<h1>Body text</h1>
 					<p>
 						Body text is set in one of (in order of preference):
 					</p>
@@ -790,27 +793,28 @@ body.home&gt;header .masthead {
 					</p>
 
 					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
-						<aside class="caution TODO">TODO</aside>
-						<pre class="code docbook"><code>&lt;<span class="keyword">para</span>&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/<span class="keyword">para</span>&gt;
-
-&lt;<span class="keyword">para</span>&gt;The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&lt;/<span class="keyword">para</span>&gt;
-</code></pre>					</div>
-
-					<div class="keep-togegther">
-						<h2>HTML mark-up</h2>
-						<aside class="caution TODO">TODO</aside>
-						<pre class="code html"><code>&lt;<span class="keyword">p</span>&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/<span class="keyword">p</span>&gt;
-
-&lt;<span class="keyword">p</span>&gt;The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&lt;/<span class="keyword">p</span>&gt;</code></pre>					</div>
-					<div class="keep-together">
 						<h2>Sample</h2>
 						<aside class="example"><p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
 
 <p>The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.</p></aside>					</div>
+
+					<details>
+						<summary>DocBook mark-up</summary>
+						<aside class="caution TODO">TODO</aside>
+						<pre class="code docbook"><code>&lt;<span class="keyword">para</span>&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/<span class="keyword">para</span>&gt;
+
+&lt;<span class="keyword">para</span>&gt;The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&lt;/<span class="keyword">para</span>&gt;
+</code></pre>					</details>
+
+					<details>
+						<summary>HTML mark-up</summary>
+						<aside class="caution TODO">TODO</aside>
+						<pre class="code html"><code>&lt;<span class="keyword">p</span>&gt;Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.&lt;/<span class="keyword">p</span>&gt;
+
+&lt;<span class="keyword">p</span>&gt;The Big Oxmox advised her not to do so, because there were thousands of bad Commas, wild Question Marks and devious Semikoli, but the Little Blind Text didn’t listen. She packed her seven versalia, put her initial into the belt and made herself on the way. When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&lt;/<span class="keyword">p</span>&gt;</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>html {
 	background-color: #fff;
 	color: #000;
@@ -847,10 +851,10 @@ body &gt; section, body &gt; article, body &gt; nav {
 	width: 100%;
 	max-width: 960px;
 }
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">					
-						<h2>CSS styling rules for HTML documents (for print)</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents (for print)</summary>
 						<pre class="code css"><code>html {
 	background: inherit;
 }
@@ -859,7 +863,7 @@ body {
 	margin: 1em 1cm;
 	box-shadow: none;
 }
-.keep-together {
+.keep-together, summary {
 	page-break-inside: avoid;
 }
 article&gt;section, body&gt;section {
@@ -876,10 +880,10 @@ article&gt;section:last-child {
 p, li, dt, dd, tr {
 	page-break-inside: avoid;
 }
-.refentry&gt;header, .refentry&gt;section, .refentry&gt;article section {                
-    page-break-after: inherit !important;
+.refentry&gt;header, .refentry&gt;section, .refentry&gt;article section {
+	page-break-after: inherit !important;
 }
-</code></pre>					</div>
+</code></pre>					</details>
 				</section>
 				
 				<section id="headings">
@@ -906,8 +910,8 @@ p, li, dt, dd, tr {
 <hr>
 <h5 class="sample">Fifth-level: Gotham Rounded Bold (700) 0.75em all-caps</h5>
 <h6 class="sample sample2">Subhead: Gotham Rounded Bold (700) 0.75em all-caps</h6></aside>					</div>
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code docbook"><code>&lt;<span class="keyword">info</span>&gt;
 	&lt;<span class="keyword">title</span>&gt;First-level: Gotham Rounded Light (300) 3em&lt;/<span class="keyword">title</span>&gt;
@@ -917,9 +921,9 @@ p, li, dt, dd, tr {
 	&lt;<span class="keyword">title</span>&gt;Second-level: Gotham Rounded Book (400) 1.875em&lt;/<span class="keyword">title</span>&gt;
 	&lt;<span class="keyword">subtitle</span>&gt;Subhead: Gotham Rounded Medium (500) 1.125em&lt;/<span class="keyword">subtitle</span>&gt;
 &lt;/<span class="keyword">chapter</span>&gt;
-</code></pre>					</div>
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+</code></pre>					</details>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code html"><code>&lt;<span class="keyword">header</span>&gt;
 	&lt;<span class="keyword">h1</span>&gt;First-level: Gotham Rounded Light (300) 3em&lt;/<span class="keyword">h1</span>&gt;
@@ -930,9 +934,9 @@ p, li, dt, dd, tr {
 		&lt;<span class="keyword">h1</span>&gt;Second-level: Gotham Rounded Book (400) 1.875em&lt;/<span class="keyword">h1</span>&gt;
 		&lt;<span class="keyword">h2</span>&gt;Subhead: Gotham Rounded Medium (500) 1.125em&lt;/<span class="keyword">h2</span>&gt;
 	&lt;/<span class="keyword">section</span>&gt;
-&lt;/<span class="keyword">article</span>&gt;</code></pre>					</div>
-					<div class="keep-together">						
-						<h2>CSS styling rules for HTML documents</h2>
+&lt;/<span class="keyword">article</span>&gt;</code></pre>					</details>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code css"><code>h1, h2, h3, h4, h5, h6 {
 	font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
@@ -966,14 +970,14 @@ h5, h6, section section section section h1, section section section h2, section 
 }
 h5, h6, section section section section section h1, section section section section h2, section section section h3, section section h4  {
 	text-transform: uppercase;
-}</code></pre>					</div>
+}</code></pre>					</details>
 				</section>
 
 				<section id="lists">
 					<h1>Lists</h1>
-					<p>Lists are set with a <code>1em</code> top and bottom margin, except where an ordered or un-ordered list is contained within another ordered or un-ordered list. <code>1.5em</code> of padding is applied to the left-hand side. List items have a <code>0.25em</code> top and bottom margin.</p>					
-					<h2>Common CSS styling rules for HTML documents</h2>
-					<div class="keep-together">
+					<p>Lists are set with a <code>1em</code> top and bottom margin, except where an ordered or un-ordered list is contained within another ordered or un-ordered list. <code>1.5em</code> of padding is applied to the left-hand side. List items have a <code>0.25em</code> top and bottom margin.</p>			
+					<details>
+						<summary>Common CSS styling rules for HTML documents</summary>
 						<p>
 							A common set of rules used for both ordered and un-ordered lists is shown below:
 						</p>
@@ -1000,7 +1004,7 @@ li&gt;*:first-child {
 li&gt;*:last-child {
 	margin-bottom: 0;
 }
-</code></pre>					</div>
+</code></pre>					</details>
 					
 					<section id="ol">
 						<h1>Ordered lists</h1>
