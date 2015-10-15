@@ -897,17 +897,17 @@
 						<?php sample('example.html'); ?>
 					</div>
 					
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<p>
 							In DocBook documents, examples are marked up using the <code>&lt;example&gt;</code> element, optionally including
 							a <code>&lt;title&gt;</code>.
 						</p>					
 						<?php code('docbook', 'example.xml'); ?>
-					</div>
-										
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					</details>
+					
+					<details>
+						<summary>HTML mark-up</summary>
 						<p>
 							In HTML documents, examples consist of an <code>&lt;aside&gt;</code>
 							with a <code>class</code> of <code>example</code>. If the example has
@@ -915,12 +915,12 @@
 							<code>class</code> of <code>example-title</code>.
 						</p>
 						<?php code('html', 'example.html'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'example.css'); ?>
-					</div>
+					</details>
 				</section>
 				
 				<section id="blockquote">
@@ -932,22 +932,22 @@
 						<?php sample('blockquote.html'); ?>
 					</div>
 					
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('docbook', 'blockquote.xml'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('html', 'blockquote.html'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'blockquote.css'); ?>
-					</div>
+					</details>
 				</section>
 				
 				<section id="footnotes">
@@ -959,18 +959,21 @@
 						<?php sample('footnote.html'); ?>
 					</div>
 					
-					<aside class="caution TODO">TODO: DocBook mark-up</aside>
+					<details>
+						<summary>DocBook mark-up</summary>
+						<aside class="caution TODO">TODO: DocBook mark-up</aside>
+					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('html', 'footnote.html'); ?>
-					</div>
+					</details>
 
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'footnote.css'); ?>
-					</div>
+					</details>
 				</section>
 				
 				<section id="forms">

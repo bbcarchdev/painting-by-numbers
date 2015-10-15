@@ -2085,8 +2085,8 @@ aside&gt;p:last-child {
 </example>
 </aside>					</div>
 					
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<p>
 							In DocBook documents, examples are marked up using the <code>&lt;example&gt;</code> element, optionally including
 							a <code>&lt;title&gt;</code>.
@@ -2095,10 +2095,10 @@ aside&gt;p:last-child {
   &lt;<span class="keyword">title</span>&gt;Sample paragraph&lt;/<span class="keyword">title</span>&gt;
   &lt;<span class="keyword">para</span>&gt;When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&lt;/<span class="keyword">para</span>&gt;
 &lt;/<span class="keyword">example</span>&gt;
-</code></pre>					</div>
-										
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+</code></pre>					</details>
+					
+					<details>
+						<summary>HTML mark-up</summary>
 						<p>
 							In HTML documents, examples consist of an <code>&lt;aside&gt;</code>
 							with a <code>class</code> of <code>example</code>. If the example has
@@ -2109,10 +2109,10 @@ aside&gt;p:last-child {
   &lt;<span class="keyword">h1</span> <span class="keyword">class</span>="<span class="string">example-title</span>"&gt;Sample paragraph&lt;/<span class="keyword">h1</span>&gt;
   &lt;<span class="keyword">p</span>&gt;When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane.&lt;/<span class="keyword">p</span>&gt;
 &lt;/<span class="keyword">example</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>aside.example {
 	margin: 1em auto;
 	padding: 1em;
@@ -2174,7 +2174,7 @@ aside.example:hover:before {
 aside.example:hover&gt;h1.example-title {
 	background: #848484;
 }
-</code></pre>					</div>
+</code></pre>					</details>
 				</section>
 				
 				<section id="blockquote">
@@ -2196,8 +2196,8 @@ aside.example:hover&gt;h1.example-title {
 </blockquote>
 </aside>					</div>
 					
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code docbook"><code>&lt;<span class="keyword">para</span>&gt;
 	Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -2208,10 +2208,10 @@ aside.example:hover&gt;h1.example-title {
 	&lt;/<span class="keyword">para</span>&gt;
 	&lt;<span class="keyword">attribution</span>&gt;&lt;<span class="keyword">link</span> <span class="keyword">xlink:href</span>="<span class="string">http://www.blindtextgenerator.com/lorem-ipsum</span>"&gt;Blind text generator&lt;/<span class="keyword">link</span>&gt;, 3rd January 2014&lt;/<span class="keyword">attribution</span>&gt;
 &lt;/<span class="keyword">blockquote</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code html"><code>&lt;<span class="keyword">p</span>&gt;
 	Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean. A small river named Duden flows by their place and supplies it with the necessary regelialia. It is a paradisematic country, in which roasted parts of sentences fly into your mouth. Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
@@ -2224,17 +2224,17 @@ aside.example:hover&gt;h1.example-title {
 		&lt;<span class="keyword">cite</span>&gt;&lt;<span class="keyword">a</span> <span class="keyword">href</span>="<span class="string">http://www.blindtextgenerator.com/lorem-ipsum</span>"&gt;Blind text generator&lt;/<span class="keyword">a</span>&gt;, 3rd January 2014&lt;/<span class="keyword">cite</span>&gt;
 	&lt;/<span class="keyword">footer</span>&gt;
 &lt;/<span class="keyword">blockquote</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>blockquote {
 	margin: 1em 1em 1em 0em;
 	padding: 0 0 0 1em;
 	border-left: 0.5em solid #e6e6e6;
 	line-height: 1.4;
 	color: #404040;
-}</code></pre>					</div>
+}</code></pre>					</details>
 				</section>
 				
 				<section id="footnotes">
@@ -2256,10 +2256,13 @@ aside.example:hover&gt;h1.example-title {
 </footer>
 </aside>					</div>
 					
-					<aside class="caution TODO">TODO: DocBook mark-up</aside>
+					<details>
+						<summary>DocBook mark-up</summary>
+						<aside class="caution TODO">TODO: DocBook mark-up</aside>
+					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code html"><code>&lt;<span class="keyword">p</span>&gt;
 	Far far away, behind the word mountains&lt;<span class="keyword">sup</span> <span class="keyword">id</span>="<span class="string">ref-mountains</span>" <span class="keyword">class</span>="<span class="string">footnote</span>"&gt;&lt;<span class="keyword">a</span> <span class="keyword">href</span>="<span class="string">#fn-mountains</span>"&gt;1&lt;/<span class="keyword">a</span>&gt;&lt;/<span class="keyword">sup</span>&gt;, far from the countries Vokalia and Consonantia, there live the blind texts.
@@ -2272,10 +2275,10 @@ aside.example:hover&gt;h1.example-title {
 		&lt;/<span class="keyword">ul</span>&gt;
 	&lt;/<span class="keyword">div</span>&gt;
 &lt;/<span class="keyword">footer</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>.footnote&gt;a:link, .footnote&gt;a:visited {
 	color: #268bd2;
 	text-decoration: none;
@@ -2285,7 +2288,7 @@ aside.example:hover&gt;h1.example-title {
 }
 .footnotes ul {
 	list-style: none;
-}</code></pre>					</div>
+}</code></pre>					</details>
 				</section>
 				
 				<section id="forms">
