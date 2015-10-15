@@ -722,27 +722,31 @@
 					<aside class="info">
 						Rules and separators are automatically inserted between chapters. Explicit insertion of horizontal rules should generally be avoided.
 					</aside>
-					<p>
-						Explicit horizontal rules are not supported in DocBook documents.
-					</p>
 					
 					<div class="keep-together">
 						<h2>Sample</h2>
 						<?php sample('hr.html'); ?>
 					</div>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
+						<p>
+							Explicit horizontal rules are not supported in DocBook documents.
+						</p>
+					</details>
+					
+					<details>
+						<summary>HTML mark-up</summary>
 						<p>
 							Horizontal rules are marked up using the <code>&lt;hr&gt;</code> element.
 						</p>
 						<?php code('html', 'hr.html'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'hr.css'); ?>
-					</div>
+					</details>
 				</section>
 				
 				<section id="code">
