@@ -2319,15 +2319,18 @@ aside.example:hover&gt;h1.example-title {
 					<p>
 						In all cases, the mouse cursor, if applicable, must be set to the system– or browser-default for links (typically a “pointing finger” cursor).
 					</p>
-					<h2>Sample</h2>
-					<aside class="example"><ul>
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<aside class="example"><ul>
 	<li><a href="http://nonexistent.example.com/">Un-visited link</a></li>
 	<li><a href="">Visited link</a></li>
 	<li><a class="sample-active" href="">Hovered-over/active link</a> (simulated)</li>
 </ul>
-</aside>					
-					<h2>CSS styling rules for HTML documents</h2>
-					<pre class="code css"><code>a:link {
+</aside>					</div>
+					
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
+						<pre class="code css"><code>a:link {
 	color: #a29f06;
 }
 a:visited {
@@ -2336,16 +2339,19 @@ a:visited {
 a:hover, a:active {
 	color: #e43744;
 }
-</code></pre>					
-					<h2>CSS styling rules for HTML documents (for print)</h2>
-					<pre class="code css"><code>a:link, a:visited {
+</code></pre>					</details>
+					
+					<details>
+						<summary>>CSS styling rules for HTML documents (for print)</summary>
+						<pre class="code css"><code>a:link, a:visited {
 	color: #00f;
 }
 a[href^="#"] {
 	color: inherit !important;
 	text-decoration: inherit !important;
 }
-</code></pre>				</section>
+</code></pre>					</details>
+				</section>
 
 				<section id="emphasis">
 					<h1>Emphasis</h1>
@@ -2368,18 +2374,18 @@ a[href^="#"] {
 <p><strong>Strongly-emphasised text</strong></p>
 </aside>					</div>
 
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code docbook"><code>&lt;<span class="keyword">para</span>&gt;Un-emphasised text&lt;/<span class="keyword">para</span>&gt;
 
 &lt;<span class="keyword">para</span>&gt;&lt;<span class="keyword">emphasis</span>&gt;Emphasised text&lt;/<span class="keyword">emphasis</span>&gt;&lt;/<span class="keyword">para</span>&gt;
 
 &lt;<span class="keyword">para</span>&gt;&lt;<span class="keyword">emphasis</span> <span class="keyword">role</span>="<span class="string">strong</span>"&gt;Strongly-emphasised text&lt;/<span class="keyword">emphasis</span>&gt;&lt;/<span class="keyword">para</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<p>
 							The sample above was produced with the following HTML:
@@ -2389,19 +2395,19 @@ a[href^="#"] {
 &lt;<span class="keyword">p</span>&gt;&lt;<span class="keyword">em</span>&gt;Emphasised text&lt;/<span class="keyword">em</span>&gt;&lt;/<span class="keyword">p</span>&gt;
 
 &lt;<span class="keyword">p</span>&gt;&lt;<span class="keyword">strong</span>&gt;Strongly-emphasised text&lt;/<span class="keyword">strong</span>&gt;&lt;/<span class="keyword">p</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>em {
 	font-style: italic;
 }
 strong {
 	font-weight: 500;
 }
-</code></pre>					</div>
+</code></pre>					</details>
 				</section>
-								
+				
 				<section id="abbr">
 					<h1>Abbreviations and acronyms</h1>
 					
@@ -2418,8 +2424,8 @@ strong {
 	through mobile phones, to supercomputers.
 </p></aside>					</div>
 					
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<p>
 							DocBook documents use separate elements for (pronounceable)
 							acronymns—<code>&lt;acronymn&gt;</code>—and other abbreviations—<code>&lt;abbrev&gt;</code>.
@@ -2433,10 +2439,10 @@ strong {
 	ranging from aged &lt;<span class="keyword">abbrev</span>&gt;PCs&lt;/<span class="keyword">abbrev</span>&gt; running &lt;<span class="keyword">acronym</span>&gt;DOS&lt;<span class="keyword">alt</span>&gt;Microsoft's MS-DOS, and compatible equivalents, was the operating system shipped with most PCs prior to Windows 95’s release&lt;/<span class="keyword">alt</span>&gt;&lt;/<span class="keyword">acronym</span>&gt;,
 	through mobile phones, to supercomputers.
 &lt;/<span class="keyword">para</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<p>Abbreviations and acronyms are both marked up using the <code>&lt;abbr&gt;</code> in-line element;
 							the <code>title</code> attribute is used to convey the expansion of the abbreviation.</p>
 						<p>
@@ -2451,15 +2457,15 @@ strong {
 	&lt;<span class="keyword">abbr</span>&gt;PCs&lt;/<span class="keyword">abbr</span>&gt; running
 	&lt;<span class="keyword">abbr</span> <span class="keyword">title</span>="<span class="string">Microsoft's MS-DOS, and compatible equivalents, was the operating system shipped with most PCs prior to Windows 95’s release</span>"&gt;DOS&lt;/<span class="keyword">abbr</span>&gt;,
 	through mobile phones, to supercomputers.
-&lt;/<span class="keyword">p</span>&gt;</code></pre>					</div>					
+&lt;/<span class="keyword">p</span>&gt;</code></pre>					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>abbr[title] {
 	border-bottom: dotted #000 1px;
 	cursor: help;
 }
-</code></pre>					</div>
+</code></pre>					</details>
 				</section>
 				
 				<section id="tt">
@@ -2505,9 +2511,9 @@ strong {
 	Once connected, the <cite>Message of the Day</cite> (stored in <code>/etc/motd</code>) is printed, and will typically indicate the version of the operating system running on the host you’ve connected to, such as <samp>3.2.46-1 x86_64</samp>.
 </p>
 </aside>					</div>
-										
-					<div class="keep-together">
-						<h2>DocBook Mark-up</h2>
+					
+					<details>
+						<summary>DocBook Mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code docbook"><code>&lt;<span class="keyword">para</span>&gt;
 	The variable &lt;<span class="keyword">varname</span>&gt;x&lt;/<span class="keyword">varname</span>&gt; denotes the horizontal coordinate in the plot. The formula in &lt;<span class="keyword">code</span>&gt;calcplot()&lt;/<span class="keyword">code</span>&gt; is used to calculate the value based upon the supplied value of &lt;<span class="keyword">varname</span>&gt;y&lt;/<span class="keyword">varname</span>&gt;: &lt;<span class="keyword">code</span>&gt;return cos(2 * &lt;<span class="keyword">varname</span>&gt;y&lt;/<span class="keyword">varname</span>&gt;);&lt;/<span class="keyword">code</span>&gt;
@@ -2518,10 +2524,10 @@ strong {
 &lt;<span class="keyword">para</span>&gt;
 	Once connected, the &lt;<span class="keyword">phrase</span>&gt;Message of the Day&lt;/<span class="keyword">phrase</span>&gt; (stored in &lt;<span class="keyword">filename</span>&gt;/etc/motd&lt;/<span class="keyword">filename</span>&gt;) is printed, and will typically indicate the version of the operating system running on the host you’ve connected to, such as &lt;<span class="keyword">computeroutput</span>&gt;3.2.46-1 x86_64&lt;/<span class="keyword">computeroutput</span>&gt;.
 &lt;/<span class="keyword">para</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 
-					<div class="keep-together">
-						<h2>HTML Mark-up</h2>
+					<details>
+						<summary>HTML Mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<pre class="code html"><code>&lt;<span class="keyword">p</span>&gt;
 	The variable &lt;<span class="keyword">var</span>&gt;x&lt;/<span class="keyword">var</span>&gt; denotes the horizontal coordinate in the plot. The formula in &lt;<span class="keyword">code</span>&gt;calcplot()&lt;/<span class="keyword">code</span>&gt; is used to calculate the value based upon the supplied value of &lt;<span class="keyword">var</span>&gt;y&lt;/<span class="keyword">var</span>&gt;: &lt;<span class="keyword">code</span>&gt;return cos(2 * &lt;<span class="keyword">var</span>&gt;y&lt;/<span class="keyword">var</span>&gt;);&lt;/<span class="keyword">code</span>&gt;
@@ -2532,10 +2538,10 @@ strong {
 &lt;<span class="keyword">p</span>&gt;
 	Once connected, the &lt;<span class="keyword">cite</span>&gt;Message of the Day&lt;/<span class="keyword">cite</span>&gt; (stored in &lt;<span class="keyword">code</span>&gt;/etc/motd&lt;/<span class="keyword">code</span>&gt;) is printed, and will typically indicate the version of the operating system running on the host you’ve connected to, such as &lt;<span class="keyword">samp</span>&gt;3.2.46-1 x86_64&lt;/<span class="keyword">samp</span>&gt;.
 &lt;/<span class="keyword">p</span>&gt;
-</code></pre>					</div>
+</code></pre>					</details>
 					
-					<div class="keep-together">					
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>code, samp {
 	font-family: Inconsolata, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
 	font-size: 0.75em;
@@ -2572,7 +2578,7 @@ code var, kbd samp {
 code var {
 	font-weight: bold;
 }
-</code></pre>					</div>
+</code></pre>					</details>
 				</section>
 				
 				<section id="inlinequote">

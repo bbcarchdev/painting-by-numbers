@@ -1004,14 +1004,20 @@
 					<p>
 						In all cases, the mouse cursor, if applicable, must be set to the system– or browser-default for links (typically a “pointing finger” cursor).
 					</p>
-					<h2>Sample</h2>
-					<?php sample('link-simulated.html'); ?>
+					<div class="keep-together">
+						<h2>Sample</h2>
+						<?php sample('link-simulated.html'); ?>
+					</div>
 					
-					<h2>CSS styling rules for HTML documents</h2>
-					<?php code('css', 'link.css'); ?>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
+						<?php code('css', 'link.css'); ?>
+					</details>
 					
-					<h2>CSS styling rules for HTML documents (for print)</h2>
-					<?php code('css', 'link-print.css'); ?>
+					<details>
+						<summary>>CSS styling rules for HTML documents (for print)</summary>
+						<?php code('css', 'link-print.css'); ?>
+					</details>
 				</section>
 
 				<section id="emphasis">
@@ -1031,27 +1037,27 @@
 						<?php sample('em.html'); ?>
 					</div>
 
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('docbook', 'em.xml'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<p>
 							The sample above was produced with the following HTML:
 						</p>
 						<?php code('html', 'em.html'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'em.css'); ?>
-					</div>
+					</details>
 				</section>
-								
+				
 				<section id="abbr">
 					<h1>Abbreviations and acronyms</h1>
 					
@@ -1060,30 +1066,30 @@
 						<?php sample('abbr.html'); ?>
 					</div>
 					
-					<div class="keep-together">
-						<h2>DocBook mark-up</h2>
+					<details>
+						<summary>DocBook mark-up</summary>
 						<p>
 							DocBook documents use separate elements for (pronounceable)
 							acronymns—<code>&lt;acronymn&gt;</code>—and other abbreviations—<code>&lt;abbrev&gt;</code>.
 							There is no defined attribute or child element for conveying the expansion of the abbreviation.
 						</p>
 						<?php code('docbook', 'abbr.xml'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<p>Abbreviations and acronyms are both marked up using the <code>&lt;abbr&gt;</code> in-line element;
 							the <code>title</code> attribute is used to convey the expansion of the abbreviation.</p>
 						<p>
 							The sample above was produced with the following HTML:
 						</p>
 						<?php code('html', 'abbr.html'); ?>
-					</div>					
+					</details>
 					
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'abbr.css'); ?>
-					</div>
+					</details>
 				</section>
 				
 				<section id="tt">
@@ -1121,23 +1127,23 @@
 						<h2>Sample</h2>
 						<?php sample('code-literals.html'); ?>
 					</div>
-										
-					<div class="keep-together">
-						<h2>DocBook Mark-up</h2>
+					
+					<details>
+						<summary>DocBook Mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('docbook', 'code-literals.xml'); ?>
-					</div>
+					</details>
 
-					<div class="keep-together">
-						<h2>HTML Mark-up</h2>
+					<details>
+						<summary>HTML Mark-up</summary>
 						<aside class="caution TODO">TODO</aside>
 						<?php code('html', 'code-literals.html'); ?>
-					</div>
+					</details>
 					
-					<div class="keep-together">					
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'code-literals.css'); ?>
-					</div>
+					</details>
 				</section>
 				
 				<section id="inlinequote">
