@@ -845,17 +845,20 @@
 						<?php sample('figure.html'); ?>
 					</div>
 					
-					<aside class="caution TODO">TODO: DocBook mark-up</aside>
+					<details>
+						<summary>DocBook mark-up</summary>
+						<aside class="caution TODO">TODO: DocBook mark-up</aside>
+					</details>
 
-					<div class="keep-together">
-						<h2>HTML mark-up</h2>
+					<details>
+						<summary>HTML mark-up</summary>
 						<?php code('html', 'figure.html'); ?>
-					</div>
+					</details>
 
-					<div class="keep-together">
-						<h2>CSS styling rules for HTML documents</h2>
+					<details>
+						<summary>CSS styling rules for HTML documents</summary>
 						<?php code('css', 'figure.css'); ?>
-					</div>					
+					</details>
 				</section>
 				
 				<section id="callouts">
