@@ -17,7 +17,11 @@ foreach($logo as $name => $title)
 	echo '<a href="logo/' . _e($name) . '.svg">' ;
 	echo '<img src="logo/' . _e($name) . '.png" alt="' . _e($title) . '">';
 	echo '</a>';
-	echo '<figcaption>' . _e($title) . '</figcaption>';
+	echo '<figcaption>' . _e($title) . ' (';
+	echo '<a href="logo/' . _e($name) . '.png">PNG</a>, ';
+	echo '<a href="logo/' . _e($name) . '.svg">SVG</a>, ';
+	echo '<a href="logo/' . _e($name) . '.pdf">PDF</a>';
+	echo ')</figcaption>';
 	echo '</figure>';
 }
 echo '</div>';
