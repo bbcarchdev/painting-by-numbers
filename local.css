@@ -19,9 +19,9 @@
 
 body>header .masthead {
 	display: block;
-	background: #268bd2;
+	background: #01172A;
 }
 
 .book>header .masthead {
-	background: #268bd2 url('images/masthead.png') 50% 50% no-repeat;
+	background: #01172A url('images/masthead.png') 50% 50% no-repeat;
 }

@@ -482,9 +482,9 @@ section.legalnotice {
 }
 
 body.home&gt;header {
-	background: #000;
+	background: transparent;
 	color: #e2e2e2;
-	border-bottom: none;
+	border-bottom: none; 
 }
 body.home&gt;header h1 {
 	display: none;
@@ -535,18 +535,20 @@ nav.global abbr {
 	border: none !important;
 }
 nav.global {
-	background: #636363;
+	background: transparent;
 	color: #ffffff;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	border-bottom: solid #404040 1px;
+	border-bottom: solid #404040 0px;
+	position: absolute;
+	width: 100%;
 }
 nav.global .inner {
 	margin: 0 auto;
 	padding: 0;
 	max-width: 986px;
-	height: 39pt;
+	height: 60px;
 	position: relative;
 }
 nav.global ul {
@@ -560,41 +562,50 @@ nav.global li {
 	font-style: normal;
 	display: block;
 	float: left;
-	height: 39pt;
+	height: 60px;
 	margin: 0;
-	color: #e2e2e2;
-	border-right: solid #707070 1px;
+	color: #fff;
+	/*border-right: solid #707070 1px;*/
 }
 nav.global li:last-child {
 	border-right: none;
 }
 nav.global li&gt;a {
 	display: block;
-	height: 39pt;
-	line-height: 39pt;
+	height: 60px;
+	line-height: 60px;
 	color: #b2b2b2;
 	padding: 0 13pt;
-	font-size: 0.85em;
-	text-transform: lowercase;
+	font-size: 1.2em;
+	/*text-transform: lowercase;*/
 }
 nav.global li&gt;a:hover {
-	background: #b2b2b2;
-	color: #404040;
+	/*background: #b2b2b2;*/
+	/*color: #404040;*/
 }
 nav.global li.logo {
 	position: absolute;
 	float: none;
 	top: 0;
-	left: 0;
+	left: -4px;
 	border: none;
+	width: 100px;
+  height: 60px;
 }
 nav.global li.logo&gt;a {
 	background: #636363;
 	color: #ceca13 !important;	
 	font-size: 2.5em;
+	background: url(/res/images/res-logo-min-white-black.png);
+	text-indent: -999999px;
+	overflow: hidden;
+	width: 100px;
+  height: 60px;
+	padding: 0px;
+	background-size: 100%;
+	background-position: 50% 50%;
 }
 nav.global li.logo&gt;a:hover {
-	background: #636363;
 	color: inherit;
 }</code></pre>						</details>
 						
@@ -622,7 +633,7 @@ nav.global li.logo&gt;a:hover {
 	display: none;
 	margin: -1px 0 0 0;
 	background: #b4b4b4;
-	height: 0.5em;
+	height: 60px;
 }
 body.book&gt;header .masthead, body.index&gt;header .masthead {
 	height: 360px;

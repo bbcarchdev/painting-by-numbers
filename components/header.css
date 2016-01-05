@@ -9,9 +9,9 @@ section.legalnotice {
 }
 
 body.home>header {
-	background: #000;
+	background: transparent;
 	color: #e2e2e2;
-	border-bottom: none;
+	border-bottom: none; 
 }
 body.home>header h1 {
 	display: none;
