@@ -16,3 +16,21 @@ body.home>header {
 body.home>header h1 {
 	display: none;
 }
+body.book>header .global, body.index>header .global, body.home>header .global{
+  color: #fff;
+}
+
+body.index>header, body.home>header {
+  color: #fff;
+}
+
+.education header, .collection header, .developers header {
+  color: #fff;
+}
+body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+  }

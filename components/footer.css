@@ -1,9 +1,12 @@
 body>footer {
-	margin: 0 -1em -1em -1em;
+	margin: 0 -13pt -13pt -13pt;
 	padding: 0.25em 1em 0.25em 1em;
   background-color: #01172a;
   position: relative;
   color: white;
+}
+body>footer .wrapper{
+  padding: 0;
 }
 body > footer p {
 	margin-left: auto;
@@ -31,18 +34,33 @@ body>footer:before{
   opacity: 0.5;
 }
 body>footer p{
-  font-size: 24px;
+  font-size: 1em;
 }
 body>footer a:link, body>footer a:visited, body>footer a:link, body>footer a:visited{
   color: white;
   text-decoration: none;
 }
 .footer__links{
-    border-bottom: 1px solid white;
     border-color: rgba(255,255,255,0.3);
-    padding: 0 0 40px 0;
-    margin: 0 0 40px 0;
+    padding: 0 0 0px 0;
+    margin: 0 0 0px 0;
 }
 footer .logos a{
   margin-right: 50px;
+  margin-bottom: 20px;
+}
+footer .logos:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+@media screen and (max-width: 768px) {
+  footer .logos a{
+    display: block;
+    
+    max-width: 100px;
+  }
+  footer .logos img{
+    width: 100%;
+  }
 }

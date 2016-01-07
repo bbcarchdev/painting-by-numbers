@@ -9,7 +9,6 @@ nav.global abbr {
 }
 nav.global {
 	background: transparent;
-	color: #ffffff;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -21,7 +20,7 @@ nav.global .inner {
 	margin: 0 auto;
 	padding: 0;
 	max-width: 986px;
-	height: 60px;
+	height: 100px;
 	position: relative;
 }
 nav.global ul {
@@ -35,9 +34,8 @@ nav.global li {
 	font-style: normal;
 	display: block;
 	float: left;
-	height: 60px;
+	height: 100px;
 	margin: 0;
-	color: #fff;
 	/*border-right: solid #707070 1px;*/
 }
 nav.global li:last-child {
@@ -45,8 +43,8 @@ nav.global li:last-child {
 }
 nav.global li>a {
 	display: block;
-	height: 60px;
-	line-height: 60px;
+	height: 100px;
+	line-height: 100px;
 	color: #b2b2b2;
 	padding: 0 13pt;
 	font-size: 1.2em;
@@ -60,20 +58,20 @@ nav.global li.logo {
 	position: absolute;
 	float: none;
 	top: 0;
-	left: -4px;
+	left: 12pt;
 	border: none;
 	width: 100px;
-  height: 60px;
+  height: 100px;
 }
 nav.global li.logo>a {
 	background: #636363;
 	color: #ceca13 !important;	
 	font-size: 2.5em;
-	background: url(/res/images/res-logo-min-olive-grey.png);
-	text-indent: -999999px;
+	background: url(/res/images/res-logo-min-white-black.png); /*/res/images/res-logo-min-olive-grey.png*/
+	text-indent: 999999px;
 	overflow: hidden;
 	width: 100px;
-  height: 60px;
+  height: 100px;
 	padding: 0px;
 	background-size: 100%;
 	background-position: 50% 50%;

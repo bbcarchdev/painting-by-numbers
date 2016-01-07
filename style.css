@@ -36,7 +36,24 @@ body.home>header {
 body.home>header h1 {
 	display: none;
 }
+body.book>header .global, body.index>header .global, body.home>header .global{
+  color: #fff;
+}
 
+body.index>header, body.home>header {
+  color: #fff;
+}
+
+.education header, .collection header, .developers header {
+  color: #fff;
+}
+body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 30px;
+    margin: auto;
+  }
 /* 5.1.1 Global navigation */
 
 nav.global a:link, nav.global a:visited {
@@ -50,7 +67,6 @@ nav.global abbr {
 }
 nav.global {
 	background: transparent;
-	color: #ffffff;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
@@ -62,7 +78,7 @@ nav.global .inner {
 	margin: 0 auto;
 	padding: 0;
 	max-width: 986px;
-	height: 60px;
+	height: 100px;
 	position: relative;
 }
 nav.global ul {
@@ -76,9 +92,8 @@ nav.global li {
 	font-style: normal;
 	display: block;
 	float: left;
-	height: 60px;
+	height: 100px;
 	margin: 0;
-	color: #fff;
 	/*border-right: solid #707070 1px;*/
 }
 nav.global li:last-child {
@@ -86,8 +101,8 @@ nav.global li:last-child {
 }
 nav.global li>a {
 	display: block;
-	height: 60px;
-	line-height: 60px;
+	height: 100px;
+	line-height: 100px;
 	color: #b2b2b2;
 	padding: 0 13pt;
 	font-size: 1.2em;
@@ -101,20 +116,20 @@ nav.global li.logo {
 	position: absolute;
 	float: none;
 	top: 0;
-	left: -4px;
+	left: 12pt;
 	border: none;
 	width: 100px;
-  height: 60px;
+  height: 100px;
 }
 nav.global li.logo>a {
 	background: #636363;
 	color: #ceca13 !important;	
 	font-size: 2.5em;
-	background: url(/res/images/res-logo-min-olive-grey.png);
-	text-indent: -999999px;
+	background: url(/res/images/res-logo-min-white-black.png); /*/res/images/res-logo-min-olive-grey.png*/
+	text-indent: 999999px;
 	overflow: hidden;
 	width: 100px;
-  height: 60px;
+  height: 100px;
 	padding: 0px;
 	background-size: 100%;
 	background-position: 50% 50%;
@@ -174,8 +189,9 @@ nav.subnav li>a:hover {
 body>header .masthead {
 	display: none;
 	margin: -1px 0 0 0;
-	background: #b4b4b4;
-	height: 60px;
+	background: #fff;
+	height: 150px;
+  display: block;
 }
 body.book>header .masthead, body.index>header .masthead {
 	height: 360px;
@@ -218,11 +234,14 @@ body>header .copyright {
 /* 5.2 Document footer */
 
 body>footer {
-	margin: 0 -1em -1em -1em;
+	margin: 0 -13pt -13pt -13pt;
 	padding: 0.25em 1em 0.25em 1em;
   background-color: #01172a;
   position: relative;
   color: white;
+}
+body>footer .wrapper{
+  padding: 0;
 }
 body > footer p {
 	margin-left: auto;
@@ -250,20 +269,35 @@ body>footer:before{
   opacity: 0.5;
 }
 body>footer p{
-  font-size: 24px;
+  font-size: 1em;
 }
 body>footer a:link, body>footer a:visited, body>footer a:link, body>footer a:visited{
   color: white;
   text-decoration: none;
 }
 .footer__links{
-    border-bottom: 1px solid white;
     border-color: rgba(255,255,255,0.3);
-    padding: 0 0 40px 0;
-    margin: 0 0 40px 0;
+    padding: 0 0 0px 0;
+    margin: 0 0 0px 0;
 }
 footer .logos a{
   margin-right: 50px;
+  margin-bottom: 20px;
+}
+footer .logos:after {
+    content:"";
+    display:table;
+    clear:both;
+  }
+@media screen and (max-width: 768px) {
+  footer .logos a{
+    display: block;
+    
+    max-width: 100px;
+  }
+  footer .logos img{
+    width: 100%;
+  }
 }
 /* 5.3 Body text */
 
@@ -887,14 +921,18 @@ q:after {
 		font-size: 11pt;
 	}
 	body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
-		height: 120px;
+		height: 160px;
 	}
 	nav.global>.inner, nav.global li, nav.global li>a {
-		height: 24pt;
+		
 	}
-	nav.global ul {
+	nav.global ul li{
+    height: auto;
+    float: none;
+    text-align: right;
 	}
 	nav.global li>a {
+  height: auto;
 		padding: 0 5pt;
 		line-height: 24pt;
 	}

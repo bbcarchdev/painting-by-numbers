@@ -1,8 +1,9 @@
 body>header .masthead {
 	display: none;
 	margin: -1px 0 0 0;
-	background: #b4b4b4;
-	height: 60px;
+	background: #fff;
+	height: 150px;
+  display: block;
 }
 body.book>header .masthead, body.index>header .masthead {
 	height: 360px;
