@@ -47,12 +47,12 @@ body.index>header, body.home>header {
 .education header, .collection header, .developers header {
   color: #fff;
 }
-body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1 {
+body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1 {
     position: absolute;
     left: 0;
     right: 0;
     bottom: 30px;
-    margin: auto;
+    margin: 0 auto !important;
   }
 /* 5.1.1 Global navigation */
 
@@ -73,6 +73,7 @@ nav.global {
 	border-bottom: solid #404040 0px;
 	position: absolute;
 	width: 100%;
+	z-index: 1;
 }
 nav.global .inner {
 	margin: 0 auto;
@@ -80,7 +81,10 @@ nav.global .inner {
 	max-width: 986px;
 	height: 100px;
 	position: relative;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
+
 nav.global ul {
 	display: block;
 	float: right;
@@ -137,6 +141,33 @@ nav.global li.logo>a {
 nav.global li.logo>a:hover {
 	color: inherit;
 }
+
+@media screen and (max-width: 768px) {
+	nav.global ul {
+    float: left;
+    margin-left: 90px;
+	}
+	nav.global ul li{
+    height: auto;
+    float: none;
+    text-align: left;
+    height: 25px;
+	}
+	nav.global li>a {
+  height: auto;
+		padding: 0 5pt;
+		line-height: 24pt;
+	}
+	nav.global li.logo>a {
+		font-size: 1.5em;
+	}
+	nav.subnav li>a {
+		padding: 0 6pt;
+	}
+	nav.subnav li:first-child>a {
+		padding-left: 4pt;
+	}
+}
 nav.subnav {                                                                    
     background: #848484;
     color: #e6e6e6;
@@ -190,15 +221,56 @@ body>header .masthead {
 	display: none;
 	margin: -1px 0 0 0;
 	background: #fff;
-	height: 150px;
+	height: 360px;
   display: block;
+}
+@media screen and (max-width: 768px) {
+  body>header .masthead {
+    height: 220px;
+  }
 }
 body.book>header .masthead, body.index>header .masthead {
 	height: 360px;
 	border-bottom: solid #636363 1px;
 }
 body.home>header .masthead {
-	height: 360px;
+	position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 9px;
+  height: 0;
+  overflow: hidden;
+  z-index: 0;
+  z-index: 0;
+}
+@media screen and (max-width: 768px) {
+  body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
+    height: 220px;
+  }
+  body.home>header .masthead{
+    height: 100%;
+  }
+}
+body.home>header .masthead iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+@media screen and (min-width: 1300px) {
+  body.home>header .masthead {
+    height: 740px;
+    padding: 0;
+
+  }
+  body.home>header .masthead iframe{
+    width: 1300px;
+    height: 740px;
+    margin: auto;
+    display: block;
+    position: relative;
+  }
 }
 
 /* 5.1.3 Inside cover */
@@ -920,39 +992,7 @@ q:after {
 	body {
 		font-size: 11pt;
 	}
-	body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
-		height: 160px;
-	}
-	nav.global>.inner, nav.global li, nav.global li>a {
-		
-	}
-	nav.global ul li{
-    height: auto;
-    float: none;
-    text-align: right;
-	}
-	nav.global li>a {
-  height: auto;
-		padding: 0 5pt;
-		line-height: 24pt;
-	}
-	nav.global li.logo>a {
-		font-size: 1.5em;
-	}
-	nav.subnav li>a {
-		padding: 0 6pt;
-	}
-	nav.subnav li:first-child>a {
-		padding-left: 4pt;
-	}
 }
-
-@media screen and (max-width: 640px) {
-	nav.global {
-		font-size: 0.875em;
-	}
-}
-
 /* Fixes for older IE */
 header, footer, nav, aside, article, section {                                  
     display: block;                                                             

@@ -2,13 +2,54 @@ body>header .masthead {
 	display: none;
 	margin: -1px 0 0 0;
 	background: #fff;
-	height: 150px;
+	height: 360px;
   display: block;
+}
+@media screen and (max-width: 768px) {
+  body>header .masthead {
+    height: 220px;
+  }
 }
 body.book>header .masthead, body.index>header .masthead {
 	height: 360px;
 	border-bottom: solid #636363 1px;
 }
 body.home>header .masthead {
-	height: 360px;
+	position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 9px;
+  height: 0;
+  overflow: hidden;
+  z-index: 0;
+  z-index: 0;
+}
+@media screen and (max-width: 768px) {
+  body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
+    height: 220px;
+  }
+  body.home>header .masthead{
+    height: 100%;
+  }
+}
+body.home>header .masthead iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+@media screen and (min-width: 1300px) {
+  body.home>header .masthead {
+    height: 740px;
+    padding: 0;
+
+  }
+  body.home>header .masthead iframe{
+    width: 1300px;
+    height: 740px;
+    margin: auto;
+    display: block;
+    position: relative;
+  }
 }

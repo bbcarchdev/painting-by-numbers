@@ -15,6 +15,7 @@ nav.global {
 	border-bottom: solid #404040 0px;
 	position: absolute;
 	width: 100%;
+	z-index: 1;
 }
 nav.global .inner {
 	margin: 0 auto;
@@ -22,7 +23,10 @@ nav.global .inner {
 	max-width: 986px;
 	height: 100px;
 	position: relative;
+  padding: 0 40px;
+  box-sizing: border-box;
 }
+
 nav.global ul {
 	display: block;
 	float: right;
@@ -78,4 +82,31 @@ nav.global li.logo>a {
 }
 nav.global li.logo>a:hover {
 	color: inherit;
+}
+
+@media screen and (max-width: 768px) {
+	nav.global ul {
+    float: left;
+    margin-left: 90px;
+	}
+	nav.global ul li{
+    height: auto;
+    float: none;
+    text-align: left;
+    height: 25px;
+	}
+	nav.global li>a {
+  height: auto;
+		padding: 0 5pt;
+		line-height: 24pt;
+	}
+	nav.global li.logo>a {
+		font-size: 1.5em;
+	}
+	nav.subnav li>a {
+		padding: 0 6pt;
+	}
+	nav.subnav li:first-child>a {
+		padding-left: 4pt;
+	}
 }
