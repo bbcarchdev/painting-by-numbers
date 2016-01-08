@@ -24,13 +24,14 @@ body.index>header, body.home>header {
   color: #fff;
 }
 
-.education header, .collection header, .developers header {
+.education header, .collection header, .developers header, .tech header {
   color: #fff;
+  border-bottom: 0;
 }
-body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1 {
+body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 50px;
     margin: 0 auto !important;
   }

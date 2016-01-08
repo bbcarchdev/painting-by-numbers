@@ -16,6 +16,16 @@ nav.global {
 	position: absolute;
 	width: 100%;
 	z-index: 1;
+    width: auto;
+    margin: 0 40px 0 0;
+    left: 0;
+    right: 0;
+    display: block;
+}
+@media screen and (max-width: 768px) {
+	nav.global {
+    margin: 0;
+	}
 }
 nav.global .inner {
 	margin: 0 auto;
@@ -23,8 +33,6 @@ nav.global .inner {
 	max-width: 986px;
 	height: 100px;
 	position: relative;
-  padding: 0 40px;
-  box-sizing: border-box;
 }
 
 nav.global ul {
@@ -85,14 +93,19 @@ nav.global li.logo>a:hover {
 }
 
 @media screen and (max-width: 768px) {
+	body.home>header nav.global{
+		position: relative;
+		height: 120px;
+		color: #000;
+	}
 	nav.global ul {
-    float: left;
+    float: right;
     margin-left: 90px;
 	}
 	nav.global ul li{
     height: auto;
     float: none;
-    text-align: left;
+    text-align: right;
     height: 25px;
 	}
 	nav.global li>a {

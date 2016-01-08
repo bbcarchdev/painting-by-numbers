@@ -497,14 +497,15 @@ body.index&gt;header, body.home&gt;header {
   color: #fff;
 }
 
-.education header, .collection header, .developers header {
+.education header, .collection header, .developers header, .tech header {
   color: #fff;
+  border-bottom: 0;
 }
-body&gt;header h1, body.index&gt;header h1, body.home&gt;header h1, .education header h1, .collection header h1, .developers header h1 {
+body&gt;header h1, body.index&gt;header h1, body.home&gt;header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 30px;
+    bottom: 50px;
     margin: 0 auto !important;
   }</code></pre>					</details>
 					<section id="globalnav">
@@ -560,6 +561,16 @@ nav.global {
 	position: absolute;
 	width: 100%;
 	z-index: 1;
+    width: auto;
+    margin: 0 40px 0 0;
+    left: 0;
+    right: 0;
+    display: block;
+}
+@media screen and (max-width: 768px) {
+	nav.global {
+    margin: 0;
+	}
 }
 nav.global .inner {
 	margin: 0 auto;
@@ -567,8 +578,6 @@ nav.global .inner {
 	max-width: 986px;
 	height: 100px;
 	position: relative;
-  padding: 0 40px;
-  box-sizing: border-box;
 }
 
 nav.global ul {
@@ -629,14 +638,19 @@ nav.global li.logo&gt;a:hover {
 }
 
 @media screen and (max-width: 768px) {
+	body.home&gt;header nav.global{
+		position: relative;
+		height: 120px;
+		color: #000;
+	}
 	nav.global ul {
-    float: left;
+    float: right;
     margin-left: 90px;
 	}
 	nav.global ul li{
     height: auto;
     float: none;
-    text-align: left;
+    text-align: right;
     height: 25px;
 	}
 	nav.global li&gt;a {
