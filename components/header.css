@@ -32,6 +32,11 @@ body>header h1, body.index>header h1, body.home>header h1, .education header h1,
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 50px;
+    top: 250px;
     margin: 0 auto !important;
+}
+@media screen and (max-width: 768px) {
+  body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
+    top: 150px;
   }
+}

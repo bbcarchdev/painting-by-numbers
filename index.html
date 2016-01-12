@@ -23,16 +23,19 @@
 	</head>
 	<body class="book">
 		<header>
-			<nav class="global"><div class="inner">
-				<ul>
-					<li class="logo"><a href="https://bbcarchdev.github.io/res/"><abbr title="Research &amp; Education Space">RES</abbr></a></li>
-					<li><a href="https://bbcarchdev.github.io/res/guides">Guides</a></li>
-					<li><a href="http://acropolis.org.uk/">Developer API</a></li>
-					<li><a href="https://bbcarchdev.github.io/res/tools">Tools</a></li>
-					<li><a href="https://bbcarchdev.github.io/res/code">Source code</a></li>
-				</ul>
-			</div></nav>
+			<nav class="global">
+				<div class="inner">
+					<ul>
+						<li class="logo"><a href="/res/"><abbr title="Research &amp; Education Space">RES</abbr></a></li>
+						<li><a href="/res/education">Education</a></li>
+						<li><a href="/res/collections">Collections</a></li>
+						<li><a href="/res/products">Products</a></li>
+						<li><a href="/res/faq">FAQ</a></li>
+					</ul>
+				</div>
+			</nav>
 			<div class="masthead"></div>
+			<nav class="secondarynav"><div class="inner"><ul><li><a href="https://bbcarchdev.github.io/res/guides">Guides</a></li><li><a href="//acropolis.org.uk">Developer API</a></li><li><a href="https://bbcarchdev.github.io/res/tools">Tools</a></li><li><a href="https://bbcarchdev.github.io/res/code">Source Code</a></li></ul></div></nav>
 			<h1>Painting by Numbers</h1>
 			<h2>The visual style &amp; mark-up guide for the Research and Education Space</h2>
 			<p class="edition">December 2015 Edition</p>
@@ -505,9 +508,14 @@ body&gt;header h1, body.index&gt;header h1, body.home&gt;header h1, .education h
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 50px;
+    top: 250px;
     margin: 0 auto !important;
-  }</code></pre>					</details>
+}
+@media screen and (max-width: 768px) {
+  body&gt;header h1, body.index&gt;header h1, body.home&gt;header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
+    top: 150px;
+  }
+}</code></pre>					</details>
 					<section id="globalnav">
 						<h1>Global navigation</h1>
 						<p>
@@ -561,15 +569,21 @@ nav.global {
 	position: absolute;
 	width: 100%;
 	z-index: 1;
-    width: auto;
-    margin: 0 40px 0 0;
-    left: 0;
-    right: 0;
-    display: block;
+  width: auto;
+  margin: 0 40px 0 0;
+  left: 0;
+  right: 0;
+  display: block;
 }
 @media screen and (max-width: 768px) {
 	nav.global {
     margin: 0;
+	}
+}
+@media screen and (min-width: 1024px) {
+	nav.global {
+    margin: 0 auto;
+    max-width: 986px;
 	}
 }
 nav.global .inner {
@@ -624,7 +638,7 @@ nav.global li.logo&gt;a {
 	background: #636363;
 	color: #ceca13 !important;	
 	font-size: 2.5em;
-	background: url(/res/images/res-logo-min-white-black.png); /*/res/images/res-logo-min-olive-grey.png*/
+	background: url(/res/images/res-logo-min-olive-grey.png); /*/res/images/res-logo-min-olive-grey.png*/
 	text-indent: 999999px;
 	overflow: hidden;
 	width: 100px;
@@ -666,6 +680,56 @@ nav.global li.logo&gt;a:hover {
 	}
 	nav.subnav li:first-child&gt;a {
 		padding-left: 4pt;
+	}
+}
+.secondarynav{
+  position: absolute;
+  top: 115px;
+  left: 0px;
+  width: 100%;
+  background: transparent;
+  border-bottom: 0;
+  color: black;
+  text-align: left;
+  z-index: 2;
+}
+@media screen and (min-width: 768px){
+	.secondarynav {
+  	top: 80px;
+  	text-align: right;
+	}
+}
+.secondarynav .inner {
+	max-width: 986px;
+	margin: 0 auto;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+@media screen and (min-width: 768px){
+	.secondarynav .inner {
+		margin: 0 40px 0 0;
+		padding-left: 0px;
+	}
+}
+@media screen and (min-width: 1024px){
+	.secondarynav .inner {
+	    margin: 0 auto;
+	}
+}
+.secondarynav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+} 
+.secondarynav li{
+	display: inline-block;
+}
+.secondarynav a{
+	padding: 0 5pt;
+}
+@media screen and (min-width: 768px){
+	.secondarynav a{
+		padding: 0 13pt;
 	}
 }</code></pre>						</details>
 						

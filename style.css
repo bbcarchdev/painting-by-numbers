@@ -52,9 +52,14 @@ body>header h1, body.index>header h1, body.home>header h1, .education header h1,
     position: absolute;
     left: 0;
     right: 0;
-    bottom: 50px;
+    top: 250px;
     margin: 0 auto !important;
+}
+@media screen and (max-width: 768px) {
+  body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
+    top: 150px;
   }
+}
 /* 5.1.1 Global navigation */
 
 nav.global a:link, nav.global a:visited {
@@ -75,15 +80,21 @@ nav.global {
 	position: absolute;
 	width: 100%;
 	z-index: 1;
-    width: auto;
-    margin: 0 40px 0 0;
-    left: 0;
-    right: 0;
-    display: block;
+  width: auto;
+  margin: 0 40px 0 0;
+  left: 0;
+  right: 0;
+  display: block;
 }
 @media screen and (max-width: 768px) {
 	nav.global {
     margin: 0;
+	}
+}
+@media screen and (min-width: 1024px) {
+	nav.global {
+    margin: 0 auto;
+    max-width: 986px;
 	}
 }
 nav.global .inner {
@@ -138,7 +149,7 @@ nav.global li.logo>a {
 	background: #636363;
 	color: #ceca13 !important;	
 	font-size: 2.5em;
-	background: url(/res/images/res-logo-min-white-black.png); /*/res/images/res-logo-min-olive-grey.png*/
+	background: url(/res/images/res-logo-min-olive-grey.png); /*/res/images/res-logo-min-olive-grey.png*/
 	text-indent: 999999px;
 	overflow: hidden;
 	width: 100px;
@@ -180,6 +191,56 @@ nav.global li.logo>a:hover {
 	}
 	nav.subnav li:first-child>a {
 		padding-left: 4pt;
+	}
+}
+.secondarynav{
+  position: absolute;
+  top: 115px;
+  left: 0px;
+  width: 100%;
+  background: transparent;
+  border-bottom: 0;
+  color: black;
+  text-align: left;
+  z-index: 2;
+}
+@media screen and (min-width: 768px){
+	.secondarynav {
+  	top: 80px;
+  	text-align: right;
+	}
+}
+.secondarynav .inner {
+	max-width: 986px;
+	margin: 0 auto;
+	padding-left: 10px;
+	box-sizing: border-box;
+}
+@media screen and (min-width: 768px){
+	.secondarynav .inner {
+		margin: 0 40px 0 0;
+		padding-left: 0px;
+	}
+}
+@media screen and (min-width: 1024px){
+	.secondarynav .inner {
+	    margin: 0 auto;
+	}
+}
+.secondarynav ul{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+} 
+.secondarynav li{
+	display: inline-block;
+}
+.secondarynav a{
+	padding: 0 5pt;
+}
+@media screen and (min-width: 768px){
+	.secondarynav a{
+		padding: 0 13pt;
 	}
 }
 nav.subnav {                                                                    
@@ -322,9 +383,9 @@ body>header .copyright {
 body>footer {
 	margin: 0 -13pt -13pt -13pt;
 	padding: 0.25em 1em 0.25em 1em;
-  background-color: #01172a;
+  /*background-color: #01172a;*/
   position: relative;
-  color: white;
+  /*color: white;*/
 }
 body>footer .wrapper{
   padding: 0;
@@ -348,7 +409,7 @@ body>footer:before{
   height: 100%;
   z-index: 1;
   border: 0px;
-  background-image: url(../res/images/twine-masthead.png);
+/*  background-image: url(../res/images/twine-masthead.png);*/
   background-size: 90%;
   background-position: center 50px;
   background-repeat: no-repeat;
@@ -358,7 +419,7 @@ body>footer p{
   font-size: 1em;
 }
 body>footer a:link, body>footer a:visited, body>footer a:link, body>footer a:visited{
-  color: white;
+  /*color: white;*/
   text-decoration: none;
 }
 .footer__links{

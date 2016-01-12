@@ -1,9 +1,9 @@
 body>footer {
 	margin: 0 -13pt -13pt -13pt;
 	padding: 0.25em 1em 0.25em 1em;
-  background-color: #01172a;
+  /*background-color: #01172a;*/
   position: relative;
-  color: white;
+  /*color: white;*/
 }
 body>footer .wrapper{
   padding: 0;
@@ -27,7 +27,7 @@ body>footer:before{
   height: 100%;
   z-index: 1;
   border: 0px;
-  background-image: url(../res/images/twine-masthead.png);
+/*  background-image: url(../res/images/twine-masthead.png);*/
   background-size: 90%;
   background-position: center 50px;
   background-repeat: no-repeat;
@@ -37,7 +37,7 @@ body>footer p{
   font-size: 1em;
 }
 body>footer a:link, body>footer a:visited, body>footer a:link, body>footer a:visited{
-  color: white;
+  /*color: white;*/
   text-decoration: none;
 }
 .footer__links{
