@@ -1,9 +1,10 @@
 body>footer {
 	margin: 0 -13pt -13pt -13pt;
-	padding: 0.25em 1em 0.25em 1em;
+	padding: 2em 1em 2em 1em;
   /*background-color: #01172a;*/
   position: relative;
   /*color: white;*/
+  border-top: 1px solid #E2E2E6;
 }
 body>footer .wrapper{
   padding: 0;
@@ -57,7 +58,7 @@ footer .logos:after {
 @media screen and (max-width: 768px) {
   footer .logos a{
     display: block;
-    
+
     max-width: 100px;
   }
   footer .logos img{
