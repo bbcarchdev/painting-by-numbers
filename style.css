@@ -329,8 +329,8 @@ body.home>header .masthead #mediaPlayer{
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100% !important;
+  height: 100% !important;
   z-index: 0;
 }
 @media screen and (min-width: 1300px) {
@@ -340,8 +340,8 @@ body.home>header .masthead #mediaPlayer{
 
   }
   body.home>header .masthead #mediaPlayer{
-    width: 1300px;
-    height: 740px;
+    width: 1300px !important;
+    height: 740px !important;
     margin: auto;
     display: block;
     position: relative;
