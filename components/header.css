@@ -22,14 +22,14 @@ body.index>header, body.home>header {
   color: #fff;
 }
 
-.education header, .collection header, .developers header, .tech header {
+.education header, .collection header, .developers header, .tech header, .faq header {
   color: #fff;
   border-bottom: 0;
 }
 body.home>header h1 {
   top: 190px;
 }
-body>header h1, body.index>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
+body>header h1, body.index>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
     position: absolute;
     left: 0;
     right: 0;
@@ -37,7 +37,7 @@ body>header h1, body.index>header h1, .education header h1, .collection header h
     margin: 0 auto !important;
 }
 @media screen and (max-width: 768px) {
-  body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
+  body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
     top: 150px;
     font-size: 30px;
   }

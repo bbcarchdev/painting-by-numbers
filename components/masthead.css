@@ -36,7 +36,7 @@ body.book>header .masthead, body.index>header .masthead {
 }
 body.home #mediaPlayerWrapper {
   position: relative;
-  padding-bottom: 56.25%;
+  padding-bottom: 57%;
   padding-top: 9px;
   height: 0;
   overflow: hidden;
