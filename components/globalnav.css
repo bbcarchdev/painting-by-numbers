@@ -105,9 +105,9 @@ nav.global li.logo>a:hover {
 
 @media screen and (max-width: 768px) {
 	body.home>header nav.global{
-		position: relative;
+/*		position: relative;
 		height: 120px;
-		color: #000;
+		color: #000;*/
 	}
 	nav.global ul {
     float: right;

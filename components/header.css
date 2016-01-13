@@ -13,9 +13,7 @@ body.home>header {
 	color: #e2e2e2;
 	border-bottom: none; 
 }
-body.home>header h1 {
-	display: none;
-}
+
 body.book>header .global, body.index>header .global, body.home>header .global{
   color: #fff;
 }
@@ -28,7 +26,10 @@ body.index>header, body.home>header {
   color: #fff;
   border-bottom: 0;
 }
-body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
+body.home>header h1 {
+  top: 190px;
+}
+body>header h1, body.index>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
     position: absolute;
     left: 0;
     right: 0;
@@ -38,5 +39,6 @@ body>header h1, body.index>header h1, body.home>header h1, .education header h1,
 @media screen and (max-width: 768px) {
   body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
     top: 150px;
+    font-size: 30px;
   }
 }

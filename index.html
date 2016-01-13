@@ -489,9 +489,7 @@ body.home&gt;header {
 	color: #e2e2e2;
 	border-bottom: none; 
 }
-body.home&gt;header h1 {
-	display: none;
-}
+
 body.book&gt;header .global, body.index&gt;header .global, body.home&gt;header .global{
   color: #fff;
 }
@@ -504,7 +502,10 @@ body.index&gt;header, body.home&gt;header {
   color: #fff;
   border-bottom: 0;
 }
-body&gt;header h1, body.index&gt;header h1, body.home&gt;header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
+body.home&gt;header h1 {
+  top: 190px;
+}
+body&gt;header h1, body.index&gt;header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
     position: absolute;
     left: 0;
     right: 0;
@@ -514,6 +515,7 @@ body&gt;header h1, body.index&gt;header h1, body.home&gt;header h1, .education h
 @media screen and (max-width: 768px) {
   body&gt;header h1, body.index&gt;header h1, body.home&gt;header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1 {
     top: 150px;
+    font-size: 30px;
   }
 }</code></pre>					</details>
 					<section id="globalnav">
@@ -658,9 +660,9 @@ nav.global li.logo&gt;a:hover {
 
 @media screen and (max-width: 768px) {
 	body.home&gt;header nav.global{
-		position: relative;
+/*		position: relative;
 		height: 120px;
-		color: #000;
+		color: #000;*/
 	}
 	nav.global ul {
     float: right;
@@ -770,11 +772,14 @@ nav.global li.logo&gt;a:hover {
     height: 220px;
   }
 }
+body.home&gt;header .masthead {
+  height: 500px;
+}
 body.book&gt;header .masthead, body.index&gt;header .masthead {
 	height: 360px;
 	border-bottom: solid #636363 1px;
 }
-body.home&gt;header .masthead {
+/*body.home&gt;header .masthead {
 	position: relative;
   padding-bottom: 56.25%;
   padding-top: 9px;
@@ -782,16 +787,25 @@ body.home&gt;header .masthead {
   overflow: hidden;
   z-index: 0;
   z-index: 0;
-}
+}*/
 @media screen and (max-width: 768px) {
   body.book&gt;header .masthead, body.index&gt;header .masthead, body.home&gt;header .masthead {
     height: 220px;
   }
   body.home&gt;header .masthead{
-    height: 100%;
+    height: 350px;
   }
 }
-body.home&gt;header .masthead #mediaPlayer{
+body.home #mediaPlayerWrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 9px;
+  height: 0;
+  overflow: hidden;
+  z-index: 0;
+  z-index: 0;
+}
+body.home #mediaPlayer{
   position: absolute;
   top: 0;
   left: 0;
@@ -800,14 +814,14 @@ body.home&gt;header .masthead #mediaPlayer{
   z-index: 0;
 }
 @media screen and (min-width: 1300px) {
-  body.home&gt;header .masthead {
+/*  body.home&gt;header .masthead {
     height: 740px;
     padding: 0;
 
-  }
-  body.home&gt;header .masthead #mediaPlayer{
-    width: 1300px !important;
-    height: 740px !important;
+  }*/
+  body.home #mediaPlayer{
+    width: 960px !important;
+    height: 549px !important;
     margin: auto;
     display: block;
     position: relative;
