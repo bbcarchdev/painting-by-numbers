@@ -5,7 +5,7 @@ body>header .masthead {
 	height: 360px;
   display: block;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body>header .masthead {
     height: 220px;
   }
@@ -26,7 +26,7 @@ body.book>header .masthead, body.index>header .masthead {
   z-index: 0;
   z-index: 0;
 }*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
     height: 220px;
   }

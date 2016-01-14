@@ -22,7 +22,7 @@ nav.global {
   right: 0;
   display: block;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	nav.global {
     margin: 0;
 	}
@@ -85,7 +85,7 @@ nav.global li.logo>a {
 	background: #636363;
 	color: #ceca13 !important;	
 	font-size: 2.5em;
-	background: url(/res/images/res-logo-min-olive-grey.png); /*/res/images/res-logo-min-olive-grey.png*/
+	background-image: url(/res/images/res-logo-min-olive-grey.png); /*/res/images/res-logo-min-olive-grey.png*/
 	text-indent: 999999px;
 	overflow: hidden;
 	width: 100px;
@@ -96,14 +96,14 @@ nav.global li.logo>a {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
 	nav.global li.logo>a {
-		background: url(/res/images/res-logo-min-olive-greyx2.png); /*/res/images/res-logo-min-olive-grey.png*/
+		background-image: url(/res/images/res-logo-min-olive-greyx2.png); /*/res/images/res-logo-min-olive-grey.png*/
 	}
 }
 nav.global li.logo>a:hover {
 	color: inherit;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
 	body.home>header nav.global{
 /*		position: relative;
 		height: 120px;
@@ -144,11 +144,13 @@ nav.global li.logo>a:hover {
   color: black;
   text-align: left;
   z-index: 2;
+  font-size: 14px;
 }
 @media screen and (min-width: 768px){
 	.secondarynav {
   	top: 80px;
   	text-align: right;
+  	font-size: 16px;
 	}
 }
 .secondarynav .inner {

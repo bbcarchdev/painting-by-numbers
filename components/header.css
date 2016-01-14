@@ -36,7 +36,7 @@ body>header h1, body.index>header h1, .education header h1, .collection header h
     top: 250px;
     margin: 0 auto !important;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
     top: 150px;
     font-size: 30px;
