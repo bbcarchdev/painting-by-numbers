@@ -42,7 +42,7 @@ body.index>header, body.home>header {
   color: #fff;
 }
 
-.education header, .collection header, .developers header, .tech header, .faq header {
+.education header, .collection header, .developers header, .tech header, .faq header, .book header, .tech-tools header, .tech-guides header{
   color: #fff;
   border-bottom: 0;
 }
@@ -55,6 +55,7 @@ body>header h1, body.index>header h1, .education header h1, .collection header h
     right: 0;
     top: 250px;
     margin: 0 auto !important;
+      color: #fff;
 }
 @media screen and (max-width: 767px) {
   body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
@@ -207,7 +208,7 @@ nav.global li.logo>a:hover {
   width: 100%;
   background: transparent;
   border-bottom: 0;
-  color: black;
+  color: white;
   text-align: left;
   z-index: 2;
   font-size: 14px;
@@ -307,6 +308,7 @@ body>header .masthead {
 	background: #fff;
 	height: 360px;
   display: block;
+  position: relative;
 }
 @media screen and (max-width: 767px) {
   body>header .masthead {
@@ -382,6 +384,7 @@ body>header p {
 	margin: 1.5em auto;
 	max-width: 960px;
 	padding: 0 13pt;
+	color: black;
 }
 body>header a:link, body>header a:visited {
 	text-decoration: inherit;

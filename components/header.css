@@ -22,7 +22,7 @@ body.index>header, body.home>header {
   color: #fff;
 }
 
-.education header, .collection header, .developers header, .tech header, .faq header {
+.education header, .collection header, .developers header, .tech header, .faq header, .book header, .tech-tools header, .tech-guides header{
   color: #fff;
   border-bottom: 0;
 }
@@ -35,6 +35,7 @@ body>header h1, body.index>header h1, .education header h1, .collection header h
     right: 0;
     top: 250px;
     margin: 0 auto !important;
+      color: #fff;
 }
 @media screen and (max-width: 767px) {
   body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
