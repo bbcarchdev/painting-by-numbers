@@ -341,8 +341,8 @@ body.book>header .masthead, body.index>header .masthead {
 }
 body.home #mediaPlayerWrapper {
   position: relative;
-  padding-bottom: 57%;
-  padding-top: 9px;
+  padding-bottom: 56.25%;
+  padding-top: 0px;
   height: 0;
   overflow: hidden;
   z-index: 0;
@@ -846,7 +846,10 @@ aside.tip:before {
 	border-radius: 0.75em;
 	color: #fff;
 }
-aside.info { border-left-color: #268bd2; }
+aside.info { 
+	border-left-color: #268bd2; 
+	overflow: scroll;
+}
 aside.info:before {
 	background: #268bd2;
 	content: 'i';

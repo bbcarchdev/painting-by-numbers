@@ -23,7 +23,10 @@ aside.tip:before {
 	border-radius: 0.75em;
 	color: #fff;
 }
-aside.info { border-left-color: #268bd2; }
+aside.info { 
+	border-left-color: #268bd2; 
+	overflow: scroll;
+}
 aside.info:before {
 	background: #268bd2;
 	content: 'i';
