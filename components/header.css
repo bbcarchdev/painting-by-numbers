@@ -22,7 +22,7 @@ body.index>header, body.home>header {
   color: #fff;
 }
 
-.education header, .collection header, .developers header, .tech header, .faq header, .book header, .tech-tools header, .tech-guides header{
+header, .education header, .collection header, .developers header, .tech header, .faq header, .book header, .tech-tools header, .tech-guides header{
   color: #fff;
   border-bottom: 0;
 }
