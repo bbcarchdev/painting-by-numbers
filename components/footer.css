@@ -39,7 +39,7 @@ body>footer p{
 }
 body>footer a:link, body>footer a:visited, body>footer a:link, body>footer a:visited{
   /*color: white;*/
-  text-decoration: none;
+  /*text-decoration: none;*/
 }
 .footer__links{
     border-color: rgba(255,255,255,0.3);
