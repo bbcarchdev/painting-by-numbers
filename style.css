@@ -455,6 +455,16 @@ body>footer a:link, body>footer a:visited, body>footer a:link, body>footer a:vis
 footer .logos a{
   margin-right: 50px;
   margin-bottom: 20px;
+  opacity: 0.7;
+  -webkit-filter: grayscale(1);
+   filter: grayscale(1);
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+footer .logos a:hover{
+  -webkit-filter: grayscale(0);
+   filter: grayscale(0);
+   opacity: 1;
 }
 footer .logos:after {
     content:"";
@@ -465,11 +475,11 @@ footer .logos:after {
   footer .logos a{
     display: block;
 
-    max-width: 100px;
+    /*max-width: 100px;*/
   }
-  footer .logos img{
+/*  footer .logos img{
     width: 100%;
-  }
+  }*/
 }
 /* 5.3 Body text */
 
