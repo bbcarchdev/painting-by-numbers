@@ -424,7 +424,7 @@ body > footer p {
 }
 
 
-body>footer:before{
+/*body>footer:before{
   content: "";
   display: block;
   position: absolute;
@@ -434,12 +434,12 @@ body>footer:before{
   height: 100%;
   z-index: 1;
   border: 0px;
-/*  background-image: url(../res/images/twine-masthead.png);*/
+  background-image: url(../res/images/twine-masthead.png);
   background-size: 90%;
   background-position: center 50px;
   background-repeat: no-repeat;
   opacity: 0.5;
-}
+}*/
 body>footer p{
   font-size: 1em;
 }
