@@ -59,7 +59,7 @@ body>header h1, body.index>header h1, .education header h1, .collection header h
 }
 @media screen and (max-width: 767px) {
   body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
-    top: 150px;
+    top: 170px;
     font-size: 30px;
   }
 }
@@ -203,7 +203,7 @@ nav.global li.logo>a:hover {
 }
 .secondarynav{
   position: absolute;
-  top: 115px;
+  top: 140px;
   left: 0px;
   width: 100%;
   background: transparent;
