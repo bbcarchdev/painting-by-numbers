@@ -34,7 +34,7 @@ body.book>header .masthead, body.index>header .masthead {
     height: 350px;
   }
 }
-body.home #mediaPlayerWrapper {
+body #mediaPlayerWrapper {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 0px;
@@ -43,7 +43,7 @@ body.home #mediaPlayerWrapper {
   z-index: 0;
   z-index: 0;
 }
-body.home #mediaPlayer{
+body #mediaPlayer{
   position: absolute;
   top: 0;
   left: 0;
@@ -57,7 +57,7 @@ body.home #mediaPlayer{
     padding: 0;
 
   }*/
-  body.home #mediaPlayer{
+  body #mediaPlayer{
     width: 960px !important;
     height: 549px !important;
     margin: auto;
