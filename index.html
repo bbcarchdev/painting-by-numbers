@@ -1565,17 +1565,26 @@ dd {
 }
 .toc &gt; ol li:before {
 	position: absolute;
-	left: -2.5em;
+	left: -3.5em;
 	min-width: 2em;
 	text-align: right;
 	content: counters(listitem, ".", decimal) " ";
 	font-style: normal;
+	font-size: 85%;
+	vertical-align: middle;
 	display: inline;
 	margin: 0;
+	color: #666;
 }
 .toc &gt; ol li.frontmatter:before, .toc &gt; ol li.backmatter:before {
 	content: '';
 	counter-reset: listitem;
+}
+.toc &gt; ol li.part:before {
+	content: '';
+}
+.toc &gt; ol li.part &gt; a:before {
+	content: "Part " counters(listitem, ".", decimal) ": ";
 }
 
 aside.sample {

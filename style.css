@@ -633,17 +633,26 @@ dd {
 }
 .toc > ol li:before {
 	position: absolute;
-	left: -2.5em;
+	left: -3.5em;
 	min-width: 2em;
 	text-align: right;
 	content: counters(listitem, ".", decimal) " ";
 	font-style: normal;
+	font-size: 85%;
+	vertical-align: middle;
 	display: inline;
 	margin: 0;
+	color: #666;
 }
 .toc > ol li.frontmatter:before, .toc > ol li.backmatter:before {
 	content: '';
 	counter-reset: listitem;
+}
+.toc > ol li.part:before {
+	content: '';
+}
+.toc > ol li.part > a:before {
+	content: "Part " counters(listitem, ".", decimal) ": ";
 }
 
 aside.sample {
