@@ -17,7 +17,7 @@
 	margin: 0;
 	color: #666;
 }
-.toc > ol > li > ol > li > ol li:before {
+.toc > ol > li > ol > li > ol > li > ol > li > ol li:before {
 	content: '';
 }
 .toc > ol li.frontmatter:before, .toc > ol li.backmatter:before {
