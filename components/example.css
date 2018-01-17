@@ -27,11 +27,11 @@ aside.example>h1.example-title {
 	border-bottom-right-radius: 6px;
 }
 aside.example:after {
-	content:".";
-	display:block;
-	height:0;
-	clear:both;
-	visibility:hidden;
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
 }
 aside.example:before {
 	content: 'Example';

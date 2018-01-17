@@ -14,32 +14,32 @@ body.home>header {
 	border-bottom: none;
 }
 
-body.book>header .global, body.index>header .global, body.home>header .global{
-  color: #fff;
+body.book>header .global, body.index>header .global, body.home>header .global {
+	color: #fff;
 }
 
 body.index>header, body.home>header {
-  color: #fff;
+	color: #fff;
 }
 
-header, .education header, .collection header, .developers header, .tech header, .faq header, .book header, .tech-tools header, .tech-guides header{
-  color: #fff;
-  border-bottom: 0;
+header, .education header, .collection header, .developers header, .tech header, .faq header, .book header, .tech-tools header, .tech-guides header {
+	color: #fff;
+	border-bottom: 0;
 }
 body.home>header h1 {
-  top: 190px;
+	top: 190px;
 }
 body>header h1, body.index>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 250px;
-    margin: 0 auto !important;
-      color: #fff;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 250px;
+	margin: 0 auto !important;
+	color: #fff;
 }
 @media screen and (max-width: 767px) {
-  body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
-    top: 170px;
-    font-size: 25px;
-  }
+	body>header h1, body.index>header h1, body.home>header h1, .education header h1, .collection header h1, .developers header h1, .tech header h1, .faq header h1 {
+		top: 170px;
+		font-size: 25px;
+	}
 }

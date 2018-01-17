@@ -12,25 +12,25 @@ nav.global {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	border-bottom: solid #404040 0px;
+	border-bottom: solid #404040 0;
 	position: absolute;
 	width: 100%;
 	z-index: 1;
-  width: auto;
-  margin: 0 40px 0 0;
-  left: 0;
-  right: 0;
-  display: block;
+	width: auto;
+	margin: 0 40px 0 0;
+	left: 0;
+	right: 0;
+	display: block;
 }
 @media screen and (max-width: 767px) {
 	nav.global {
-    margin: 0;
+		margin: 0;
 	}
 }
 @media screen and (min-width: 1024px) {
 	nav.global {
-    margin: 0 auto;
-    max-width: 986px;
+		margin: 0 auto;
+		max-width: 986px;
 	}
 }
 nav.global .inner {
@@ -73,9 +73,9 @@ nav.global li>a:hover {
 	/*color: #404040;*/
 }
 @media screen and (min-width: 768px) and (max-width:960px) {
-    nav.global li>a {
-       font-size: 1em;
-    }
+	nav.global li>a {
+		font-size: 1em;
+	}
 }
 nav.global li.logo {
 	position: absolute;
@@ -84,7 +84,7 @@ nav.global li.logo {
 	left: 12pt;
 	border: none;
 	width: 100px;
-  height: 100px;
+	height: 100px;
 }
 nav.global li.logo>a {
 	background: #636363;
@@ -94,8 +94,8 @@ nav.global li.logo>a {
 	text-indent: 999999px;
 	overflow: hidden;
 	width: 100px;
-  height: 100px;
-	padding: 0px;
+	height: 100px;
+	padding: 0;
 	background-size: 100%;
 	background-position: 50% 50%;
 }
@@ -109,23 +109,23 @@ nav.global li.logo>a:hover {
 }
 
 @media screen and (max-width: 767px) {
-	body.home>header nav.global{
+	body.home>header nav.global {
 /*		position: relative;
 		height: 120px;
 		color: #000;*/
 	}
 	nav.global ul {
-    float: right;
-    margin-left: 90px;
+		float: right;
+		margin-left: 90px;
 	}
-	nav.global ul li{
-    height: auto;
-    float: none;
-    text-align: right;
-    height: 23px;
+	nav.global ul li {
+		height: auto;
+		float: none;
+		text-align: right;
+		height: 23px;
 	}
 	nav.global li>a {
-  height: auto;
+		height: auto;
 		padding: 0 5pt;
 		line-height: 23pt;
 	}
@@ -139,23 +139,23 @@ nav.global li.logo>a:hover {
 		padding-left: 4pt;
 	}
 }
-.secondarynav{
-  position: absolute;
-  top: 145px;
-  left: 0px;
-  width: 100%;
-  background: transparent;
-  border-bottom: 0;
-  color: white;
-  text-align: left;
-  z-index: 2;
-  font-size: 14px;
+.secondarynav {
+	position: absolute;
+	top: 145px;
+	left: 0;
+	width: 100%;
+	background: transparent;
+	border-bottom: 0;
+	color: white;
+	text-align: left;
+	z-index: 2;
+	font-size: 14px;
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 	.secondarynav {
-  	top: 80px;
-  	text-align: right;
-  	font-size: 16px;
+		top: 80px;
+		text-align: right;
+		font-size: 16px;
 	}
 }
 .secondarynav .inner {
@@ -164,30 +164,30 @@ nav.global li.logo>a:hover {
 	padding-left: 10px;
 	box-sizing: border-box;
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
 	.secondarynav .inner {
 		margin: 0 40px 0 0;
-		padding-left: 0px;
+		padding-left: 0;
 	}
 }
-@media screen and (min-width: 1024px){
+@media screen and (min-width: 1024px) {
 	.secondarynav .inner {
-	    margin: 0 auto;
+		margin: 0 auto;
 	}
 }
-.secondarynav ul{
+.secondarynav ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 }
-.secondarynav li{
+.secondarynav li {
 	display: inline-block;
 }
-.secondarynav a{
+.secondarynav a {
 	padding: 0 5pt;
 }
-@media screen and (min-width: 768px){
-	.secondarynav a{
+@media screen and (min-width: 768px) {
+	.secondarynav a {
 		padding: 0 13pt;
 	}
 }

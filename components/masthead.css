@@ -2,16 +2,16 @@ body>header .masthead {
 	display: none;
 	margin: -1px 0 0 0;
 	height: 360px;
-  display: block;
-  position: relative;
+	display: block;
+	position: relative;
 }
 @media screen and (max-width: 767px) {
-  body>header .masthead {
-    height: 220px;
-  }
+	body>header .masthead {
+		height: 220px;
+	}
 }
 body.home>header .masthead {
-  height: 500px;
+	height: 500px;
 }
 body.book>header .masthead, body.index>header .masthead {
 	height: 360px;
@@ -19,49 +19,48 @@ body.book>header .masthead, body.index>header .masthead {
 }
 /*body.home>header .masthead {
 	position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 9px;
-  height: 0;
-  overflow: hidden;
-  z-index: 0;
-  z-index: 0;
+	padding-bottom: 56.25%;
+	padding-top: 9px;
+	height: 0;
+	overflow: hidden;
+	z-index: 0;
+	z-index: 0;
 }*/
 @media screen and (max-width: 767px) {
-  body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
-    height: 220px;
-  }
-  body.home>header .masthead{
-    height: 350px;
-  }
+	body.book>header .masthead, body.index>header .masthead, body.home>header .masthead {
+		height: 220px;
+	}
+	body.home>header .masthead {
+		height: 350px;
+	}
 }
 body #mediaPlayerWrapper {
-  position: relative;
-  padding-bottom: 56.25%;
-  padding-top: 0px;
-  height: 0;
-  overflow: hidden;
-  z-index: 0;
-  z-index: 0;
+	position: relative;
+	padding-bottom: 56.25%;
+	padding-top: 0;
+	height: 0;
+	overflow: hidden;
+	z-index: 0;
+	z-index: 0;
 }
-body #mediaPlayer{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100% !important;
-  height: 100% !important;
-  z-index: 0;
+body #mediaPlayer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100% !important;
+	height: 100% !important;
+	z-index: 0;
 }
 @media screen and (min-width: 1300px) {
-/*  body.home>header .masthead {
-    height: 740px;
-    padding: 0;
-
-  }*/
-  body #mediaPlayer{
-    width: 960px !important;
-    height: 549px !important;
-    margin: auto;
-    display: block;
-    position: relative;
-  }
+/*	body.home>header .masthead {
+		height: 740px;
+		padding: 0;
+	}*/
+	body #mediaPlayer {
+		width: 960px !important;
+		height: 549px !important;
+		margin: auto;
+		display: block;
+		position: relative;
+	}
 }
