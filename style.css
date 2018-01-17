@@ -803,6 +803,7 @@ figure>*, figure img {
 }
 figure>figcaption {
 	display: table-caption;
+	width: auto; /* needed for Firefox */
 	background: #e6e6e6;
 	color: #000;
 	margin: 0;
