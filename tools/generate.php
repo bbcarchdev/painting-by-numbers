@@ -64,9 +64,10 @@ function literal($file)
 }
 
 /* Emit a literal sample block */
-function sample($file)
+function sample($file, $header = 'Sample', $header_level = 2)
 {
-	echo '<aside class="example">' . file_get_contents(samplepath($file)) . '</aside>';
+	$h_tag_name = 'h' . (int) $header_level;
+	echo '<' . $h_tag_name . '>' . _e($header) . '</' . $h_tag_name . '>' . '<aside class="example">' . file_get_contents(samplepath($file)) . '</aside>';
 }
 
 function _e($text)
@@ -92,6 +93,11 @@ function code($language, $file, $html = false)
 		}
 	}
 	echo '<pre class="code ' . $language . '"><code>' . $buffer . '</code></pre>';
+}
+
+function todo()
+{
+	return '<aside class="caution TODO">TODO</aside>' . "\n";
 }
 
 /* Pretty-print some HTML */
