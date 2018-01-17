@@ -1071,11 +1071,7 @@ abbr[title] {
 
 code, samp {
 	font-family: Inconsolata, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
-	font-size: 0.75em;
 	font-weight: normal;
-}
-code samp, samp code, code code, samp samp {
-	font-size: inherit;
 }
 var {
 	font-family: Arapey, serif;
@@ -1099,7 +1095,6 @@ samp {
 }
 code var, kbd samp {
 	font-family: inherit;
-	font-size: inherit;
 	color: inherit;
 }
 code var {

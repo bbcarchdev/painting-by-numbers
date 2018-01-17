@@ -1660,7 +1660,7 @@ aside.sample {
 					<h1>Code samples</h1>
 					<aside class="tip">See also: <a href="#tt">In-line code literals</a></aside>
 					<p>
-						Code sample blocks are set in monospace type at single-spaced 0.75em, with a preference for <i>Inconsolata</i>, <i>DejaVu Sans Mono</i>, <i>Menlo</i> or <i>Consolas</i> ahead of the browser default typeface. Code is presented using the <a href="http://ethanschoonover.com/solarized">Solarized</a> palette, using <code>base02</code> as the background colour and <code>base1</code> as the default foreground colour. When printed, the font size is reduced to 8pt, <code>base3</code> is used for the background, and <code>base00</code> for the default foreground.
+						Code sample blocks are set in monospace type and single-spaced line height, with a preference for <i>Inconsolata</i>, <i>DejaVu Sans Mono</i>, <i>Menlo</i> or <i>Consolas</i> ahead of the browser default typeface. Code is presented using the <a href="http://ethanschoonover.com/solarized">Solarized</a> palette, using <code>base02</code> as the background colour and <code>base1</code> as the default foreground colour. When printed, the font size is reduced to 8pt, <code>base3</code> is used for the background, and <code>base00</code> for the default foreground.
 					</p>
 					<p>
 						The block has 1em margins on all sides, is padded by 0.5em, has a 6px 50% opacity shadow, and a 4px border on the left-hand side indicating the language or syntax used, which by default is dark grey (<code>#444444</code>). Scrolling is enabled for content which overflows the horizontal margins of the container. When printed, the shadow is removed and text is wrapped within the container in place of scrolling.
@@ -2836,11 +2836,7 @@ strong {
 						<summary>CSS styling rules for HTML documents</summary>
 						<pre class="code css"><code>code, samp {
 	font-family: Inconsolata, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
-	font-size: 0.75em;
 	font-weight: normal;
-}
-code samp, samp code, code code, samp samp {
-	font-size: inherit;
 }
 var {
 	font-family: Arapey, serif;
@@ -2864,7 +2860,6 @@ samp {
 }
 code var, kbd samp {
 	font-family: inherit;
-	font-size: inherit;
 	color: inherit;
 }
 code var {
