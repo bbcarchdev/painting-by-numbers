@@ -479,7 +479,7 @@
 					</aside>
 					<details>
 					<summary>Common CSS styling rules for HTML documents</summary>
-					<?php code('css', 'header.css'); ?>
+					<?php echo code('css', 'header.css'); ?>
 					</details>
 					<section id="globalnav">
 						<h1>Global navigation</h1>
@@ -503,12 +503,12 @@
 								Global navigation is marked up as an un-ordered list within a <code>&lt;nav&gt;</code> element
 								contained within the top-level <code>&lt;header&gt;</code>.
 							</p>
-							<?php code('html', 'globalnav.html'); ?>
+							<?php echo code('html', 'globalnav.html'); ?>
 						</details>
 
 						<details>
 							<summary>CSS styling rules for HTML documents</summary>
-							<?php code('css', 'globalnav.css'); ?>
+							<?php echo code('css', 'globalnav.css'); ?>
 						</details>
 
 					</section>
@@ -523,18 +523,18 @@
 								The masthead placeholder <code>&lt;div&gt;</code> element appears immediately following any
 								<a href="#globalnav">global navigation</a> within the top-level <code>&lt;header&gt;</code> element.
 							</p>
-							<?php code('html', 'masthead.html'); ?>
+							<?php echo code('html', 'masthead.html'); ?>
 						</details>
 
 						<details>
 							<summary>CSS styling rules for HTML documents</summary>
-							<?php code('css', 'masthead.css'); ?>
+							<?php echo code('css', 'masthead.css'); ?>
 							<p>
 								Note that the common styling rules for the masthead image specify <code>display: none;</code> and
 								a default (grey) background. A document-specific stylesheet or in-line styling rules are
 								expected to override this. A typical override might consist of:
 							</p>
-							<?php code('css', 'masthead-override.css'); ?>
+							<?php echo code('css', 'masthead-override.css'); ?>
 						</details>
 
 					</section>
@@ -550,7 +550,7 @@
 								<code>&lt;info&gt;</code> element. The subtitle (or tagline) is a <code>&lt;para&gt;</code> within
 								a <code>&lt;cover&gt;</code> element which is part of <code>&lt;info&gt;</code>.
 							</p>
-							<?php code('docbook', 'innercover.xml'); ?>
+							<?php echo code('docbook', 'innercover.xml'); ?>
 						</details>
 
 						<details>
@@ -560,7 +560,7 @@
 								the <a href="#globalnav">global navigation</a> and <a href="#masthead">masthead image</a> if either is
 								present.
 							</p>
-							<?php code('html', 'innercover.html'); ?>
+							<?php echo code('html', 'innercover.html'); ?>
 						</details>
 					</section>
 
@@ -578,7 +578,7 @@
 								In DocBook, legal notices are contained within a <code>&lt;legalnotice&gt;</code> element
 								which is part of the top-level <code>&lt;info&gt;</code> element.
 							</p>
-							<?php code('docbook', 'legalnotice.xml'); ?>
+							<?php echo code('docbook', 'legalnotice.xml'); ?>
 						</details>
 						<details>
 							<summary>HTML mark-up</summary>
@@ -586,7 +586,7 @@
 								In HTML documents, legal notices are contained within a top-level <code>&lt;section&gt;</code> with
 								a class of <code>legalnotice</code>.
 							</p>
-							<?php code('html', 'legalnotice.html'); ?>
+							<?php echo code('html', 'legalnotice.html'); ?>
 						</details>
 					</section>
 
@@ -595,12 +595,12 @@
 
 						<details>
 							<summary>DocBook mark-up</summary>
-							<?php code('docbook', 'frontmatter.xml'); ?>
+							<?php echo code('docbook', 'frontmatter.xml'); ?>
 						</details>
 
 						<details>
 							<summary>HTML mark-up</summary>
-							<?php code('html', 'frontmatter.html'); ?>
+							<?php echo code('html', 'frontmatter.html'); ?>
 						</details>
 					</section>
 
@@ -626,29 +626,29 @@
 					</p>
 
 					<div class="keep-together">
-						<?php sample('body-text.html'); ?>
+						<?php echo sample('body-text.html'); ?>
 					</div>
 
 					<details>
 						<summary>DocBook mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('docbook', 'body-text.xml'); ?>
+						<?php echo code('docbook', 'body-text.xml'); ?>
 					</details>
 
 					<details>
 						<summary>HTML mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('html', 'body-text.html'); ?>
+						<?php echo code('html', 'body-text.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'body-text.css'); ?>
+						<?php echo code('css', 'body-text.css'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents (for print)</summary>
-						<?php code('css', 'body-text-print.css'); ?>
+						<?php echo code('css', 'body-text-print.css'); ?>
 					</details>
 				</section>
 
@@ -661,22 +661,22 @@
 					</p>
 					<p>Section headings within an <code>&lt;article&gt;</code> are automatically numbered. </p>
 					<div class="keep-together">
-						<?php sample('headings.html'); ?>
+						<?php echo sample('headings.html'); ?>
 					</div>
 					<details>
 						<summary>DocBook mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('docbook', 'headings-example.xml'); ?>
+						<?php echo code('docbook', 'headings-example.xml'); ?>
 					</details>
 					<details>
 						<summary>HTML mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('html', 'headings-example.html'); ?>
+						<?php echo code('html', 'headings-example.html'); ?>
 					</details>
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
 						<?php echo todo(); ?>
-						<?php code('css', 'headings.css.html', true); ?>
+						<?php echo code('css', 'headings.css.html', true); ?>
 					</details>
 				</section>
 
@@ -688,66 +688,66 @@
 						<p>
 							A common set of rules used for both ordered and un-ordered lists is shown below:
 						</p>
-						<?php code('css', 'lists.css'); ?>
+						<?php echo code('css', 'lists.css'); ?>
 					</details>
 
 					<section id="ol">
 						<h1>Ordered lists</h1>
 						<p>Ordered lists are numbered, with the <code>1.5em</code> of left-hand padding applied to the parent used for the item number (i.e., the number has a negative <code>1.5em</code> left-hand margin). The item number is set in italics and followed by a full stop; the top-level list uses decimal numbering (<i>1., 2., 3., …</i>), the second-level uses lowercase latin (<i>a., b., c., …</i>), and third-level uses lowercase roman (<i>i., ii., iii., …</i>).</p>
 						<div class="keep-together">
-							<?php sample('ol.html'); ?>
+							<?php echo sample('ol.html'); ?>
 						</div>
 						<details>
 							<summary>DocBook mark-up</summary>
 							<?php echo todo(); ?>
-							<?php code('docbook', 'ol.xml'); ?>
+							<?php echo code('docbook', 'ol.xml'); ?>
 						</details>
 						<details>
 							<summary>HTML mark-up</summary>
 							<?php echo todo(); ?>
 							<p>The sample above was produced with the following mark-up:</p>
-							<?php code('html', 'ol.html'); ?>
+							<?php echo code('html', 'ol.html'); ?>
 						</details>
 						<details>
 							<summary>CSS styling rules for HTML documents</summary>
-							<?php code('css', 'ol.css'); ?>
+							<?php echo code('css', 'ol.css'); ?>
 						</details>
 					</section>
 
 					<section id="ul">
 						<h1>Un-ordered lists</h1>
 						<div class="keep-together">
-							<?php sample('ul.html'); ?>
+							<?php echo sample('ul.html'); ?>
 						</div>
 						<details>
 							<summary>DocBook mark-up</summary>
 							<?php echo todo(); ?>
-							<?php code('docbook', 'ul.xml'); ?>
+							<?php echo code('docbook', 'ul.xml'); ?>
 						</details>
 						<details>
 							<summary>HTML mark-up</summary>
 							<p>The sample above was produced with the following mark-up:</p>
 							<?php echo todo(); ?>
-							<?php code('html', 'ul.html'); ?>
+							<?php echo code('html', 'ul.html'); ?>
 						</details>
 					</section>
 
 					<section id="dl">
 						<h1>Definition lists</h1>
-						<?php sample('dl.html'); ?>
+						<?php echo sample('dl.html'); ?>
 						<details>
 							<summary>DocBook mark-up</summary>
 							<?php echo todo(); ?>
-							<?php code('docbook', 'dl.xml'); ?>
+							<?php echo code('docbook', 'dl.xml'); ?>
 						</details>
 						<details>
 							<summary>HTML mark-up</summary>
 							<?php echo todo(); ?>
-							<?php code('html', 'dl.html'); ?>
+							<?php echo code('html', 'dl.html'); ?>
 						</details>
 						<details>
 							<summary>CSS styling rules for HTML documents</summary>
-							<?php code('css', 'dl.css'); ?>
+							<?php echo code('css', 'dl.css'); ?>
 						</details>
 					</section>
 
@@ -759,7 +759,7 @@
 						<?php echo todo(); ?>
 
 						<div class="keep-together">
-							<?php sample('toc.html'); ?>
+							<?php echo sample('toc.html'); ?>
 						</div>
 
 						<details>
@@ -770,12 +770,12 @@
 						<details>
 							<summary>HTML mark-up</summary>
 							<p>The sample above was produced with the following mark-up:</p>
-							<?php code('html', 'toc.html'); ?>
+							<?php echo code('html', 'toc.html'); ?>
 						</details>
 
 						<details>
 							<summary>CSS styling rules for HTML documents</summary>
-							<?php code('css', 'toc.css'); ?>
+							<?php echo code('css', 'toc.css'); ?>
 						</details>
 					</section>
 
@@ -791,7 +791,7 @@
 					</aside>
 
 					<div class="keep-together">
-						<?php sample('hr.html'); ?>
+						<?php echo sample('hr.html'); ?>
 					</div>
 
 					<details>
@@ -806,12 +806,12 @@
 						<p>
 							Horizontal rules are marked up using the <code>&lt;hr&gt;</code> element.
 						</p>
-						<?php code('html', 'hr.html'); ?>
+						<?php echo code('html', 'hr.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'hr.css'); ?>
+						<?php echo code('css', 'hr.css'); ?>
 					</details>
 				</section>
 
@@ -829,19 +829,19 @@
 					</p>
 
 					<div class="keep-together">
-						<?php sample('code-sample.html', 'Code block sample'); ?>
+						<?php echo sample('code-sample.html', 'Code block sample'); ?>
 					</div>
 
 					<div class="keep-together">
-						<?php sample('samp-sample.html', 'Computer output sample'); ?>
+						<?php echo sample('samp-sample.html', 'Computer output sample'); ?>
 					</div>
 
 					<details>
 						<summary>DocBook mark-up</summary>
 						<p>Code blocks are marked up as a <code>&lt;programlisting&gt;</code> element. The <code>language</code> attribute is used to indicate the language or syntax in use.</p>
-						<?php code('docbook', 'code-sample.xml'); ?>
+						<?php echo code('docbook', 'code-sample.xml'); ?>
 						<p>Output blocks are marked up as a <code>&lt;screen&gt;</code> element.</p>
-						<?php code('docbook', 'samp-sample.xml'); ?>
+						<?php echo code('docbook', 'samp-sample.xml'); ?>
 					</details>
 
 					<details>
@@ -852,7 +852,7 @@
 						<p>
 							The code sample above was produced with the following HTML:
 						</p>
-						<?php code('html', 'code-sample.html'); ?>
+						<?php echo code('html', 'code-sample.html'); ?>
 
 						<p>
 							Output blocks are marked up as a <code>&lt;pre&gt;</code> element with an <code>output</code> class applied, containing a <code>&lt;samp&gt;</code> element. Within the body of the output, the <code>&lt;kbd&gt;</code> element is used to indicate portions of user input.
@@ -860,17 +860,17 @@
 						<p>
 							The output sample above was produced with the following HTML:
 						</p>
-						<?php code('html', 'samp-sample.html'); ?>
+						<?php echo code('html', 'samp-sample.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'code-sample.css'); ?>
+						<?php echo code('css', 'code-sample.css'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents (for print)</summary>
-						<?php code('css', 'code-sample-print.css'); ?>
+						<?php echo code('css', 'code-sample-print.css'); ?>
 					</details>
 				</section>
 
@@ -879,7 +879,7 @@
 					<?php echo todo(); ?>
 
 					<div class="keep-together">
-						<?php sample('table.html'); ?>
+						<?php echo sample('table.html'); ?>
 					</div>
 
 					<details>
@@ -890,12 +890,12 @@
 					<details>
 						<summary>HTML mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('html', 'table.html'); ?>
+						<?php echo code('html', 'table.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'table.css'); ?>
+						<?php echo code('css', 'table.css'); ?>
 					</details>
 				</section>
 
@@ -904,7 +904,7 @@
 					<?php echo todo(); ?>
 
 					<div class="keep-together">
-						<?php sample('figure.html'); ?>
+						<?php echo sample('figure.html'); ?>
 					</div>
 
 					<details>
@@ -914,12 +914,12 @@
 
 					<details>
 						<summary>HTML mark-up</summary>
-						<?php code('html', 'figure.html'); ?>
+						<?php echo code('html', 'figure.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'figure.css'); ?>
+						<?php echo code('css', 'figure.css'); ?>
 					</details>
 				</section>
 
@@ -928,24 +928,24 @@
 					<?php echo todo(); ?>
 
 					<div class="keep-together">
-						<?php sample('callout.html'); ?>
+						<?php echo sample('callout.html'); ?>
 					</div>
 
 					<details>
 						<summary>DocBook mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('docbook', 'callout.xml'); ?>
+						<?php echo code('docbook', 'callout.xml'); ?>
 					</details>
 
 					<details>
 						<summary>HTML mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('html', 'callout.html'); ?>
+						<?php echo code('html', 'callout.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'callout.css'); ?>
+						<?php echo code('css', 'callout.css'); ?>
 					</details>
 				</section>
 
@@ -954,7 +954,7 @@
 					<?php echo todo(); ?>
 
 					<div class="keep-together">
-						<?php sample('example.html'); ?>
+						<?php echo sample('example.html'); ?>
 					</div>
 
 					<details>
@@ -963,7 +963,7 @@
 							In DocBook documents, examples are marked up using the <code>&lt;example&gt;</code> element, optionally including
 							a <code>&lt;title&gt;</code>.
 						</p>
-						<?php code('docbook', 'example.xml'); ?>
+						<?php echo code('docbook', 'example.xml'); ?>
 					</details>
 
 					<details>
@@ -974,12 +974,12 @@
 							a title, then it is marked up as an <code>&lt;h1&gt;</code> with a
 							<code>class</code> of <code>example-title</code>.
 						</p>
-						<?php code('html', 'example.html'); ?>
+						<?php echo code('html', 'example.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'example.css'); ?>
+						<?php echo code('css', 'example.css'); ?>
 					</details>
 				</section>
 
@@ -988,24 +988,24 @@
 					<?php echo todo(); ?>
 
 					<div class="keep-together">
-						<?php sample('blockquote.html'); ?>
+						<?php echo sample('blockquote.html'); ?>
 					</div>
 
 					<details>
 						<summary>DocBook mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('docbook', 'blockquote.xml'); ?>
+						<?php echo code('docbook', 'blockquote.xml'); ?>
 					</details>
 
 					<details>
 						<summary>HTML mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('html', 'blockquote.html'); ?>
+						<?php echo code('html', 'blockquote.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'blockquote.css'); ?>
+						<?php echo code('css', 'blockquote.css'); ?>
 					</details>
 				</section>
 
@@ -1014,7 +1014,7 @@
 					<?php echo todo(); ?>
 
 					<div class="keep-together">
-						<?php sample('footnote.html'); ?>
+						<?php echo sample('footnote.html'); ?>
 					</div>
 
 					<details>
@@ -1025,12 +1025,12 @@
 					<details>
 						<summary>HTML mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('html', 'footnote.html'); ?>
+						<?php echo code('html', 'footnote.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'footnote.css'); ?>
+						<?php echo code('css', 'footnote.css'); ?>
 					</details>
 				</section>
 
@@ -1063,17 +1063,17 @@
 						In all cases, the mouse cursor, if applicable, must be set to the system– or browser-default for links (typically a “pointing finger” cursor).
 					</p>
 					<div class="keep-together">
-						<?php sample('link-simulated.html'); ?>
+						<?php echo sample('link-simulated.html'); ?>
 					</div>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'link.css'); ?>
+						<?php echo code('css', 'link.css'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents (for print)</summary>
-						<?php code('css', 'link-print.css'); ?>
+						<?php echo code('css', 'link-print.css'); ?>
 					</details>
 				</section>
 
@@ -1090,13 +1090,13 @@
 					</aside>
 
 					<div class="keep-together">
-						<?php sample('em.html'); ?>
+						<?php echo sample('em.html'); ?>
 					</div>
 
 					<details>
 						<summary>DocBook mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('docbook', 'em.xml'); ?>
+						<?php echo code('docbook', 'em.xml'); ?>
 					</details>
 
 					<details>
@@ -1105,12 +1105,12 @@
 						<p>
 							The sample above was produced with the following HTML:
 						</p>
-						<?php code('html', 'em.html'); ?>
+						<?php echo code('html', 'em.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'em.css'); ?>
+						<?php echo code('css', 'em.css'); ?>
 					</details>
 				</section>
 
@@ -1118,7 +1118,7 @@
 					<h1>Abbreviations and acronyms</h1>
 
 					<div class="keep-together">
-						<?php sample('abbr.html'); ?>
+						<?php echo sample('abbr.html'); ?>
 					</div>
 
 					<details>
@@ -1128,7 +1128,7 @@
 							acronymns—<code>&lt;acronymn&gt;</code>—and other abbreviations—<code>&lt;abbrev&gt;</code>.
 							There is no defined attribute or child element for conveying the expansion of the abbreviation.
 						</p>
-						<?php code('docbook', 'abbr.xml'); ?>
+						<?php echo code('docbook', 'abbr.xml'); ?>
 					</details>
 
 					<details>
@@ -1138,12 +1138,12 @@
 						<p>
 							The sample above was produced with the following HTML:
 						</p>
-						<?php code('html', 'abbr.html'); ?>
+						<?php echo code('html', 'abbr.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'abbr.css'); ?>
+						<?php echo code('css', 'abbr.css'); ?>
 					</details>
 				</section>
 
@@ -1179,24 +1179,24 @@
 						Computer input is set in italics at medium weight in the face of the surrounding text.
 					</p>
 					<div class="keep-together">
-						<?php sample('code-literals.html'); ?>
+						<?php echo sample('code-literals.html'); ?>
 					</div>
 
 					<details>
 						<summary>DocBook Mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('docbook', 'code-literals.xml'); ?>
+						<?php echo code('docbook', 'code-literals.xml'); ?>
 					</details>
 
 					<details>
 						<summary>HTML Mark-up</summary>
 						<?php echo todo(); ?>
-						<?php code('html', 'code-literals.html'); ?>
+						<?php echo code('html', 'code-literals.html'); ?>
 					</details>
 
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
-						<?php code('css', 'code-literals.css'); ?>
+						<?php echo code('css', 'code-literals.css'); ?>
 					</details>
 				</section>
 
@@ -1204,7 +1204,7 @@
 					<h1>Quotations</h1>
 
 					<div class="keep-together">
-						<?php sample('q.html'); ?>
+						<?php echo sample('q.html'); ?>
 					</div>
 				</section>
 

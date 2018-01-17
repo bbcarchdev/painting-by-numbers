@@ -57,17 +57,17 @@ function samplepath($name)
 	return dirname(__FILE__) . '/../components/' . $name;
 }
 
-/* Emit a literal sample with no decoration */
+/* Return a literal sample with no decoration */
 function literal($file)
 {
-	echo file_get_contents(samplepath($file));
+	return file_get_contents(samplepath($file));
 }
 
-/* Emit a literal sample block */
+/* Return a literal sample block */
 function sample($file, $header = 'Sample', $header_level = 2)
 {
 	$h_tag_name = 'h' . (int) $header_level;
-	echo '<' . $h_tag_name . '>' . _e($header) . '</' . $h_tag_name . '>' . '<aside class="example">' . file_get_contents(samplepath($file)) . '</aside>';
+	return '<' . $h_tag_name . '>' . _e($header) . '</' . $h_tag_name . '>' . '<aside class="example">' . literal($file) . '</aside>';
 }
 
 function _e($text)
@@ -75,10 +75,10 @@ function _e($text)
 	return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
 }
 
-/* Emit a code block */
+/* Return a code block */
 function code($language, $file, $html = false)
 {
-	$buffer = file_get_contents(samplepath($file));
+	$buffer = literal($file);
 	if(!$html)
 	{
 		switch($language)
@@ -92,7 +92,7 @@ function code($language, $file, $html = false)
 			$buffer = htmlspecialchars($buffer, ENT_NOQUOTES, 'UTF-8');
 		}
 	}
-	echo '<pre class="code ' . $language . '"><code>' . $buffer . '</code></pre>';
+	return '<pre class="code ' . $language . '"><code>' . $buffer . '</code></pre>';
 }
 
 function todo()
