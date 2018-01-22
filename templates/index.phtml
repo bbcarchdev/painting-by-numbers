@@ -279,7 +279,7 @@
 								the bottom of the document title and top of the solid colour area.
 							</li>
 						</ul>
-						<aside class="caution TODO">TODO: Lower quarter, sample, back cover, spine</aside>
+						<?php echo todo('Lower quarter, sample, back cover, spine'); ?>
 						<details>
 							<summary>DocBook mark-up</summary>
 							<p>
@@ -381,7 +381,7 @@
 				<section id="logo-variants">
 					<h1>Logo variations</h1>
 					<?php require(dirname(__FILE__) . '/../components/logo-variants.php'); ?>
-					<aside class="caution TODO">TODO: Half-height minimal colour logo</aside>
+					<?php echo todo('Half-height minimal colour logo'); ?>
 				</section>
 
 				<section id="logo-use">
@@ -438,7 +438,7 @@
 
 			<section id="colours">
 				<h1>Colour palette</h1>
-				<aside class="caution TODO">TODO: Explanation</aside>
+				<?php echo todo('Explanation'); ?>
 				<?php require(dirname(__FILE__) . '/../components/colours.php'); ?>
 			</section>
 
@@ -478,8 +478,8 @@
 						sample of how to mark up front matter.
 					</aside>
 					<details>
-					<summary>Common CSS styling rules for HTML documents</summary>
-					<?php echo code('css', 'header.css'); ?>
+						<summary>Common CSS styling rules for HTML documents</summary>
+						<?php echo code('css', 'header.css'); ?>
 					</details>
 					<section id="globalnav">
 						<h1>Global navigation</h1>
@@ -654,7 +654,7 @@
 
 				<section id="headings">
 					<h1>Headings</h1>
-					<aside class="caution TODO">TODO: Move mark-up detail to HTML-specific subsection</aside>
+					<?php echo todo('Move mark-up detail to HTML-specific subsection'); ?>
 					<p>Headings follow a scale of multipliers of the base body text size, with <code>3em</code> at the largest size (used for the page title), and <code>0.75em</code> used for fifth— and sixth-level headings.</p>
 					<p>Section headings are always marked up using the <code>&lt;h1&gt;</code> element, with sub-headings using <code>&lt;h2&gt;</code> where needed. Sub-headings use the
 						next size down in the scale, and are coloured in dark grey (<code>#636363</code>). Additional sub-heading levels (<code>&lt;h3&gt;</code>, <code>&lt;h4&gt;</code>, …) may be used where needed, and follow the same pattern. Sub-heading text transformation always matches that of the corresponding <code>&lt;h1&gt;</code>: that is, sub-headings of a fifth-level heading (or less significant) are set in all-caps, while others are capitalised normally.
@@ -676,7 +676,7 @@
 					<details>
 						<summary>CSS styling rules for HTML documents</summary>
 						<?php echo todo(); ?>
-						<?php echo code('css', 'headings.css.html', true); ?>
+						<?php echo code('css', 'headings.css'); ?>
 					</details>
 				</section>
 
@@ -751,8 +751,8 @@
 						</details>
 					</section>
 
-					<aside class="caution TODO">TODO: Simple lists</aside>
-					<aside class="caution TODO">TODO: Segmented lists</aside>
+					<?php echo todo('Simple lists'); ?>
+					<?php echo todo('Segmented lists'); ?>
 
 					<section id="tocs">
 						<h1>Tables of contents</h1>
@@ -764,7 +764,7 @@
 
 						<details>
 							<summary>DocBook mark-up</summary>
-							<aside class="caution TODO">TODO: DocBook</aside>
+							<?php echo todo('DocBook'); ?>
 						</details>
 
 						<details>
@@ -884,7 +884,7 @@
 
 					<details>
 						<summary>DocBook mark-up</summary>
-						<aside class="caution TODO">TODO: DocBook</aside>
+						<?php echo todo('DocBook'); ?>
 					</details>
 
 					<details>
@@ -909,7 +909,7 @@
 
 					<details>
 						<summary>DocBook mark-up</summary>
-						<aside class="caution TODO">TODO: DocBook mark-up</aside>
+						<?php echo todo('DocBook mark-up'); ?>
 					</details>
 
 					<details>
@@ -1019,7 +1019,7 @@
 
 					<details>
 						<summary>DocBook mark-up</summary>
-						<aside class="caution TODO">TODO: DocBook mark-up</aside>
+						<?php echo todo('DocBook mark-up'); ?>
 					</details>
 
 					<details>
@@ -1240,7 +1240,7 @@
 		</article>
 
 		<section id="docbook-index">
-			<aside class="caution TODO">TODO: Index of DocBook elements</aside>
+			<?php echo todo('Index of DocBook elements'); ?>
 		</section>
 
 		<section id="html-index">

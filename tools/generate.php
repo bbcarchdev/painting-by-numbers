@@ -47,57 +47,105 @@ if(count($argv) > 2)
 
 require($argv[1]);
 
-/* Return the path to a sample */
-function samplepath($name)
+function path_is_absolute($path)
 {
-	if(substr($name, 0, 1) == '/')
-	{
-		return $name;
-	}
-	return dirname(__FILE__) . '/../components/' . $name;
+	return substr($path, 0, 1) == '/';
+}
+
+/* Return the path to a sample */
+function sample_path($name)
+{
+	return path_is_absolute($name)
+		? $name
+		: realpath(dirname(__FILE__) . '/../components/' . $name);
 }
 
 /* Return a literal sample with no decoration */
 function literal($file)
 {
-	return file_get_contents(samplepath($file));
+	return file_get_contents(sample_path($file));
 }
 
-/* Return a literal sample block */
-function sample($file, $header = 'Sample', $header_level = 2)
+function el($name, $attrs = '', $body = '', $xml = false)
 {
-	$h_tag_name = 'h' . (int) $header_level;
-	return '<' . $h_tag_name . '>' . _e($header) . '</' . $h_tag_name . '>' . '<aside class="example">' . literal($file) . '</aside>';
+	return $xml
+		? xml_element($name, $attrs, $body)
+		: html_element($name, $attrs, $body);
+}
+
+function html_element($name, $attrs = '', $body = '')
+{
+	// arguments must be escaped already
+	return tag($name, $attrs) . $body . tag('/' . $name);
+}
+
+function xml_element($name, $attrs = '', $body = '')
+{
+	// arguments must be escaped already
+	return $body
+		? tag($name, $attrs) . $body . tag('/' . $name)
+		: tag($name, $attrs ? $attrs . ' /' : '/'); // self-closing tag
+}
+
+function tag($name, $attrs = '')
+{
+	// arguments must be escaped already
+	return '<' . $name . ($attrs ? ' ' . $attrs : '') . '>';
 }
 
 function _e($text)
 {
+	return htmlspecialchars($text, ENT_NOQUOTES, 'UTF-8');
+}
+
+function _e_attr($text)
+{
 	return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
 }
 
-/* Return a code block */
-function code($language, $file, $html = false)
+function todo($summary = '')
 {
-	$buffer = literal($file);
-	if(!$html)
+	return el('aside', 'class="caution TODO"', 'TODO' . ($summary ? ': ' . $summary : '')) . "\n";
+}
+
+function keyword($text)
+{
+	return el('span', 'class="keyword"', $text);
+}
+
+function string($text)
+{
+	return el('span', 'class="string"', $text);
+}
+
+/* Return a literal sample block as HTML */
+function sample($file, $header = 'Sample', $header_level = 2)
+{
+	return el('h' . (int) $header_level, '', _e($header)) . el('aside', 'class="example"', literal($file));
+}
+
+/* Return a code block as pretty HTML */
+function code($language, $file)
+{
+	return el('pre', 'class="code ' . $language . '"', el('code', '', pretty_file($language, $file)));
+}
+
+function pretty_file($language, $file)
+{
+	return pretty_literal($language, literal($file));
+}
+
+function pretty_literal($language, $literal)
+{
+	switch($language)
 	{
-		switch($language)
-		{
 		case 'html':
 		case 'xml':
 		case 'docbook':
-			$buffer = pretty_html($buffer);
-			break;
+			return pretty_html($literal);
 		default:
-			$buffer = htmlspecialchars($buffer, ENT_NOQUOTES, 'UTF-8');
-		}
+			return _e($literal);
 	}
-	return '<pre class="code ' . $language . '"><code>' . $buffer . '</code></pre>';
-}
-
-function todo()
-{
-	return '<aside class="caution TODO">TODO</aside>' . "\n";
 }
 
 /* Pretty-print some HTML */
@@ -146,12 +194,11 @@ function pretty_html_tag($tag)
 {
 	if(substr($tag, 0, 1) == '/')
 	{
-		return '&lt;/<span class="keyword">' . htmlspecialchars(substr($tag, 1), ENT_NOQUOTES, 'UTF-8') . '</span>&gt;';
+		return '&lt;/' . keyword(_e(substr($tag, 1))) . '&gt;';
 	}
-	$tag = htmlspecialchars($tag, ENT_NOQUOTES, 'UTF-8');
 	$matches = array();
-	preg_match('!^\s*(\S+)(\s+(.+))?$!misU', $tag, $matches);
-	$tag = '&lt;<span class="keyword">' . $matches[1] . '</span>';
+	preg_match('!^\s*(\S+)(\s+(.+))?$!misU', _e($tag), $matches);
+	$tag = '&lt;' . keyword($matches[1]);
 	$list = array();
 	if(isset($matches[3]))
 	{
@@ -168,7 +215,7 @@ function pretty_html_tag($tag)
 			}
 			$name = substr($attrs, $c, $s);
 			$ch = substr($attrs, $c + $s, 1);
-			$a = '<span class="keyword">' . $name . '</span>';
+			$a = keyword($name);
 			$c += $s + 1;
 			if($ch == '=')
 			{
@@ -185,7 +232,7 @@ function pretty_html_tag($tag)
 				{
 					$vlen = strcspn($attrs, "\t\r\n " , $c);
 				}
-				$a .= '="<span class="string">' . substr($attrs, $start, $vlen) . '</span>"';
+				$a .= '="' . string(substr($attrs, $start, $vlen)) . '"';
 				$c += $vlen;
 			}
 			$list[] = $a;
