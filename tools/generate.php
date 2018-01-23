@@ -23,7 +23,7 @@ error_reporting(E_ALL);
 ini_set('display_errors', 'On');
 
 $stderr = fopen('php://stderr', 'w');
-	
+
 if(count($argv) < 2)
 {
 	fprintf($stderr, "Usage: %s TEMPLATE [OPTIONS]\n", $argv[0]);

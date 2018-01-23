@@ -11,7 +11,7 @@ section.legalnotice {
 body.home>header {
 	background: transparent;
 	color: #e2e2e2;
-	border-bottom: none; 
+	border-bottom: none;
 }
 
 body.book>header .global, body.index>header .global, body.home>header .global{

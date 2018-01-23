@@ -13,8 +13,8 @@ ol>li:before {
 	margin-left: -2em;
 }
 ol>li>ol>li:before {
-	content: counter(listitem, lower-latin) ". ";	
+	content: counter(listitem, lower-latin) ". ";
 }
 ol>li>ol>li>ol>li:before {
-	content: counter(listitem, lower-roman) ". ";	
+	content: counter(listitem, lower-roman) ". ";
 }

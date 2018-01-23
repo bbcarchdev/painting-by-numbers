@@ -1,5 +1,5 @@
 <?php
-	
+
 $palette = array(
 	'Primary palette' => array(
 		'green1' => array('Olive green', 'ceca13'),
@@ -61,12 +61,12 @@ foreach($palette as $section => $colours)
 		sscanf($info[1], '%02x%02x%02x', $r, $g, $b);
 		echo '<tr>';
 		echo '<td class="col ' . $id . '"><span class="swatch ' . $id . '"></span>' . $info[0] . '</td>';
-		echo '<td><code>#' . $info[1] . '</code></td>'; 
+		echo '<td><code>#' . $info[1] . '</code></td>';
 		echo '<td><code>' . $r . '</code>, <code>' . $g . '</code>, <code>' . $b . '</code></td>';
 		echo '</tr>';
 	}
 }
-		
+
 ?>
 	</tbody>
 </table>

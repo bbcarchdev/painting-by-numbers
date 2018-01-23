@@ -23,8 +23,8 @@ aside.tip:before {
 	border-radius: 0.75em;
 	color: #fff;
 }
-aside.info { 
-	border-left-color: #268bd2; 
+aside.info {
+	border-left-color: #268bd2;
 	overflow: scroll;
 }
 aside.info:before {
@@ -72,7 +72,7 @@ aside.important:before {
 	text-align: center;
 	background: #dc322f;
 	border-radius: 0.75em;
-	color: #fff;	
+	color: #fff;
 }
 aside.caution { border-left-color: #dc322f; }
 aside.caution:before {
@@ -88,7 +88,7 @@ aside.caution:before {
 	text-align: center;
 	background: #dc322f;
 	border-radius: 0.75em;
-	color: #fff;	
+	color: #fff;
 }
 aside>p:first-child {
 	margin-top: 0;

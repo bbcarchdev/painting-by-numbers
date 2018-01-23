@@ -31,7 +31,7 @@ section.legalnotice {
 body.home>header {
 	background: transparent;
 	color: #e2e2e2;
-	border-bottom: none; 
+	border-bottom: none;
 }
 
 body.book>header .global, body.index>header .global, body.home>header .global{
@@ -63,6 +63,7 @@ body>header h1, body.index>header h1, .education header h1, .collection header h
     font-size: 25px;
   }
 }
+
 /* 5.1.1 Global navigation */
 
 nav.global a:link, nav.global a:visited {
@@ -141,7 +142,7 @@ nav.global li>a:hover {
 }
 @media screen and (min-width: 768px) and (max-width:960px) {
     nav.global li>a {
-       font-size: 1em; 
+       font-size: 1em;
     }
 }
 nav.global li.logo {
@@ -155,7 +156,7 @@ nav.global li.logo {
 }
 nav.global li.logo>a {
 	background: #636363;
-	color: #ceca13 !important;	
+	color: #ceca13 !important;
 	font-size: 2.5em;
 	background-image: url(/res/images/res-logo-min-olive-grey.png); /*/res/images/res-logo-min-olive-grey.png*/
 	text-indent: 999999px;
@@ -166,7 +167,7 @@ nav.global li.logo>a {
 	background-size: 100%;
 	background-position: 50% 50%;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	nav.global li.logo>a {
 		background-image: url(/res/images/res-logo-min-olive-greyx2.png); /*/res/images/res-logo-min-olive-grey.png*/
 	}
@@ -246,7 +247,7 @@ nav.global li.logo>a:hover {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-} 
+}
 .secondarynav li{
 	display: inline-block;
 }
@@ -258,13 +259,14 @@ nav.global li.logo>a:hover {
 		padding: 0 13pt;
 	}
 }
-nav.subnav {                                                                    
+
+nav.subnav {
     background: #848484;
     color: #e6e6e6;
     margin: -1px 0 0 0;
     padding: 0;
     font-family: 'Gotham Rounded SSm A', 'Gotham Rounded SSm B', 'Gotham Rounded A', 'Gotham Rounded B', 'Gotham Rounded', sans-serif;
-    font-style: normal;	
+    font-style: normal;
     border-bottom: solid #636363 1px;
 }
 nav.subnav .inner {
@@ -404,8 +406,9 @@ body>header .editor {
 body>header .copyright {
 	font-size: 0.85em;
 	font-weight: 300;
-	color: #b2b2b2;	
+	color: #b2b2b2;
 }
+
 /* 5.2 Document footer */
 
 body>footer {
@@ -485,6 +488,7 @@ footer .logos:after {
     width: 100%;
   }*/
 }
+
 /* 5.3 Body text */
 
 html {
@@ -552,13 +556,14 @@ h4, section section section h1, section section h2, section h3 {
 	font-size: 0.875em;
 	font-weight: 700;
 }
-h5, h6, section section section section h1, section section section h2, section section h3, section h4 { 
+h5, h6, section section section section h1, section section section h2, section section h3, section h4 {
 	font-size: 0.75em;
 	font-weight: 700;
 }
 h5, h6, section section section section section h1, section section section section section h2, section section section section section h3, section section section section section h4  {
 	text-transform: uppercase;
 }
+
 /* 5.5 Lists */
 
 ol, ul, dl {
@@ -602,10 +607,10 @@ ol>li:before {
 	margin-left: -2em;
 }
 ol>li>ol>li:before {
-	content: counter(listitem, lower-latin) ". ";	
+	content: counter(listitem, lower-latin) ". ";
 }
 ol>li>ol>li>ol>li:before {
-	content: counter(listitem, lower-roman) ". ";	
+	content: counter(listitem, lower-roman) ". ";
 }
 
 /* 5.5.2 Un-ordered lists */
@@ -679,9 +684,10 @@ aside.sample {
 		position: absolute;
 		left: -3em;
 		min-width: 2.5em;
-		text-align: right;	
+		text-align: right;
 	}
 }
+
 /* 5.6 Horizontal rules */
 
 hr {
@@ -706,7 +712,7 @@ pre.code {
 	background: #002b36;
 }
 pre.output {
-	background: #000;	
+	background: #000;
 }
 pre > code, pre > samp {
 	color: #93a1a1;
@@ -776,6 +782,7 @@ tfoot th {
 table.numeric td, tbody.numeric td, tr.numeric td, td.numeric {
 	text-align: right;
 }
+
 /* 5.9 Figures */
 
 figure {
@@ -873,8 +880,8 @@ aside.tip:before {
 	border-radius: 0.75em;
 	color: #fff;
 }
-aside.info { 
-	border-left-color: #268bd2; 
+aside.info {
+	border-left-color: #268bd2;
 	overflow: scroll;
 }
 aside.info:before {
@@ -922,7 +929,7 @@ aside.important:before {
 	text-align: center;
 	background: #dc322f;
 	border-radius: 0.75em;
-	color: #fff;	
+	color: #fff;
 }
 aside.caution { border-left-color: #dc322f; }
 aside.caution:before {
@@ -938,7 +945,7 @@ aside.caution:before {
 	text-align: center;
 	background: #dc322f;
 	border-radius: 0.75em;
-	color: #fff;	
+	color: #fff;
 }
 aside>p:first-child {
 	margin-top: 0;
@@ -946,6 +953,7 @@ aside>p:first-child {
 aside>p:last-child {
 	margin-bottom: 0;
 }
+
 /* 5.11 Examples */
 
 aside.example {
@@ -987,7 +995,7 @@ aside.example:before {
 	content: 'Example';
 	background: #e6e6e6;
 	color: white;
-	position: absolute;	
+	position: absolute;
 	margin: -1px -1px 0 0;
 	top: 0;
 	right: 0;
@@ -1019,6 +1027,7 @@ blockquote {
 	line-height: 1.4;
 	color: #404040;
 }
+
 /* 5.13 Footnotes */
 
 .footnote>a:link, .footnote>a:visited {
@@ -1031,6 +1040,7 @@ blockquote {
 .footnotes ul {
 	list-style: none;
 }
+
 /* 5.14 Forms */
 
 /* 6.1 Links */
@@ -1124,8 +1134,8 @@ q:after {
 	}
 }
 /* Fixes for older IE */
-header, footer, nav, aside, article, section {                                  
-    display: block;                                                             
+header, footer, nav, aside, article, section {
+    display: block;
 }
 nav.subnav li {
 	*display: inline;

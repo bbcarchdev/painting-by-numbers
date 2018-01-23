@@ -21,37 +21,37 @@
 			<holder>BBC</holder>
 		</copyright>
 	</info>
-  
+
 	<refmeta>
 		<refentrytitle>sample</refentrytitle>
 		<manvolnum>1</manvolnum>
 		<refmiscinfo class="source">Painting by Numbers</refmiscinfo>
-		<refmiscinfo class="manual">System Manager’s Manual</refmiscinfo>	
+		<refmiscinfo class="manual">System Manager’s Manual</refmiscinfo>
 	</refmeta>
-  
+
 	<refnamediv>
 		<refname>sample</refname>
 		<refpurpose>perform some action</refpurpose>
 	</refnamediv>
-  
+
 	<refsynopsisdiv>
 		<cmdsynopsis>
 		<command>sample</command>
 		</cmdsynopsis>
 	</refsynopsisdiv>
-  
+
 	<refsect1>
 		<title>Description</title>
 		<para>
 			The <command>sample</command> utility exits with a successful exit status.
 		</para>
 	</refsect1>
-  
+
 	<refsect1>
 		<title>Options</title>
 		<para>
 			The <command>sample</command> utility does not perform any option
-			processing.	  
+			processing.
 		</para>
 	</refsect1>
 

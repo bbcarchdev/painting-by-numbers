@@ -64,19 +64,19 @@
 			<title>Call-outs</title>
 			<?php literal('callout.xml'); ?>
 		</section>
-		
+
 		<section xml:id="examples">
 			<title>Examples</title>
 			<?php literal('example.xml'); ?>
 		</section>
-		
+
 		<section xml:id="blockquote">
 			<title>Quotations</title>
 			<?php literal('blockquote.xml'); ?>
 		</section>
-		
+
 	</chapter>
-	
+
 	<chapter xml:id="inline">
 		<title>In-line elements</title>
 

@@ -62,9 +62,9 @@ print.css: $(srcdir)/templates/print.pcss $(srcdir)/tools/generate.php $(COMPONE
 book.html: book.xml $(XSLTFILES) $(NAV) $(LINKS)
 	$(XML2HTML) $<
 
-book.pdf: book.html 
+book.pdf: book.html
 	$(HTML2PDF) $<
- 
+
 manpage.html: manpage.xml $(XSLTFILES) $(NAV) $(LINKS)
 	$(XML2HTML) $<
 

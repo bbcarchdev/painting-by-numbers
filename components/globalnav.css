@@ -74,7 +74,7 @@ nav.global li>a:hover {
 }
 @media screen and (min-width: 768px) and (max-width:960px) {
     nav.global li>a {
-       font-size: 1em; 
+       font-size: 1em;
     }
 }
 nav.global li.logo {
@@ -88,7 +88,7 @@ nav.global li.logo {
 }
 nav.global li.logo>a {
 	background: #636363;
-	color: #ceca13 !important;	
+	color: #ceca13 !important;
 	font-size: 2.5em;
 	background-image: url(/res/images/res-logo-min-olive-grey.png); /*/res/images/res-logo-min-olive-grey.png*/
 	text-indent: 999999px;
@@ -99,7 +99,7 @@ nav.global li.logo>a {
 	background-size: 100%;
 	background-position: 50% 50%;
 }
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
 	nav.global li.logo>a {
 		background-image: url(/res/images/res-logo-min-olive-greyx2.png); /*/res/images/res-logo-min-olive-grey.png*/
 	}
@@ -179,7 +179,7 @@ nav.global li.logo>a:hover {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-} 
+}
 .secondarynav li{
 	display: inline-block;
 }

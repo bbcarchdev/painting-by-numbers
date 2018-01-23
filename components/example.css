@@ -37,7 +37,7 @@ aside.example:before {
 	content: 'Example';
 	background: #e6e6e6;
 	color: white;
-	position: absolute;	
+	position: absolute;
 	margin: -1px -1px 0 0;
 	top: 0;
 	right: 0;
